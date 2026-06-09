@@ -1,0 +1,13 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+.vercel
+.env
+.env.local
+
+# Large media (host externally)
+*.mov
+assets/video/how2hairTone.mov
+
+# Local Claude settings (may contain secrets)
+.claude/settings.local.json

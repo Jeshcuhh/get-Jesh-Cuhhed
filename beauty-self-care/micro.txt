@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A conservative at-home microneedling protocol archive." />
+  <meta name="author" content="JeshCuhh" />
+  <meta property="og:title" content="At-Home Microneedling · JeshCuhh" />
+  <meta property="og:description" content="A conservative at-home microneedling protocol archive." />
+  <meta property="og:type" content="website" />
+  <title>At-Home Microneedling · JeshCuhh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
+  <style>
+    /* Page-scoped styles that match the existing aesthetic */
+    .protocol-table-wrap {
+      overflow-x: auto;
+      margin-top: 1.25rem;
+      border-radius: 14px;
+    }
+    .protocol-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 300;
+    }
+    .protocol-table thead th {
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.85;
+    }
+    .protocol-table tbody td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      vertical-align: top;
+    }
+    .protocol-table tbody tr:last-child td { border-bottom: none; }
+    .protocol-table td:first-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .subhead {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 1.5rem 0 0.6rem;
+      opacity: 0.7;
+    }
+    .subhead:first-child { margin-top: 0; }
+
+
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<nav class="nav" data-nav aria-label="Main navigation">
+  <a class="nav__brand" href="../index.html#home" aria-label="JeshCuhh home">
+    <span class="nav__logo-mark"><img src="../assets/images/face-logo2.png" alt="" /></span>
+    <span><span class="nav__wordmark">Jesh<em>Cuhh</em></span><!--<span class="nav__tagline">My Guide</span>--></span>
+  </a>
+  <ul class="nav__links" data-nav-links>
+      <li><a href="../index.html#home" class="">Home</a></li>
+      <li><a href="../index.html#about" class="">About</a></li>
+      <li><a href="../index.html#archive" class="">Archive</a></li>
+      <li><a href="../index.html#site-map" class="">Build</a></li>
+      <li><a href="../beauty-self-care" class="active">Routines</a></li>
+  </ul>
+  <a class="nav__cta" href="../index.html#follow">Follow Along</a>
+  <button class="nav__burger" data-burger aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<main id="main">
+<header class="page-hero">
+  <div class="breadcrumb"><a href="../index.html#home">Home</a><span>·</span><span>Beauty & Self-Care</span></div>
+  <div class="page-hero__grid">
+    <div>
+     
+      <h1 class="page-title">At-Home <em>Microneedling</em></h1>
+      <p class="page-lede">A careful protocol covering required materials, depth guidance by facial zone, the step-by-step process, and the recovery boundaries that keep the routine conservative.</p>
+    </div>
+   <!-- <div class="page-hero__art page-hero__art--contain"><img src="../assets/images/derm2.png" alt="" /></div>-->
+  </div>
+</header>
+
+<!-- Product Carousel -->
+<section class="product-carousel" aria-label="Microneedling kit products">
+  <button class="product-carousel__btn product-carousel__btn--prev" data-carousel-prev aria-label="Previous product">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <div class="product-carousel__viewport">
+    <div class="product-carousel__track" data-carousel-track>
+      <div class="product-carousel__slide" data-slide>
+        <img src="../assets/images/blackGlove.png" alt="Disposable black nitrile gloves" />
+      </div>
+      <div class="product-carousel__slide" data-slide>
+        <img src="../assets/images/HA.png" alt="Cos De Baha Hyaluronic Acid Serum" />
+      </div>
+      <div class="product-carousel__slide" data-slide>
+        <div class="slide-inner">
+          <img src="../assets/images/derm2.png" alt="Derminator 2 digital skin needling device" />
+        </div>
+      </div>
+      <div class="product-carousel__slide" data-slide>
+        <img src="../assets/images/BLTCream.png" alt="NeuroMed BLT numbing cream packets" />
+      </div>
+      <div class="product-carousel__slide" data-slide>
+        <img src="../assets/images/spatual.png" alt="Silicone serum application brushes" />
+      </div>
+    </div>
+  </div>
+  <button class="product-carousel__btn product-carousel__btn--next" data-carousel-next aria-label="Next product">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+</section>
+
+<script>
+  (function () {
+    const track = document.querySelector('[data-carousel-track]');
+    if (!track) return;
+    const slides = Array.from(track.querySelectorAll('[data-slide]'));
+    const total = slides.length;
+    // Start with the Derminator 2 (index 2) in the center to match the reference design.
+    let active = 2;
+
+    function render() {
+      slides.forEach((slide, i) => {
+        // Shortest signed distance from active on a circular track
+        let diff = i - active;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
+        if (Math.abs(diff) <= 2) {
+          slide.setAttribute('data-pos', String(diff));
+        } else {
+          slide.setAttribute('data-pos', 'hidden');
+        }
+      });
+    }
+
+    function next() { active = (active + 1) % total; render(); }
+    function prev() { active = (active - 1 + total) % total; render(); }
+
+    document.querySelector('[data-carousel-next]').addEventListener('click', next);
+    document.querySelector('[data-carousel-prev]').addEventListener('click', prev);
+
+    // Keyboard support when the carousel region is focused/hovered
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') prev();
+    });
+
+    // Basic touch swipe
+    let startX = null;
+    track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+      startX = null;
+    });
+
+    render();
+  })();
+</script>
+
+<section class="detail-section">
+
+<!-- 01 · THE PREMISE -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">01</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">The <em>Premise</em></h3>
+      <div class="protocol__meta">Controlled micro-injury · collagen response</div>
+    </div>
+    <div class="protocol__cadence">Foundational</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <p>Here's the loveliest part, you're not damaging your skin, you're <em>asking</em> it to repair itself. 
+        Fine needles create controlled micro-injuries, and the skin responds with its own wound-healing capabilities. 
+        Thus producing more collagen and elastin, the proteins responsible for firmness and elasticity. Minimal downtime. 
+        No harsh resurfacing. Just a quiet conversation with your own biology. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11499218/">[nih]</a></p>
+    </div>
+  </div>
+</article>
+
+<!-- 02 · WHERE IT SHINES -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">02</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Where It <em>Shines</em></h3>
+      <div class="protocol__meta">Scarring · pigmentation · texture</div>
+    </div>
+    <div class="protocol__cadence">Broad indication</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <p>This is the part I love telling people about, because the range is remarkable for something so understated. It works beautifully on atrophic acne scars, fine lines, hyperpigmentation, melasma, stretch marks, surgical and burn scars, and even androgenetic alopecia.</p>
+      <p>Compared with chemical peels and laser, it often delivers higher satisfaction and a lower risk of pigmentation issues — which matters enormously for darker skin tones. It's the rare treatment that doesn't ask you to choose between results and safety. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11499218/">[nih]</a></p>
+    </div>
+  </div>
+</article>
+
+<!-- 03 · THE HONEST TIMELINE -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">03</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">The Honest <em>Timeline</em></h3>
+      <div class="protocol__meta">Collagen remodels over months</div>
+    </div>
+    <div class="protocol__cadence">Every 6–12 months</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <p>A note on patience, because this isn't an injectable — it doesn't perform overnight. Collagen remodels over months, gradually and on its own schedule. Most people maintain results with treatments every six to twelve months. Think of it less as a fix and more as a practice.</p>
+      <p>Frequency scales with needle depth: <strong>0–0.5 mm</strong> can be done daily; <strong>0.5–2 mm</strong> every 4 weeks or less frequently; <strong>&gt;2 mm</strong> every 8 weeks.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 04 · PREP TIMELINE -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">04</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Prep <em>Timeline</em></h3>
+      <div class="protocol__meta">What to pause · when to pause it</div>
+    </div>
+    <div class="protocol__cadence">Begin 1–2 weeks out</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <p>Always monitor timelines.</p>
+      <h3>1–2 Weeks Before</h3>
+      <ul class="clean-list">
+        <li>
+          <span>
+            <strong>Blood thinners</strong>: avoid NSAIDs like ibuprofen
+            (Advil/Motrin) and aspirin — consult your prescribing doctor if
+            you're on blood thinners for a medical condition.
+          </span>
+        </li>        
+        <li>
+          <span>
+            <strong>Supplements</strong>: stop fish oil, high-dose Vitamin E, 
+            and herbal supplements (St. John's Wort, Ginkgo Biloba).
+          </span>
+        </li>
+      </ul>
+      <h3>3–7 Days Before</h3>
+      <ul class="clean-list">
+        <li><span><strong>Retinoids</strong>: stop all prescription and OTC retinol or retinoid creams (Tretinoin, Adapalene).</span></li>
+        <li><span><strong>Exfoliants</strong>: halt AHAs (glycolic, lactic), BHAs (salicylic acid), facial scrubs, and at-home peel pads.</span></li>
+        <li><span><strong>Acne treatments</strong>: pause benzoyl peroxide and spot treatments.</span></li>
+        <li><span><strong>Other treatments</strong>: avoid waxing, laser hair removal, or chemical peels in the target area.</span></li>
+      </ul>
+
+      <h3>24–48 Hours Before</h3>
+      <ul class="clean-list">
+        <li>
+          <span>
+            <strong>Sun exposure</strong>: avoid direct, unprotected sun and tanning beds.
+          </span>
+        </li>
+        <li>
+          <span>
+            <strong>Alcohol &amp; caffeine</strong>: limit alcohol (impedes healing, causes swelling); 
+            skip caffeine on the day of your appointment.
+          </span>
+        </li>
+      </ul>
+      <h3>The Day Of</h3>
+      <ul class="clean-list">
+        <li><span><strong>Cleanse only</strong>: Start with a freshly washed face (no makeup, lotion, oils, or sunscreen).</span></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- 05 · REQUIRED MATERIALS -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">05</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Required <em>Materials</em></h3>
+      <div class="protocol__meta">Device · serums · sanitation</div>
+    </div>
+    <div class="protocol__cadence">One-time setup</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <ul class="clean-list">
+        <li><span><strong>Derminator 2</strong>: the device anchor for this routine.</span></li>
+        <li><span><strong>NeuroMed BLT Numbing Cream</strong>: applied pre-treatment to manage discomfort.</span></li>
+        <li><span><strong>AnteAGE® Regenerative Science Hyaluronic Acid</strong>: primary slip and post-pass leave-on.</span></li>
+        <li><span><strong>Cos De Baha</strong>: secondary serum option for the routine.</span></li>
+        <li><span><strong>Rejuran Healer Turnover Ampoule</strong>: helps improve the appearance of skin's tone, texture, and radiance</span></li>
+        <li><span><strong>Sterile single-use cartridges</strong>: no reusing needles and no bargain-bin risk.</span></li>
+        <li><span><strong>Alcohol pads / wipes</strong>: for swabbing skin and surfaces.</span></li>
+        <li><span><strong>Disposable gloves</strong>: one pair, swapped if contaminated.</span></li>
+        <li><span><strong>Soft sponges</strong>: for removing numbing cream cleanly.</span></li>
+        <li><span><strong>Secure headband</strong>: keeps hair fully out of the field.</span></li>
+        <li><span><strong>Clean silicone brush</strong>: dedicated to serum application only.</span></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- 06 · THE RULE SET -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">06</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">The <em>Rule Set</em></h3>
+      <div class="protocol__meta">Non-negotiables before you begin</div>
+    </div>
+    <div class="protocol__cadence">Every session</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <ol class="number-list">
+        <li><span>Do not microneedle over active acne, irritation, infection, sunburn, or compromised skin.</span></li>
+        <li><span>Never exceed <strong>1.25mm</strong> depth at home, regardless of area.</span></li>
+        <li><span>Skip aggressive actives while skin is recovering.</span></li>
+        <li><span>Plan around sun exposure and events. This is not a same-night-before-going-out routine.</span></li>
+        <li><span>Treat face, neck, and décolletage in <em>separate sessions</em>, never all at once.</span></li>
+        <li><span>When anything looks wrong, stop and get professional help instead of pushing through.</span></li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<!-- 07 · NEEDLE DEPTHS BY AREA -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">07</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Needle <em>Depths</em> by Area</h3>
+      <div class="protocol__meta">Thin skin · thick skin</div>
+    </div>
+    <div class="protocol__cadence">≤ 1.25 mm at home</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <p>Guidance only, adjust down for thin or reactive skin and never exceed 1.25mm at home.</p>
+      <div class="protocol-table-wrap">
+        <table class="protocol-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Thin Skin</th>
+              <th>Thick Skin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Forehead</td><td>0.25 – 0.5 mm</td><td>0.5 – 0.75 mm</td></tr>
+            <tr><td>Between Eyebrows</td><td>0.25 – 0.5 mm</td><td>0.5 – 1.0 mm</td></tr>
+            <tr><td>Nose</td><td>0.25 – 0.5 mm</td><td>0.25 – 0.5 mm</td></tr>
+            <tr><td>Eye Area</td><td>0.25 – 0.5 mm</td><td>0.25 – 0.5 mm</td></tr>
+            <tr><td>Cheekbone</td><td>0.5 mm</td><td>0.5 – 1.0 mm</td></tr>
+            <tr><td>Lower Cheek / Chin</td><td>0.5 – 1.0 mm</td><td>0.5 – 1.0 mm</td></tr>
+            <tr><td>Upper Lip</td><td>0.25 mm</td><td>0.25 – 0.75 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- 08 · STEP-BY-STEP PROTOCOL -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">08</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Step-by-Step <em>Protocol</em></h3>
+      <div class="protocol__meta">Prep · treatment · recovery</div>
+    </div>
+    <div class="protocol__cadence">~45 minutes</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <div class="subhead">01 · Preparation</div>
+      <ol class="number-list">
+        <li><span>Thoroughly cleanse face.</span></li>
+        <li><span>Apply NeuroMed BLT numbing cream in an even layer.</span></li>
+        <li><span>Wait 10–15 minutes for it to take effect.</span></li>
+        <li><span>Remove numbing cream completely with a soft sponge.</span></li>
+        <li><span>Cleanse face again with chlorhexidine.</span></li>
+        <li><span>Swab the entire treatment area with an alcohol pad.</span></li>
+      </ol>
+
+      <div class="subhead">02 · Treatment</div>
+      <ol class="number-list">
+        <li><span>Apply hyaluronic acid serum with the dedicated silicone brush.</span></li>
+        <li><span>Work in sections using a grid pattern, <em>vertical</em>, then <em>horizontal</em>, then <em>diagonal</em> passes.</span></li>
+        <li><span>Keep skin taut with the non-pen hand for better, more even penetration.</span></li>
+        <li><span>Use the shortest strokes possible and work quickly while numbing is active.</span></li>
+        <li><span>Watch for even pinkness (erythema) as the endpoint, stop there, do not chase more.</span></li>
+        <li><span>Reapply hyaluronic acid as needed for slip throughout the session.</span></li>
+      </ol>
+
+      <div class="subhead">03 · Immediate Post-Treatment</div>
+      <ul class="clean-list">
+        <li><span>Leave hyaluronic acid on the skin.</span></li>
+        <li><span> Press in 3-5 of Rejuran Healer Turnover Ampoule over the HA while skin is still tacky. Ideal timing for PDRN support and enhanced delivery through fresh channels.
+            60+ min: Seal with a ceramide moisturizer.
+            Nothing else that night: no retinoids, acids, vitamin C, or actives.</span></li>
+
+      </ul>
+
+      <div class="subhead">04 · Next Few Days Post-Treatment</div>
+      <ul class="clean-list">
+        <li><span>Resume regular skincare the next day, kept bland.</span></li>
+        <li><span>Wait <strong>3 days</strong> before reintroducing retinol or tretinoin.</span></li>
+        <li><span>Add kiwi seed oil as the last step in the routine.</span></li>
+        <li><span>Expect 3–5 days of dry, tight skin while the barrier repairs.</span></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- 09 · SANITATION & STERILE FIELD -->
+<article class="protocol" data-protocol>
+  <div class="protocol__header" data-toggle>
+    <div class="protocol__num">09</div>
+    <div class="protocol__title-wrap">
+      <h3 class="protocol__title">Sanitation &amp; <em>Sterile Field</em></h3>
+      <div class="protocol__meta">Pen hand · gloves · serum brush</div>
+    </div>
+    <div class="protocol__cadence">Throughout session</div>
+    <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M7 1v12M1 7h12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="protocol__body protocol__body--learn">
+    <div class="protocol__body-spacer"></div>
+    <div class="protocol__learn-card">
+      <ul class="clean-list">
+        <li><span>Designate one hand for the pen, never letting it touch the face.</span></li>
+        <li><span>Keep a separate, clean silicone brush reserved for serum only.</span></li>
+        <li><span>Sanitize hands between activities and swap gloves the moment they're compromised.</span></li>
+        <li><span>Keep alcohol wipes within arm's reach throughout the session.</span></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+  <div class="note-card reveal">
+    <strong>Safety note:</strong> microneedling can cause infection, scarring, irritation, 
+    and pigment issues when done poorly. This suits my needs and is fully not medical advice. 
+    Adjust parameters to your skin's needs, err on the side of caution, and consult a licensed 
+    professional for personalized guidance.
+  </div>
+
+  <!-- ========== MEASURE / NUMBERS ========== -->
+  <section class="measure reveal" id="site-map">
+    <div class="measure__inner">
+      <div>
+        <div class="section__eyebrow">By Measure</div>
+        <h2 class="section__title">Where the <em>dollar</em> goes.</h2>
+        <p class="measure__lede">
+          When you study a service well enough to perform it yourself, the savings stop being a side effect. They become the discipline's most honest proof. At the clinic, only seven cents of every dollar reaches your skin.
+        </p>
+        <blockquote class="measure__quote">
+          "Consistency is elegance. Learning is leverage. The most expensive look is the one you can repeat at home."
+        </blockquote>
+        <div class="measure__actions">
+          <a class="measure__link" href="../finance-investing/stonks.html">Open category <span class="btn__arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="cost-grid">
+        <!-- AT HOME -->
+        <div class="cost-col">
+          <div class="cost-col__head">
+            <h3 class="cost-col__title">At home</h3>
+            <div class="cost-col__total">
+              <span class="cost-col__total-num">$33</span>
+              <span class="cost-col__total-unit">/session</span>
+            </div>
+          </div>
+
+          <div class="cost-row"><span class="cost-row__label">Device (amortized 5yr)</span><span class="cost-row__val">$10.89 · 33%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:33%;background:#c9ad74;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Sterile cartridge</span><span class="cost-row__val">$6.50 · 19%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:19%;background:#c9ad74;opacity:0.78;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">AnteAGE HA glide</span><span class="cost-row__val">$6.00 · 18%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:18%;background:#d6aaa3;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">BLT numbing cream</span><span class="cost-row__val">$5.50 · 16%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:16%;background:#d6aaa3;opacity:0.78;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Rejuran Healer ampoule</span><span class="cost-row__val">$2.60 · 8%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:8%;background:#c9827d;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Cos De Baha HA</span><span class="cost-row__val">$1.00 · 3%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:3%;background:#d6aaa3;opacity:0.55;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Gloves</span><span class="cost-row__val">$0.40 · 1%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:1.2%;background:#8d837a;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Alcohol pads</span><span class="cost-row__val">$0.33 · 1%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:1%;background:#8d837a;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Sponges</span><span class="cost-row__val">$0.23 · 1%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:0.7%;background:#8d837a;"></div></div>
+
+          <div class="cost-foot">
+            <span class="cost-foot__label">Pays you per hour</span>
+            <span class="cost-foot__val cost-foot__val--gold">~$370/hr</span>
+          </div>
+        </div>
+
+        <!-- AT THE CLINIC -->
+        <div class="cost-col">
+          <div class="cost-col__head">
+            <h3 class="cost-col__title">At the clinic</h3>
+            <div class="cost-col__total">
+              <span class="cost-col__total-num">$468</span>
+              <span class="cost-col__total-unit">/session</span>
+            </div>
+          </div>
+
+          <div class="cost-row"><span class="cost-row__label">Provider labor</span><span class="cost-row__val">$150 · 32%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:32%;background:#7a3e36;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Profit margin</span><span class="cost-row__val">$94 · 20%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:20%;background:#7a3e36;opacity:0.82;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Facility overhead</span><span class="cost-row__val">$84 · 18%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:18%;background:#c9827d;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Marketing &amp; admin</span><span class="cost-row__val">$47 · 10%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:10%;background:#c9827d;opacity:0.78;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Consumables</span><span class="cost-row__val">$33 · 7%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:7%;background:#c9ad74;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Payment &amp; taxes</span><span class="cost-row__val">$23 · 5%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:5%;background:#c9ad74;opacity:0.7;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Equipment depreciation</span><span class="cost-row__val">$19 · 4%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:4%;background:#8d837a;"></div></div>
+
+          <div class="cost-row"><span class="cost-row__label">Insurance &amp; licensing</span><span class="cost-row__val">$19 · 4%</span></div>
+          <div class="cost-bar"><div class="cost-bar__fill" style="width:4%;background:#8d837a;"></div></div>
+
+          <div class="cost-foot">
+            <span class="cost-foot__label">Goes to your needling</span>
+            <span class="cost-foot__val cost-foot__val--rose">~$33 (7%)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-row">
+    <a class="btn btn--light" href="../index.html#archive">← Back to archive</a>
+    <a class="btn btn--dark" href="../index.html#follow">Follow along <span class="btn__arrow">→</span></a>
+  </div>
+</section>
+
+<section class="related-section reveal">
+  <div class="section__head"><div class="section__eyebrow">Related</div><h2 class="section__title">More <em>notes</em>.</h2></div>
+  <div class="related-grid">
+    <a class="related-card" href="hair-toning.html">
+      <div class="related-card__kicker">Keep browsing</div>
+      <h3 class="related-card__title">Hair <em>Toning</em></h3>
+      <p>The next beauty protocol.</p>
+      <span class="card-link">Open <span class="btn__arrow">→</span></span>
+    </a>
+    <a class="related-card" href="skincare-routine.html">
+      <div class="related-card__kicker">Keep browsing</div>
+      <h3 class="related-card__title"><em>Skincare</em> Routine</h3>
+      <p>Daily skin maintenance.</p>
+      <span class="card-link">Open <span class="btn__arrow">→</span></span>
+    </a>
+    <a class="related-card" href="dermaplaner.html">
+      <div class="related-card__kicker">Keep browsing</div>
+      <h3 class="related-card__title"><em>Dermaplaner</em></h3>
+      <p>Mechanical exfoliation notes.</p>
+      <span class="card-link">Open <span class="btn__arrow">→</span></span>
+    </a>
+  </div>
+</section>
+</main>
+<footer class="footer" id="follow">
+  <div class="footer__inner">
+    <div class="footer__links">
+      <a href="beauty-self-care/index.html">Beauty</a>
+      <a href="wardrobe/index.html">Wardrobe</a>
+      <a href="home-lifestyle/index.html">Home Notes</a>
+      <a href="finance-investing/index.html">Finance</a>
+      <a href="portfolio/modeling-portfolio.html">Portfolio</a>
+    </div>
+
+    <div class="footer__center">
+      <h2>Keep in <em>Touch</em></h2>
+      <form class="footer-form" action="#" onsubmit="return false">
+        <label>Email*
+          <input type="email" aria-label="Email address" />
+        </label>
+        <button class="btn btn--dark" type="submit">Join</button>
+      </form>
+      <div class="socials" aria-label="Social links">
+        <a class="social" href="#" aria-label="Facebook">f</a>
+        <a class="social" href="#" aria-label="Instagram">ig</a>
+        <a class="social" href="#" aria-label="Discord">d</a>
+        <a class="social" href="#" aria-label="YouTube">▶</a>
+      </div>
+      <br> 
+      <p class="footer__copy">Copyright © 2026 · All rights reserved · JeshCuhh</p>
+    </div>
+
+    <div class="footer__right">
+      <a href="mailto:jerishaklima09@gmail.com">Inquiring</a>
+      <a href="mailto:jerishaklima09@gmail.com">jerishaklima09@gmail.com</a>
+      <a href="index.html#site-map">Offers</a>
+      <a href="index.html#site-map">Terms</a>
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

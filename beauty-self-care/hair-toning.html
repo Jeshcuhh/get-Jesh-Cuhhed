@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Redken Shades EQ hair toning routine." />
+  <meta name="author" content="JeshCuhh" />
+  <meta property="og:title" content="Hair Toning · JeshCuhh" />
+  <meta property="og:description" content="Redken Shades EQ hair toning routine." />
+  <meta property="og:type" content="website" />
+  <title>Hair Toning · JeshCuhh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
+  <style>
+    .hero-video {
+      display: block;
+      margin: 2.5rem auto 0;
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    }
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* measure / cost section: matches the microneedling page so nothing spills the border */
+    .measure{width:min(1180px,calc(100% - 2rem));margin:clamp(3rem,6vw,5rem) auto 0;
+      background:var(--ink);color:var(--paper);border-radius:24px;padding:clamp(2rem,5vw,3.5rem);}
+    .measure .section__eyebrow{color:var(--champagne);}
+    .measure .section__title{color:var(--paper);font-size:clamp(2rem,4.5vw,3.2rem);}
+    .measure .section__title em{color:var(--champagne);}
+    .measure__lede{color:rgba(255,250,244,.82);max-width:62ch;line-height:1.7;}
+    .measure__quote{font-family:var(--font-serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:rgba(255,250,244,.92);border-left:2px solid var(--champagne);padding-left:1.2rem;margin:1.8rem 0;}
+    .measure__inner{display:grid;gap:2rem;}
+    .measure__actions{margin-top:1rem;}
+    .measure__link{color:var(--champagne);text-decoration:none;font-family:var(--font-serif);font-variant:small-caps;letter-spacing:.05em;font-size:1.1rem;}
+    .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);margin-top:2.5rem;}
+    @media(max-width:760px){.cost-grid{grid-template-columns:1fr;}}
+    .cost-col{background:rgba(255,250,244,.04);border:1px solid rgba(255,250,244,.12);border-radius:16px;padding:1.5rem;}
+    .cost-col__head{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,250,244,.14);}
+    .cost-col__title{margin:0;font-family:var(--font-serif);font-weight:400;font-size:1.6rem;}
+    .cost-col__total{white-space:nowrap;}
+    .cost-col__total-num{font-family:var(--font-serif);font-size:2rem;color:var(--champagne);}
+    .cost-col__total-unit{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,250,244,.6);}
+    .cost-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:.82rem;color:rgba(255,250,244,.8);margin-top:.9rem;}
+    .cost-row__label{font-family:var(--font-serif);font-style:italic;font-size:1rem;color:rgba(255,250,244,.9);}
+    .cost-row__val{font-family:var(--font-mono);font-size:.7rem;color:rgba(255,250,244,.6);white-space:nowrap;}
+    .cost-bar{height:5px;border-radius:999px;background:rgba(255,250,244,.08);margin-top:.4rem;overflow:hidden;}
+    .cost-bar__fill{height:100%;border-radius:999px;}
+    .cost-foot{display:flex;justify-content:space-between;gap:1rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid rgba(255,250,244,.14);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,250,244,.7);}
+    .cost-foot__val--gold{color:var(--champagne);}
+    .cost-foot__val--rose{color:var(--rose);}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<!-- ── ROTATING ANNOUNCEMENT BAR ── -->
+<div class="topbar">
+  <button class="topbar__btn topbar__btn--prev" onclick="rotateBar(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="14 7 9 12 14 17"/></svg></button>
+  <p class="topbar__msg" id="topbar-msg"><a href="#">Discover our Gift Card</a></p>
+  <button class="topbar__btn topbar__btn--next" onclick="rotateBar(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="10 7 15 12 10 17"/></svg></button>
+</div>
+
+<!-- ── NAV (mega menu) ── -->
+<nav class="nav" data-nav>
+  <div class="nav__left">
+    <button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav__menu">
+      <div class="navitem" data-menu="beauty"><button class="navitem__btn" aria-current="page">Beauty</button></div>
+      <div class="navitem" data-menu="wardrobe"><button class="navitem__btn">Wardrobe</button></div>
+      <div class="navitem" data-menu="home"><button class="navitem__btn">At Home</button></div>
+      <div class="navitem" data-menu="atelier"><button class="navitem__btn">Pecuniary</button></div>
+    </div>
+  </div>
+  <a class="nav__brand" href="../index.html"><img class="nav__logo" src="../assets/images/face-logo2.png" alt="" />Jesh<em>Cuhh</em></a>
+  <div class="nav__icons">
+    <a class="nav__iconlink" href="../index.html#journal" aria-label="Journal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.7-1.1-4.2-1.6-6.5-1.4v12.8c2.3-.2 4.8.3 6.5 1.4"/><path d="M12 6c1.7-1.1 4.2-1.6 6.5-1.4v12.8c-2.3-.2-4.8.3-6.5 1.4"/><line x1="12" y1="6" x2="12" y2="18.8"/></svg>
+    </a>
+    <button class="nav__account" id="account-open" aria-label="Account" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.4"/><path d="M5.2 19.2c0-3.7 3-6.3 6.8-6.3s6.8 2.6 6.8 6.3"/></svg>
+    </button>
+    <a class="nav__iconlink" href="../portfolio/modeling-portfolio.html" aria-label="Portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5a1.5 1.5 0 0 1 1.5-1.5h1.8l1.2-1.8h4l1.2 1.8H19a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>
+    </a>
+  </div>
+
+  <!-- mega panels -->
+  <div class="mega" data-panel="beauty">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Skincare</h6>
+          <a href="../beauty-self-care/skincare-routine.html">Skincare routine</a>
+          <a href="../beauty-self-care/microneedling.html">Microneedling</a>
+          <a href="../beauty-self-care/dermaplaner.html">Dermaplaning</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">Hair</h6>
+          <a href="../beauty-self-care/hair-care.html">Hair care</a>
+          <a href="../beauty-self-care/hair-toning.html">Hair toning</a>
+          <a href="../beauty-self-care/lash-clusters.html">Lash clusters</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">Makeup &amp; Nails</h6>
+          <a href="../beauty-self-care/makeup.html">Makeup</a>
+          <a href="../beauty-self-care/pressOnNail.html">Press-on nails</a>
+          <a class="is-all" href="../beauty-self-care/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../beauty-self-care/index.html">
+          <div class="mega__card-img"><img src="../assets/images/mah-face-2026.jpg" alt="" /></div>
+          <p>The routine</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../beauty-self-care/microneedling.html">
+          <div class="mega__card-img"><img src="../assets/images/derm2.jpeg" alt="" /></div>
+          <p>Microneedling</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="wardrobe">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Care</h6>
+          <a href="../wardrobe/wardrobe-care.html">Wardrobe care</a>
+          <a href="../wardrobe/shoe-care.html">Shoe care</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">The Capsule</h6>
+          <a href="../wardrobe/wardrobe.html">Capsule wardrobe</a>
+          <a href="../wardrobe/jewelry.html">Jewelry &amp; gemstones</a>
+          <a class="is-all" href="../wardrobe/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../wardrobe/index.html">
+          <div class="mega__card-img"><img src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
+          <p>Closet care</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../wardrobe/jewelry.html">
+          <div class="mega__card-img"><img src="../assets/images/jewlery-collection.jpg" alt="" /></div>
+          <p>Jewelry</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="home">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">The Home</h6>
+          <a href="../home-lifestyle/decor.html">Decor materials</a>
+          <a href="../home-lifestyle/masstige.html">Masstige thinking</a>
+          <a href="../home-lifestyle/opinion-procedure.html">Procedure hierarchy</a>
+          <a class="is-all" href="../home-lifestyle/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../home-lifestyle/index.html">
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <p>At home</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../home-lifestyle/decor.html">
+          <div class="mega__card-img"><img src="../assets/images/on-nuu-fab-rice.jpg" alt="" /></div>
+          <p>Decor</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="atelier">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Systems</h6>
+          <a href="../finance-investing/invest.html">Investing</a>
+          <a href="../finance-investing/fire.html">FI/RE</a>
+          <a href="../finance-investing/churning.html">Card churning</a>
+          <a href="../finance-investing/stonks.html">Markets</a>
+          <a class="is-all" href="../finance-investing/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../finance-investing/index.html">
+          <div class="mega__card-img"><img src="../assets/images/jewlery-collection.jpg" alt="" /></div>
+          <p>The numbers</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- header curtain -->
+<div class="page-scrim" id="page-scrim"></div>
+
+<!-- ── ACCOUNT LOGIN MODAL ── -->
+<div class="acct" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="acct-title">
+  <div class="acct__scrim" data-acct-close></div>
+  <div class="acct__panel">
+    <button class="acct__close" data-acct-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div class="acct__inner">
+      <h2 class="acct__title" id="acct-title">Get <em>Jeshied</em></h2>
+      <p class="acct__lede">Please enter your email address to login or create a new profile</p>
+      <p class="acct__req">* Required fields</p>
+      <form class="acct__form" onsubmit="return false;">
+        <div class="acct__field">
+          <label for="acct-email">* Email:</label>
+          <input type="email" id="acct-email" autocomplete="email" />
+        </div>
+        <button type="submit" class="acct__submit">Continue</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ── MOBILE DRAWER ── -->
+<div class="drawer" id="drawer">
+  <div class="drawer__head">
+    <span class="nav__brand" style="font-size:1.4rem">Jesh<em>Cuhh</em></span>
+    <button class="drawer__close" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Beauty <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../beauty-self-care/skincare-routine.html">Skincare routine</a>
+      <a href="../beauty-self-care/microneedling.html">Microneedling</a>
+      <a href="../beauty-self-care/hair-toning.html">Hair toning</a>
+      <a href="../beauty-self-care/makeup.html">Makeup</a>
+      <a href="../beauty-self-care/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Wardrobe <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../wardrobe/wardrobe-care.html">Wardrobe care</a>
+      <a href="../wardrobe/shoe-care.html">Shoe care</a>
+      <a href="../wardrobe/jewelry.html">Jewelry</a>
+      <a href="../wardrobe/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">At Home <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../home-lifestyle/decor.html">Decor materials</a>
+      <a href="../home-lifestyle/masstige.html">Masstige thinking</a>
+      <a href="../home-lifestyle/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Pecuniary <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../finance-investing/invest.html">Investing</a>
+      <a href="../finance-investing/fire.html">FI/RE</a>
+      <a href="../finance-investing/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <a class="drawer__toggle" href="../portfolio/modeling-portfolio.html">Portfolio <span>↗</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+<header class="page-hero">
+
+  <div class="page-hero__grid">
+
+    <div>
+      <div class="page-kicker">Beauty & Self-Care</div>
+
+      <h1 class="page-title">
+        Hair <em>Toning</em>
+      </h1>
+
+      <p class="page-lede">
+        A demi-permanent gloss routine for keeping tone cool,
+        dimensional, and soft without over-processing.
+      </p>
+    </div>
+
+    <div class="page-hero__art">
+      <img src="../assets/images/personalToning.jpg"alt="Hair toning result" style="
+          width: 100%;
+          max-width: 420px;
+          border-radius: 16px;
+          display: block;
+          object-fit: cover;
+        "
+      />
+    </div>
+
+  </div>
+
+  <div class="hero-video">
+    <video controls preload="metadata" playsinline>
+      <source
+        src="../assets/video/how2hairTone.mov"
+        type="video/mp4"
+      />
+
+      Your browser doesn't support embedded video.
+    </video>
+  </div>
+
+</header>
+
+
+
+
+<section class="detail-section"><div class="detail-grid"><article class="content-card reveal">
+  <h2>The <em>Supplies</em></h2>
+  <ul class="clean-list"><li><span><strong>Shades EQ 6T (Iron)</strong>: root tap</span></li><li><span><strong>Shades EQ 8T (Silver)</strong>: mids and ends</span></li><li><span><strong>Shades EQ 9P (Opal Glow)</strong>: mids and ends</span></li><li><span><strong>EQ Processing Solution</strong>: 1:2 ratio with color</span></li><li><span><strong>Olaplex No. 1</strong>: a few drops per mix</span></li><li><span><strong>K18</strong>: post-rinse finishing mask</span></li><li><span>Mixing bowl, applicator brush, gloves, and timer</span></li></ul>
+</article>
+<article class="content-card reveal">
+  <h2>The <em>Method</em></h2>
+<ol class="number-list">
+  <li><span>Start on towel-blotted wet hair</span></li>
+  <li><span>Root tap: 15 ml 6T + 30 ml Processing Solution + one drop Olaplex No. 1. Apply 1–1.5 inches from scalp</span></li>
+  <li><span>Mids and ends: equal parts 8T and 9P + Processing Solution at 1:2 + a few drops Olaplex No. 1</span></li>
+  <li><span>Apply from where the root tap ends through the ends. Saturate fully</span></li>
+  <li><span>Process about 20 minutes. Step away: go exercise</span></li>
+  <li><span>Rinse thoroughly until the water runs clear</span></li>
+  <li><span>Finish with a K18 treatment</span></li>
+</ol>
+
+</article>
+</div>
+
+<div class="note-card reveal">
+  <strong>Technique note:</strong>
+  Shades EQ deposits tone without lift, so the approach is gentler than lightening. The 6T root tap keeps depth at the scalp natural; the 8T/9P blend creates the cool, dimensional finish.
+</div>
+
+<div class="back-row">
+  <a class="btn btn--light" href="../assets/images/personalToning.jpg">← Back to archive</a>
+  <a class="btn btn--dark" href="../index.html#follow">
+    Follow along <span class="btn__arrow">→</span>
+  </a>
+</div>
+
+</section>
+
+<!-- ===== WHERE THE DOLLAR GOES ===== -->
+<section class="measure reveal" id="dollar">
+  <div class="measure__inner">
+    <div>
+      <div class="section__eyebrow">By Measure</div>
+      <h2 class="section__title">Where the <em>dollar</em> goes</h2>
+      <p class="measure__lede">
+        A demi-permanent gloss is one of the easiest salon services to learn: and one of the most marked-up. In the Bay Area a root tap and toner starts at $100 before tip; once you can mix and time it yourself, that $120 ticket becomes a twenty-minute habit. At the salon, only a sliver of every dollar actually deposits onto your hair.
+      </p>
+      <blockquote class="measure__quote">
+        "Consistency is elegance. Learning is leverage. The most expensive look is the one you can repeat at home."
+      </blockquote>
+      <div class="measure__actions">
+        <a class="measure__link" href="../finance-investing/stonks.html">Open category <span class="btn__arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="cost-grid">
+      <!-- AT HOME -->
+      <div class="cost-col">
+        <div class="cost-col__head">
+          <h3 class="cost-col__title">At home</h3>
+          <div class="cost-col__total">
+            <span class="cost-col__total-num">$9.40</span>
+            <span class="cost-col__total-unit">/gloss</span>
+          </div>
+        </div>
+
+        <div class="cost-row"><span class="cost-row__label">Shades EQ color (3 tubes, amortized)</span><span class="cost-row__val">$3.80 · 40%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:40%;background:#c9ad74;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">K18 finishing mask</span><span class="cost-row__val">$2.80 · 30%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:30%;background:#d6aaa3;opacity:0.78;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Olaplex No. 1 (amortized)</span><span class="cost-row__val">$1.20 · 13%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:13%;background:#c9827d;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Processing solution</span><span class="cost-row__val">$0.90 · 10%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:10%;background:#c9ad74;opacity:0.78;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Gloves, bowl, brush (amortized)</span><span class="cost-row__val">$0.70 · 7%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:7%;background:#8d837a;"></div></div>
+
+        <div class="cost-foot">
+          <span class="cost-foot__label">Pays you per hour</span>
+          <span class="cost-foot__val cost-foot__val--gold">~$150/hr</span>
+        </div>
+      </div>
+
+      <!-- AT THE SALON -->
+      <div class="cost-col">
+        <div class="cost-col__head">
+          <h3 class="cost-col__title">The Salon</h3>
+          <div class="cost-col__total">
+            <span class="cost-col__total-num">$120</span>
+            <span class="cost-col__total-unit">/gloss · incl. tip</span>
+          </div>
+        </div>
+
+        <div class="cost-row"><span class="cost-row__label">Stylist labor</span><span class="cost-row__val">$52.80 · 44%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:44%;background:#7a3e36;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Profit margin</span><span class="cost-row__val">$19.20 · 16%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:16%;background:#7a3e36;opacity:0.82;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Facility overhead</span><span class="cost-row__val">$18.00 · 15%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:15%;background:#c9827d;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Color products</span><span class="cost-row__val">$10.80 · 9%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:9%;background:#c9ad74;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Marketing &amp; admin</span><span class="cost-row__val">$8.40 · 7%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:7%;background:#c9ad74;opacity:0.78;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Payment &amp; taxes</span><span class="cost-row__val">$6.00 · 5%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:5%;background:#c9ad74;opacity:0.7;"></div></div>
+
+        <div class="cost-row"><span class="cost-row__label">Licensing &amp; sanitation</span><span class="cost-row__val">$4.80 · 4%</span></div>
+        <div class="cost-bar"><div class="cost-bar__fill" style="width:4%;background:#8d837a;"></div></div>
+
+        <div class="cost-foot">
+          <span class="cost-foot__label">Goes onto your hair</span>
+          <span class="cost-foot__val cost-foot__val--rose">~$10.80 · 9%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section reveal">
+  <div class="section__head"><div class="section__eyebrow">Related</div>
+  <h2 class="section__title">More <em>notes</em></h2></div>
+  <div class="related-grid"><a class="related-card" href="makeup.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title">Going-Out <em>Makeup</em></h3>
+  <p>Event makeup routine</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a><a class="related-card" href="hair-care.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title">Hair <em>Care</em></h3>
+  <p>Maintenance between tone refreshes</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a><a class="related-card" href="skincare-routine.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title"><em>Skincare</em> Routine</h3>
+  <p>AM and PM basics</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a></div>
+</section>
+</main>
+<footer class="footer" id="signup">
+  <div class="footer__box">
+  <div class="footer__top">
+    <div class="footer__news">
+      <h4>Subscribe to our newsletter</h4>
+      <p>Receive letters from the archive: collections, routines, and the latest from JeshCuhh.</p>
+      <form class="footer__form" onsubmit="return false">
+        <input type="email" placeholder="Your email address" aria-label="Email address" />
+        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="20" height="14"><line x1="2" y1="7" x2="20" y2="7"/><polyline points="15 2 21 7 15 12"/></svg></button>
+      </form>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h6>Get in touch</h6>
+        <a href="mailto:jerishaklima09@gmail.com">Contacts</a>
+        <a href="../index.html#journal">Journal</a>
+      </div>
+      <div>
+        <h6>Categories</h6>
+        <a href="../beauty-self-care/index.html">Beauty</a>
+        <a href="../wardrobe/index.html">Wardrobe</a>
+        <a href="../home-lifestyle/index.html">At Home</a>
+      </div>
+      <div>
+        <h6>Pecuniary</h6>
+        <a href="../finance-investing/index.html">Finance</a>
+        <a href="../finance-investing/fire.html">FI/RE</a>
+        <a href="../finance-investing/invest.html">Investing</a>
+      </div>
+      <div>
+        <h6>Portfolio</h6>
+        <a href="../portfolio/modeling-portfolio.html">Modeling</a>
+        <a href="../portfolio/booking.html">Booking</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer__base">
+    <span class="footer__country"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>United States (English)</span>
+    <span class="footer__brand"><img class="footer__logo" src="../assets/images/face-logo2.png" alt="" />Jesh<em>Cuhh</em></span>
+    <div class="socials" aria-label="Social links">
+      <a class="social" href="#" aria-label="Facebook">f</a>
+      <a class="social" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+      <a class="social" href="#" aria-label="Discord">d</a>
+      <a class="social" href="#" aria-label="YouTube">▶</a>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 JeshCuhh · All rights reserved </p>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

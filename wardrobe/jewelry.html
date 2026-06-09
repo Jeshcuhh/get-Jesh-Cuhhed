@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gemstone durability and jewelry buying notes." />
+  <meta name="author" content="JeshCuhh" />
+  <meta property="og:title" content="Jewelry · JeshCuhh" />
+  <meta property="og:description" content="Gemstone durability and jewelry buying notes." />
+  <meta property="og:type" content="website" />
+  <title>Jewelry · JeshCuhh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
+
+
+  <style>
+    .valuation { margin-top: clamp(1rem, 2vw, 1.4rem); }
+    .valuation > p { color: var(--stone); margin: 0 0 .4rem; }
+    .valuation__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, .82fr);
+      gap: clamp(1.2rem, 3vw, 2.4rem);
+      align-items: stretch;
+      margin-top: 1.4rem;
+    }
+    .valuation__fields { display: grid; align-content: start; }
+    .valuation__label {
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      margin-top: 1.1rem;
+    }
+    .valuation__fields > .valuation__label:first-child { margin-top: 0; }
+    .valuation__label span { color: var(--ash); }
+    .valuation__input {
+      width: 100%;
+      margin-top: .45rem;
+      padding: .72rem .9rem;
+      font-family: var(--font-sans);
+      font-size: .96rem;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .6);
+      border: 1px solid var(--hairline-strong);
+      border-radius: 10px;
+      transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .valuation__input::placeholder { color: var(--ash); }
+    .valuation__input:focus {
+      outline: none;
+      border-color: var(--rose-dust);
+      box-shadow: 0 0 0 3px var(--champagne-soft);
+    }
+    select.valuation__input {
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      padding-right: 2.4rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%237a3e36' stroke-width='1.4' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .95rem center;
+      background-size: 14px;
+    }
+    .valuation__result {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(1.4rem, 3vw, 2rem);
+      border-radius: 18px;
+      background: linear-gradient(160deg, rgba(201, 173, 116, .2), rgba(214, 170, 163, .16));
+      border: 1px solid rgba(201, 173, 116, .5);
+      box-shadow: var(--shadow-soft);
+    }
+    .valuation__result-kicker {
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+    }
+    .valuation__value {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      margin: .45rem 0 1.1rem;
+      transition: color .3s var(--ease);
+    }
+    .valuation__breakdown {
+      list-style: none;
+      margin: 0;
+      padding: 1rem 0 0;
+      border-top: 1px solid var(--hairline);
+      display: grid;
+      gap: .6rem;
+    }
+    .valuation__breakdown li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: .9rem;
+      color: var(--stone);
+    }
+    .valuation__breakdown li span:last-child {
+      font-family: var(--font-mono);
+      color: var(--ink);
+    }
+    .valuation__breakdown em { font-style: normal; color: var(--ash); }
+    .valuation__btn { margin-top: 1.3rem; }
+    .valuation__note {
+      margin: 1.3rem 0 0;
+      font-family: var(--font-mono);
+      font-size: .58rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    @media (max-width: 680px) {
+      .valuation__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<!-- ── ROTATING ANNOUNCEMENT BAR ── -->
+<div class="topbar">
+  <button class="topbar__btn topbar__btn--prev" onclick="rotateBar(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="14 7 9 12 14 17"/></svg></button>
+  <p class="topbar__msg" id="topbar-msg"><a href="#">Discover our Gift Card</a></p>
+  <button class="topbar__btn topbar__btn--next" onclick="rotateBar(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="10 7 15 12 10 17"/></svg></button>
+</div>
+
+<!-- ── NAV (mega menu) ── -->
+<nav class="nav" data-nav>
+  <div class="nav__left">
+    <button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav__menu">
+      <div class="navitem" data-menu="beauty"><button class="navitem__btn">Beauty</button></div>
+      <div class="navitem" data-menu="wardrobe"><button class="navitem__btn" aria-current="page">Wardrobe</button></div>
+      <div class="navitem" data-menu="home"><button class="navitem__btn">At Home</button></div>
+      <div class="navitem" data-menu="atelier"><button class="navitem__btn">Pecuniary</button></div>
+    </div>
+  </div>
+  <a class="nav__brand" href="../index.html"><img class="nav__logo" src="../assets/images/face-logo2.png" alt="" />Jesh<em>Cuhh</em></a>
+  <div class="nav__icons">
+    <a class="nav__iconlink" href="../index.html#journal" aria-label="Journal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.7-1.1-4.2-1.6-6.5-1.4v12.8c2.3-.2 4.8.3 6.5 1.4"/><path d="M12 6c1.7-1.1 4.2-1.6 6.5-1.4v12.8c-2.3-.2-4.8.3-6.5 1.4"/><line x1="12" y1="6" x2="12" y2="18.8"/></svg>
+    </a>
+    <button class="nav__account" id="account-open" aria-label="Account" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.4"/><path d="M5.2 19.2c0-3.7 3-6.3 6.8-6.3s6.8 2.6 6.8 6.3"/></svg>
+    </button>
+    <a class="nav__iconlink" href="../portfolio/modeling-portfolio.html" aria-label="Portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5a1.5 1.5 0 0 1 1.5-1.5h1.8l1.2-1.8h4l1.2 1.8H19a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>
+    </a>
+  </div>
+
+  <!-- mega panels -->
+  <div class="mega" data-panel="beauty">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Skincare</h6>
+          <a href="../beauty-self-care/skincare-routine.html">Skincare routine</a>
+          <a href="../beauty-self-care/microneedling.html">Microneedling</a>
+          <a href="../beauty-self-care/dermaplaner.html">Dermaplaning</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">Hair</h6>
+          <a href="../beauty-self-care/hair-care.html">Hair care</a>
+          <a href="../beauty-self-care/hair-toning.html">Hair toning</a>
+          <a href="../beauty-self-care/lash-clusters.html">Lash clusters</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">Makeup &amp; Nails</h6>
+          <a href="../beauty-self-care/makeup.html">Makeup</a>
+          <a href="../beauty-self-care/pressOnNail.html">Press-on nails</a>
+          <a class="is-all" href="../beauty-self-care/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../beauty-self-care/index.html">
+          <div class="mega__card-img"><img src="../assets/images/mah-face-2026.jpg" alt="" /></div>
+          <p>The routine</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../beauty-self-care/microneedling.html">
+          <div class="mega__card-img"><img src="../assets/images/derm2.jpeg" alt="" /></div>
+          <p>Microneedling</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="wardrobe">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Care</h6>
+          <a href="../wardrobe/wardrobe-care.html">Wardrobe care</a>
+          <a href="../wardrobe/shoe-care.html">Shoe care</a>
+        </div>
+        <div class="mega__group">
+          <h6 class="mega__title">The Capsule</h6>
+          <a href="../wardrobe/wardrobe.html">Capsule wardrobe</a>
+          <a href="../wardrobe/jewelry.html">Jewelry &amp; gemstones</a>
+          <a class="is-all" href="../wardrobe/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../wardrobe/index.html">
+          <div class="mega__card-img"><img src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
+          <p>Closet care</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../wardrobe/jewelry.html">
+          <div class="mega__card-img"><img src="../assets/images/jewlery-collection.jpg" alt="" /></div>
+          <p>Jewelry</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="home">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">The Home</h6>
+          <a href="../home-lifestyle/decor.html">Decor materials</a>
+          <a href="../home-lifestyle/masstige.html">Masstige thinking</a>
+          <a href="../home-lifestyle/opinion-procedure.html">Procedure hierarchy</a>
+          <a class="is-all" href="../home-lifestyle/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../home-lifestyle/index.html">
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <p>At home</p><span class="cta">Discover</span>
+        </a>
+        <a class="mega__card" href="../home-lifestyle/decor.html">
+          <div class="mega__card-img"><img src="../assets/images/on-nuu-fab-rice.jpg" alt="" /></div>
+          <p>Decor</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" data-panel="atelier">
+    <div class="mega__inner">
+      <div class="mega__cols">
+        <div class="mega__group">
+          <h6 class="mega__title">Systems</h6>
+          <a href="../finance-investing/invest.html">Investing</a>
+          <a href="../finance-investing/fire.html">FI/RE</a>
+          <a href="../finance-investing/churning.html">Card churning</a>
+          <a href="../finance-investing/stonks.html">Markets</a>
+          <a class="is-all" href="../finance-investing/index.html">View all</a>
+        </div>
+      </div>
+      <div class="mega__feature">
+        <a class="mega__card" href="../finance-investing/index.html">
+          <div class="mega__card-img"><img src="../assets/images/jewlery-collection.jpg" alt="" /></div>
+          <p>The numbers</p><span class="cta">Discover</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- header curtain -->
+<div class="page-scrim" id="page-scrim"></div>
+
+<!-- ── ACCOUNT LOGIN MODAL ── -->
+<div class="acct" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="acct-title">
+  <div class="acct__scrim" data-acct-close></div>
+  <div class="acct__panel">
+    <button class="acct__close" data-acct-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div class="acct__inner">
+      <h2 class="acct__title" id="acct-title">Get <em>Jeshied</em></h2>
+      <p class="acct__lede">Please enter your email address to login or create a new profile</p>
+      <p class="acct__req">* Required fields</p>
+      <form class="acct__form" onsubmit="return false;">
+        <div class="acct__field">
+          <label for="acct-email">* Email:</label>
+          <input type="email" id="acct-email" autocomplete="email" />
+        </div>
+        <button type="submit" class="acct__submit">Continue</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ── MOBILE DRAWER ── -->
+<div class="drawer" id="drawer">
+  <div class="drawer__head">
+    <span class="nav__brand" style="font-size:1.4rem">Jesh<em>Cuhh</em></span>
+    <button class="drawer__close" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Beauty <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../beauty-self-care/skincare-routine.html">Skincare routine</a>
+      <a href="../beauty-self-care/microneedling.html">Microneedling</a>
+      <a href="../beauty-self-care/hair-toning.html">Hair toning</a>
+      <a href="../beauty-self-care/makeup.html">Makeup</a>
+      <a href="../beauty-self-care/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Wardrobe <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../wardrobe/wardrobe-care.html">Wardrobe care</a>
+      <a href="../wardrobe/shoe-care.html">Shoe care</a>
+      <a href="../wardrobe/jewelry.html">Jewelry</a>
+      <a href="../wardrobe/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">At Home <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../home-lifestyle/decor.html">Decor materials</a>
+      <a href="../home-lifestyle/masstige.html">Masstige thinking</a>
+      <a href="../home-lifestyle/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <button class="drawer__toggle">Pecuniary <span>+</span></button>
+    <div class="drawer__sub">
+      <a href="../finance-investing/invest.html">Investing</a>
+      <a href="../finance-investing/fire.html">FI/RE</a>
+      <a href="../finance-investing/index.html">View all</a>
+    </div>
+  </div>
+  <div class="drawer__group">
+    <a class="drawer__toggle" href="../portfolio/modeling-portfolio.html">Portfolio <span>↗</span></a>
+  </div>
+</div>
+
+<main id="main">
+<header class="page-hero">
+  <div class="breadcrumb"><a href="../index.html#home">Home</a><span>·</span><span>Wardrobe</span></div>
+  <div class="page-hero__grid">
+    <div>
+      <div class="page-kicker">Wardrobe</div>
+      <h1 class="page-title"><em>Jewelry</em></h1>
+      <p class="page-lede">A gemstone tier list where hardness is not the same as toughness, and durability matters more than hype.</p>
+    </div>
+    <div class="page-hero__art"><span class="section__title">      <img src="../assets/images/jewlery-collection.jpg"alt="fit check" ></span></div>
+  </div>
+</header>
+<section class="detail-section">
+  <div class="detail-grid">
+    <article class="content-card reveal">
+      <h2>Metals <em>Tier</em> List</h2>
+      <p>heavily prioritizes longevity, repairability, and engineering considerations</p>
+
+
+      <div class="tier-group">
+        <div class="tier-name">S tier</div>
+        <div class="tier-items"><strong>Platinum alloys</strong>, <strong>18k yellow gold</strong>, <strong>Argentium silver</strong>, <strong>18k palladium white gold</strong>: maximum purity, exceptional tarnish resistance, and ideal for lifetime daily wear.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">A tier</div>
+        <div class="tier-items"><strong>Palladium white gold</strong>, <strong>22k yellow gold</strong> - <strong>14k yellow gold</strong>: fantastic everyday durability, rich classic tones, and highly practical workhorse alloys.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">B tier</div>
+        <div class="tier-items"><strong>Sterling silver</strong>, <strong>Green gold (Electrum)</strong>: beautiful traditional luster, though they require routine polishing or specialized care to handle oxidation.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">C tier</div>
+        <div class="tier-items"><strong>Titanium</strong>, <strong>Stainless steel</strong>, <strong>Copper</strong>, <strong>Brass</strong>, <strong>24k gold</strong>, <strong>Fine silver</strong>, <strong>Purple gold</strong>, <strong>Blue gold</strong>: mixed utility; either highly durable but difficult to resize, or beautiful niche colors that are too soft for high-wear jewelry.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">D tier</div>
+        <div class="tier-items"><strong>Rhodium-plated white gold</strong>: crisp, bright finish, but requires ongoing re-plating maintenance as the base metal begins to show through.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">E tier</div>
+        <div class="tier-items"><strong>Tungsten carbide</strong>: incredibly scratch-resistant, but brittle enough to shatter on high impact and entirely impossible to resize.</div>
+      </div>
+      <div class="tier-group">
+        <div class="tier-name">F tier</div>
+        <div class="tier-items"><strong>Gold-plated base metal jewelry</strong>, <strong>Gold vermeil</strong>: budget-friendly appeal, but the thin gold layer wears away quickly under daily friction, exposing the base metal beneath.</div>
+      </div>
+
+    </article>
+    <article class="content-card reveal">
+      <h2>Gemstone <em>Tier </em>List</h2>
+      <div class="tier-list">
+              <p>Hardness means scratch resistance. Toughness means resistance to breaking. A stone can be hard and still cleave, chip, or become annoying in daily wear.</p>
+      <p>Buy for the life you actually live: how often you wear it, what it knocks against, and how much upkeep you will tolerate.</p>
+        <div class="tier-group"><div class="tier-name">God tier</div><div class="tier-items"><strong>Corundum</strong>: ruby and sapphire, Mohs 9, no cleavage, extremely tough, every color, keeps polish forever.</div></div>
+        <div class="tier-group"><div class="tier-name">S tier</div><div class="tier-items"><strong>Moissanite</strong>, <strong>lab diamond</strong>, <strong>spinel</strong>: durable, brilliant, and often smarter value than natural diamond hype.</div></div>
+        <div class="tier-group"><div class="tier-name">A tier</div><div class="tier-items"><strong>Garnet</strong>, <strong>chrysoberyl</strong>: useful durability, beautiful color, and good everyday logic depending on setting.</div></div>
+        <div class="tier-group"><div class="tier-name">B tier</div><div class="tier-items"><strong>Tourmaline</strong>, <strong>cubic zirconia</strong>, <strong>demantoid garnet</strong>, <strong>nephrite jade</strong>, <strong>jadeite</strong>: pretty, but know the maintenance tradeoffs.</div></div>
+        <div class="tier-group"><div class="tier-name">C tier</div><div class="tier-items"><strong>Aquamarine</strong>, <strong>topaz</strong>, <strong>quartz family</strong>, <strong>natural diamond</strong>: mixed durability/value notes.</div></div>
+        <div class="tier-group"><div class="tier-name">D tier</div><div class="tier-items"><strong>Morganite</strong>, <strong>peridot</strong>: can be beautiful but show wear or grime faster.</div></div>
+        <div class="tier-group"><div class="tier-name">E/F tier</div><div class="tier-items"><strong>Emerald</strong>, <strong>tanzanite</strong>, <strong>synthetic rutile</strong>, <strong>pearl</strong>, <strong>opal</strong>, <strong>feldspar family</strong>: high romance, high caution.</div></div>
+      </div>
+    </article>
+  </div>
+
+  <article class="content-card reveal valuation" data-valuation>
+    <h2>Jewellery <em>Valuation</em></h2>
+    <p>The intrinsic value of a piece is estimated from the current market price of the precious metal, adjusted by a craftsmanship premium of 10–45%. Figures update as you type.</p>
+    <div class="valuation__grid">
+      <div class="valuation__fields">
+        <label class="valuation__label" for="metalPrice">Metal price <span>$ per gram</span></label>
+        <input class="valuation__input" type="number" id="metalPrice" inputmode="decimal" min="0" step="any" placeholder="e.g. 110" />
+
+        <label class="valuation__label" for="weight">Weight <span>grams</span></label>
+        <input class="valuation__input" type="number" id="weight" inputmode="decimal" min="0" step="any" placeholder="e.g. 25" />
+
+        <label class="valuation__label" for="premium">Craftsmanship premium</label>
+        <select class="valuation__input" id="premium">
+          <option value="1.10">10%: Simple / Investment grade</option>
+          <option value="1.20">20%</option>
+          <option value="1.30">30%</option>
+          <option value="1.45">45%: Artistic / Designer piece</option>
+        </select>
+
+        <button class="btn btn--dark valuation__btn" type="button" onclick="calculateValue()">Calculate value</button>
+      </div>
+
+      <div class="valuation__result" aria-live="polite">
+        <span class="valuation__result-kicker">Estimated value</span>
+        <span class="valuation__value" id="result">$0.00</span>
+        <ul class="valuation__breakdown">
+          <li><span>Metal value</span><span id="metalValue">$0.00</span></li>
+          <li><span>Craftsmanship premium <em id="premiumPct">10%</em></span><span id="premiumAmt">$0.00</span></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <p class="valuation__note">Estimate only · excludes stones, certification &amp; resale spread</p>
+  </article>
+
+  <div class="note-card reveal"><strong>Buying note:</strong> choose stones based on how you actually live. A romantic stone that cannot survive your habits becomes expensive stress.</div>
+  <div class="back-row"><a class="btn btn--light" href="../index.html#archive">← Back to archive</a><a class="btn btn--dark" href="../index.html#follow">Follow along <span class="btn__arrow">→</span></a></div>
+</section>
+<section class="related-section reveal">
+  <div class="section__head"><div class="section__eyebrow">Related</div><h2 class="section__title">More <em>notes</em>.</h2></div>
+  <div class="related-grid"><a class="related-card" href="wardrobe.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title">Capsule <em>Wardrobe</em></h3>
+  <p>Quiet luxury shopping.</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a><a class="related-card" href="shoe-care.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title">Shoe <em>Care</em></h3>
+  <p>Maintenance ritual.</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a><a class="related-card" href="wardrobe-care.html">
+  <div class="related-card__kicker">Keep browsing</div>
+  <h3 class="related-card__title"><em>Wardrobe</em> Care</h3>
+  <p>Closet reset.</p>
+  <span class="card-link">Open <span class="btn__arrow">→</span></span>
+</a></div>
+</section>
+</main>
+<footer class="footer" id="signup">
+  <div class="footer__box">
+  <div class="footer__top">
+    <div class="footer__news">
+      <h4>Subscribe to our newsletter</h4>
+      <p>Receive letters from the archive: collections, routines, and the latest from JeshCuhh.</p>
+      <form class="footer__form" onsubmit="return false">
+        <input type="email" placeholder="Your email address" aria-label="Email address" />
+        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="20" height="14"><line x1="2" y1="7" x2="20" y2="7"/><polyline points="15 2 21 7 15 12"/></svg></button>
+      </form>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h6>Get in touch</h6>
+        <a href="mailto:jerishaklima09@gmail.com">Contacts</a>
+        <a href="../index.html#journal">Journal</a>
+      </div>
+      <div>
+        <h6>Categories</h6>
+        <a href="../beauty-self-care/index.html">Beauty</a>
+        <a href="../wardrobe/index.html">Wardrobe</a>
+        <a href="../home-lifestyle/index.html">At Home</a>
+      </div>
+      <div>
+        <h6>Pecuniary</h6>
+        <a href="../finance-investing/index.html">Finance</a>
+        <a href="../finance-investing/fire.html">FI/RE</a>
+        <a href="../finance-investing/invest.html">Investing</a>
+      </div>
+      <div>
+        <h6>Portfolio</h6>
+        <a href="../portfolio/modeling-portfolio.html">Modeling</a>
+        <a href="../portfolio/booking.html">Booking</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer__base">
+    <span class="footer__country"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>United States (English)</span>
+    <span class="footer__brand"><img class="footer__logo" src="../assets/images/face-logo2.png" alt="" />Jesh<em>Cuhh</em></span>
+    <div class="socials" aria-label="Social links">
+      <a class="social" href="#" aria-label="Facebook">f</a>
+      <a class="social" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+      <a class="social" href="#" aria-label="Discord">d</a>
+      <a class="social" href="#" aria-label="YouTube">▶</a>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 JeshCuhh · All rights reserved </p>
+</footer>
+
+<!-- Valuation calculator: live updates + backwards-compatible calculateValue() -->
+<script>
+(function () {
+  var byId = function (id) { return document.getElementById(id); };
+  var money = function (n) {
+    return n.toLocaleString(undefined, { style: 'currency', currency: 'USD' });
+  };
+
+  function calculateValue() {
+    var price   = parseFloat(byId('metalPrice').value) || 0;
+    var weight  = parseFloat(byId('weight').value) || 0;
+    var premium = parseFloat(byId('premium').value) || 1;
+
+    var metalValue  = price * weight;
+    var total       = metalValue * premium;
+    var premiumAmt  = total - metalValue;
+
+    byId('result').textContent     = money(total);
+    byId('metalValue').textContent = money(metalValue);
+    byId('premiumAmt').textContent = money(premiumAmt);
+    byId('premiumPct').textContent = Math.round((premium - 1) * 100) + '%';
+  }
+
+  // Keep the original global so the inline onclick still works.
+  window.calculateValue = calculateValue;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    ['metalPrice', 'weight', 'premium'].forEach(function (id) {
+      var el = byId(id);
+      if (!el) return;
+      el.addEventListener('input', calculateValue);
+      el.addEventListener('change', calculateValue);
+    });
+    calculateValue();
+  });
+})();
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
