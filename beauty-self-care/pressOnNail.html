@@ -24,23 +24,43 @@
        The grid is named .build (not .protocol) so it does NOT
        collide with style.css's accordion .protocol.
        --------------------------------------------------------- */
-    .wrap { width: min(1200px, calc(100% - 2.5rem)); margin: 0 auto; }
-
-    .finished { padding: clamp(2.5rem,6vw,5rem) 0 clamp(3rem,6vw,5rem); }
+    .wrap {
+      width: min(1200px, calc(100% - 2.5rem));
+      margin: 0 auto;
+    }
+    .finished {
+      padding: clamp(2.5rem,6vw,5rem) 0 clamp(3rem,6vw,5rem);
+    }
     .finished .serif-title {
-      font-family: var(--font-serif); font-weight: 400; line-height: .98;
-      letter-spacing: -.04em; color: var(--ink); margin: .85rem 0 1.1rem;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -.04em;
+      color: var(--ink);
+      margin: .85rem 0 1.1rem;
       font-size: clamp(2.4rem,6vw,4.6rem);
     }
-    .finished .serif-title em { font-style: italic; color: var(--rose-dust); }
-    .finished .lede {
-      max-width: 62ch; color: var(--stone); margin-top: .6rem;
-      font-size: clamp(.96rem,1.6vw,1.08rem); line-height: 1.78;
+    .finished .serif-title em {
+      font-style: italic;
+      color: var(--rose-dust);
     }
-    .finished__divider { color: var(--champagne); margin: clamp(2rem,4vw,3rem) 0 0; }
-    .sprig { display: block; }
-    .sprig--center { margin: 0 auto; }
-
+    .finished .lede {
+      max-width: 62ch;
+      color: var(--stone);
+      margin-top: .6rem;
+      font-size: clamp(.96rem,1.6vw,1.08rem);
+      line-height: 1.78;
+    }
+    .finished__divider {
+      color: var(--champagne);
+      margin: clamp(2rem,4vw,3rem) 0 0;
+    }
+    .sprig {
+      display: block;
+    }
+    .sprig--center {
+      margin: 0 auto;
+    }
     /* sticky kit rail on the LEFT, steps on the RIGHT */
     .build {
       display: grid;
@@ -49,107 +69,329 @@
       align-items: start;
       margin-top: clamp(2rem,4vw,3rem);
     }
-    @media (max-width: 840px) { .build { grid-template-columns: 1fr; } }
-
-    .section-label {
-      font-family: var(--font-mono); font-size: .66rem; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--oxblood);
-      display: flex; align-items: center; gap: .75rem; margin: 0 0 1.4rem;
+    @media (max-width: 840px) {
+      .build {
+        grid-template-columns: 1fr;
+      }
     }
-    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
-
-    ol.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
-    ol.steps > li { position: relative; padding: 1.5rem 0 1.5rem 4.2rem; border-bottom: 1px solid var(--hairline); }
-    ol.steps > li:last-child { border-bottom: none; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 1.4rem;
+    }
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--hairline);
+    }
+    ol.steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: step;
+    }
+    ol.steps > li {
+      position: relative;
+      padding: 1.5rem 0 1.5rem 4.2rem;
+      border-bottom: 1px solid var(--hairline);
+    }
+    ol.steps > li:last-child {
+      border-bottom: none;
+    }
     ol.steps > li::before {
-      counter-increment: step; content: counter(step,decimal-leading-zero);
-      position: absolute; left: 0; top: 1.55rem;
-      font-family: var(--font-mono); font-size: .78rem; letter-spacing: .04em; color: var(--champagne);
+      counter-increment: step;
+      content: counter(step,decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 1.55rem;
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      letter-spacing: .04em;
+      color: var(--champagne);
     }
     ol.steps h4 {
-      font-family: var(--font-serif); font-weight: 400; font-style: italic;
-      font-size: 1.55rem; line-height: 1.1; margin: 0 0 .4rem; letter-spacing: -.01em;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      margin: 0 0 .4rem;
+      letter-spacing: -.01em;
     }
-    ol.steps p { margin: 0; color: var(--stone); font-size: .96rem; line-height: 1.66; }
+    ol.steps p {
+      margin: 0;
+      color: var(--stone);
+      font-size: .96rem;
+      line-height: 1.66;
+    }
     /* uniform step photos; multiple photos span horizontally side-by-side */
     ol.steps .step-media {
-      display: flex; flex-wrap: nowrap; gap: .8rem; margin-top: 1rem;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: .8rem;
+      margin-top: 1rem;
     }
     ol.steps .step-media img {
-      flex: 1 1 0; width: 0; height: 220px;
-      object-fit: cover; border-radius: 12px; display: block;
+      flex: 1 1 0;
+      width: 0;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
     }
     @media (max-width: 560px) {
-      ol.steps .step-media { flex-wrap: wrap; }
-      ol.steps .step-media img { flex-basis: 100%; width: 100%; height: 200px; }
+      ol.steps .step-media {
+        flex-wrap: wrap;
+      }
+      ol.steps .step-media img {
+        flex-basis: 100%;
+        width: 100%;
+        height: 200px;
+      }
     }
     /* full-size, uncropped image (natural aspect ratio) */
     ol.steps .step-media--full img {
-      flex: 1 1 auto; width: 100%; height: auto; object-fit: contain;
+      flex: 1 1 auto;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
     ol.steps .opt {
-      font-family: var(--font-mono); font-size: .56rem; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--oxblood);
-      border: 1px solid var(--champagne-soft); border-radius: 999px;
-      padding: .15rem .55rem; margin-left: .6rem; vertical-align: middle;
+      font-family: var(--font-mono);
+      font-size: .56rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      border: 1px solid var(--champagne-soft);
+      border-radius: 999px;
+      padding: .15rem .55rem;
+      margin-left: .6rem;
+      vertical-align: middle;
       background: rgba(201,173,116,.12);
     }
-
-    .rail { position: sticky; top: 1.5rem; align-self: start; display: flex; flex-direction: column; gap: 1.4rem; }
+    .rail {
+      position: sticky;
+      top: 1.5rem;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
     .kit-card {
-      position: relative; background: rgba(255,250,244,.55);
-      border: 1px solid var(--hairline); border-radius: 22px;
-      padding: clamp(1.4rem,3vw,1.9rem); box-shadow: var(--shadow-soft); overflow: hidden;
+      position: relative;
+      background: rgba(255,250,244,.55);
+      border: 1px solid var(--hairline);
+      border-radius: 22px;
+      padding: clamp(1.4rem,3vw,1.9rem);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
     }
     .kit-card h5 {
-      font-family: var(--font-mono); font-size: .62rem; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--oxblood); margin: 0 0 1rem;
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      margin: 0 0 1rem;
     }
-    .kit-list { list-style: none; margin: 0; padding: 0; }
+    .kit-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
     .kit-list li {
-      display: flex; justify-content: space-between; align-items: baseline; gap: .8rem;
-      padding: .55rem 0; border-bottom: 1px solid var(--hairline); font-size: .9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .8rem;
+      padding: .55rem 0;
+      border-bottom: 1px solid var(--hairline);
+      font-size: .9rem;
     }
-    .kit-list li:last-child { border-bottom: none; }
-    .kit-list .nm { font-family: var(--font-serif); font-style: italic; font-size: 1.06rem; }
+    .kit-list li:last-child {
+      border-bottom: none;
+    }
+    .kit-list .nm {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.06rem;
+    }
     .kit-list a {
-      font-family: var(--font-mono); font-size: .55rem; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--oxblood); white-space: nowrap; transition: color .3s var(--ease);
+      font-family: var(--font-mono);
+      font-size: .55rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      white-space: nowrap;
+      transition: color .3s var(--ease);
     }
-    .kit-list a::after { content: " ↗"; }
-    .kit-list a:hover { color: var(--rose-dust); }
+    .kit-list a::after {
+      content: " ↗";
+    }
+    .kit-list a:hover {
+      color: var(--rose-dust);
+    }
     .kit-list .onhand {
-      font-family: var(--font-mono); font-size: .55rem; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--stone);
+      font-family: var(--font-mono);
+      font-size: .55rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--stone);
     }
-
     /* measure / cost section: matches the microneedling page so nothing spills the border */
-    .measure{width:min(1180px,calc(100% - 2rem));margin:clamp(3rem,6vw,5rem) auto 0;
-      background:var(--ink);color:var(--paper);border-radius:24px;padding:clamp(2rem,5vw,3.5rem);}
-    .measure .section__eyebrow{color:var(--champagne);}
-    .measure .section__title{color:var(--paper);font-size:clamp(2rem,4.5vw,3.2rem);}
-    .measure .section__title em{color:var(--champagne);}
-    .measure__lede{color:rgba(255,250,244,.82);max-width:62ch;line-height:1.7;}
-    .measure__quote{font-family:var(--font-serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:rgba(255,250,244,.92);border-left:2px solid var(--champagne);padding-left:1.2rem;margin:1.8rem 0;}
-    .measure__inner{display:grid;gap:2rem;}
-    .measure__actions{margin-top:1rem;}
-    .measure__link{color:var(--champagne);text-decoration:none;font-family:var(--font-serif);font-variant:small-caps;letter-spacing:.05em;font-size:1.1rem;}
-    .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);margin-top:2.5rem;}
-    @media(max-width:760px){.cost-grid{grid-template-columns:1fr;}}
-    .cost-col{background:rgba(255,250,244,.04);border:1px solid rgba(255,250,244,.12);border-radius:16px;padding:1.5rem;}
-    .cost-col__head{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,250,244,.14);}
-    .cost-col__title{margin:0;font-family:var(--font-serif);font-weight:400;font-size:1.6rem;}
-    .cost-col__total{white-space:nowrap;}
-    .cost-col__total-num{font-family:var(--font-serif);font-size:2rem;color:var(--champagne);}
-    .cost-col__total-unit{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,250,244,.6);}
-    .cost-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:.82rem;color:rgba(255,250,244,.8);margin-top:.9rem;}
-    .cost-row__label{font-family:var(--font-serif);font-style:italic;font-size:1rem;color:rgba(255,250,244,.9);}
-    .cost-row__val{font-family:var(--font-mono);font-size:.7rem;color:rgba(255,250,244,.6);white-space:nowrap;}
-    .cost-bar{height:5px;border-radius:999px;background:rgba(255,250,244,.08);margin-top:.4rem;overflow:hidden;}
-    .cost-bar__fill{height:100%;border-radius:999px;}
-    .cost-foot{display:flex;justify-content:space-between;gap:1rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid rgba(255,250,244,.14);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,250,244,.7);}
-    .cost-foot__val--gold{color:var(--champagne);}
-    .cost-foot__val--rose{color:var(--rose);}
+    .measure {
+      width: min(1180px,calc(100% - 2rem));
+      margin: clamp(3rem,6vw,5rem) auto 0;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 24px;
+      padding: clamp(2rem,5vw,3.5rem);
+    }
+    .measure .section__eyebrow {
+      color: var(--champagne);
+    }
+    .measure .section__title {
+      color: var(--paper);
+      font-size: clamp(2rem,4.5vw,3.2rem);
+    }
+    .measure .section__title em {
+      color: var(--champagne);
+    }
+    .measure__lede {
+      color: rgba(255,250,244,.82);
+      max-width: 62ch;
+      line-height: 1.7;
+    }
+    .measure__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: rgba(255,250,244,.92);
+      border-left: 2px solid var(--champagne);
+      padding-left: 1.2rem;
+      margin: 1.8rem 0;
+    }
+    .measure__inner {
+      display: grid;
+      gap: 2rem;
+    }
+    .measure__actions {
+      margin-top: 1rem;
+    }
+    .measure__link {
+      color: var(--champagne);
+      text-decoration: none;
+      font-family: var(--font-serif);
+      font-variant: small-caps;
+      letter-spacing: .05em;
+      font-size: 1.1rem;
+    }
+    .cost-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem,3vw,2.5rem);
+      margin-top: 2.5rem;
+    }
+    @media(max-width:760px) {
+      .cost-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cost-col {
+      background: rgba(255,250,244,.04);
+      border: 1px solid rgba(255,250,244,.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .cost-col__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .8rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,250,244,.14);
+    }
+    .cost-col__title {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+    .cost-col__total {
+      white-space: nowrap;
+    }
+    .cost-col__total-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--champagne);
+    }
+    .cost-col__total-unit {
+      font-family: var(--font-mono);
+      font-size: .6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,250,244,.6);
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: .82rem;
+      color: rgba(255,250,244,.8);
+      margin-top: .9rem;
+    }
+    .cost-row__label {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,250,244,.9);
+    }
+    .cost-row__val {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      color: rgba(255,250,244,.6);
+      white-space: nowrap;
+    }
+    .cost-bar {
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255,250,244,.08);
+      margin-top: .4rem;
+      overflow: hidden;
+    }
+    .cost-bar__fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .cost-foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,250,244,.14);
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,250,244,.7);
+    }
+    .cost-foot__val--gold {
+      color: var(--champagne);
+    }
+    .cost-foot__val--rose {
+      color: var(--rose);
+    }
   </style>
 </head>
 <body>
@@ -264,7 +506,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../home-lifestyle/index.html">
-          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.jpg" alt="" /></div>
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">

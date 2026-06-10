@@ -1,696 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bookings</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
-<style>
-  
-  /* ─────────────────────────────────────────────────────────
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
+  <style>
+    /* ─────────────────────────────────────────────────────────
      BOOKING page-specific styles
      Inherits tokens (--ivory, --oxblood, --rose-dust, --champagne,
      --walnut, --ink, --hairline, --font-serif, --font-mono…) from style.css
      ───────────────────────────────────────────────────────── */
-
-  .booking-wrap { width: min(1280px, calc(100% - 2rem)); margin: 0 auto; }
-
-  /* ─── Hero ─── */
-  .booking-hero {
-    padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: clamp(1.5rem, 4vw, 3.5rem);
-    align-items: end;
-  }
-  .booking-hero .kicker {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--oxblood);
-    margin-bottom: 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .booking-hero .kicker::before {
-    content: ""; width: 38px; height: 1px; background: currentColor; opacity: 0.55;
-  }
-  .booking-hero h1 {
-    margin: 0;
-    font-family: var(--font-serif);
-    font-size: clamp(2.6rem, 6vw, 4.8rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
-    font-weight: 400;
-    color: var(--ink);
-  }
-  .booking-hero h1 em { font-style: italic; color: var(--rose-dust); }
-  .booking-hero .hero-right p {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: clamp(1rem, 1.6vw, 1.18rem);
-    color: var(--stone);
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* ─── TFP block ─── */
-  .tfp-block {
-    margin: 1.5rem 0 0;
-    padding: 1.6rem 1.9rem;
-    background: linear-gradient(135deg, rgba(214,170,163,0.18), rgba(201,173,116,0.12));
-    border: 1px solid rgba(201,173,116,0.45);
-    border-radius: 14px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 1.2rem;
-    align-items: center;
-  }
-  .tfp-block .tfp-mark {
-    width: 46px; height: 46px;
-    display: grid; place-items: center;
-    background: var(--ink);
-    color: var(--champagne);
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.5rem;
-    border-radius: 50%;
-  }
-  .tfp-block .tfp-copy { min-width: 0; }
-  .tfp-block .tfp-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--oxblood);
-    display: block;
-    margin-bottom: 0.3rem;
-  }
-  .tfp-block .tfp-line {
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
-    color: var(--ink);
-    line-height: 1.5;
-  }
-  .tfp-block .tfp-line em { font-style: italic; color: var(--rose-dust); }
-  .tfp-block .dm-btn {
-    display: inline-flex; align-items: center; gap: 0.55rem;
-    padding: 0.7rem 1.2rem;
-    border-radius: 999px;
-    background: var(--ink);
-    color: var(--paper);
-    font-family: var(--font-serif);
-    font-variant: small-caps;
-    font-size: 0.95rem;
-    letter-spacing: 0.06em;
-    border: 1px solid var(--ink);
-    transition: transform .35s var(--ease), background .35s var(--ease);
-    text-decoration: none;
-  }
-  .tfp-block .dm-btn:hover { background: var(--oxblood); border-color: var(--oxblood); transform: translateY(-1px); }
-  .tfp-block .dm-btn .arrow { font-style: italic; transition: transform .3s var(--ease); }
-  .tfp-block .dm-btn:hover .arrow { transform: translateX(3px); }
-  .tfp-block .tfp-fineprint {
-    margin-top: 0.55rem;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ash);
-  }
-
-  /* ─── Section heading utility ─── */
-  .booking-section { padding: clamp(2.2rem, 4vw, 3.6rem) 0; }
-  .booking-section-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1.5rem;
-    margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
-  }
-  .booking-section-head h2 {
-    margin: 0;
-    font-family: var(--font-serif);
-    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    font-weight: 400;
-    color: var(--ink);
-  }
-  .booking-section-head h2 em { font-style: italic; color: var(--rose-dust); }
-  .booking-section-head .note {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ash);
-    max-width: 320px;
-    text-align: right;
-    line-height: 1.7;
-  }
-
-  .hairline {
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--hairline), transparent);
-    margin: 0;
-  }
-
-  /* ─── Session tiers ─── */
-  .tiers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .tier-card {
-    background: var(--paper);
-    padding: clamp(1.6rem, 2.4vw, 2.2rem);
-    position: relative;
-    cursor: pointer;
-    transition: background .45s var(--ease-out);
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-  .tier-card:hover { background: #fffdf9; }
-  .tier-card.selected { background: linear-gradient(180deg, rgba(214,170,163,0.18), rgba(201,173,116,0.08)); }
-  .tier-card.selected::before {
-    content: ""; position: absolute; top: 0; left: 0;
-    width: 3px; height: 100%; background: var(--oxblood);
-  }
-  .tier-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.58rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--oxblood);
-  }
-  .tier-name {
-    font-family: var(--font-serif);
-    font-size: 1.55rem;
-    line-height: 1.1;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .tier-name em { font-style: italic; color: var(--rose-dust); }
-  .tier-desc {
-    font-size: 0.85rem;
-    color: var(--stone);
-    line-height: 1.65;
-  }
-  .tier-price {
-    margin-top: auto;
-    padding-top: 0.9rem;
-    border-top: 1px solid var(--hairline);
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .tier-price .from {
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ash);
-  }
-  .tier-price .amount {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 2rem;
-    line-height: 1;
-    color: var(--ink);
-  }
-  .tier-price .per {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ash);
-  }
-  .tier-flag {
-    position: absolute;
-    top: 1.1rem; right: 1.1rem;
-    font-family: var(--font-mono);
-    font-size: 0.5rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.55rem;
-    border-radius: 2px;
-  }
-  .tier-flag.cheap { background: rgba(201,173,116,0.22); color: var(--walnut-2); }
-  .tier-flag.premium { background: var(--ink); color: var(--champagne); }
-
-  /* ─── Calendar ─── */
-  .calendar-legend {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .legend-item {
-    display: flex; align-items: center; gap: 0.45rem;
-    font-family: var(--font-mono);
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ash);
-  }
-  .legend-dot { width: 9px; height: 9px; border-radius: 2px; }
-  .legend-dot.peak { background: var(--oxblood); }
-  .legend-dot.standard { background: var(--rose-dust); }
-  .legend-dot.off-peak { background: var(--champagne); }
-  .legend-dot.unavailable { background: var(--mauve); }
-
-  .calendar-wrapper {
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-  }
-  .calendar-nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 1.8rem;
-    border-bottom: 1px solid var(--hairline);
-    background: rgba(255,250,244,0.7);
-  }
-  .calendar-nav .month-name {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .calendar-nav .month-name span { color: var(--ash); font-style: italic; margin-left: 0.4rem; }
-  .calendar-nav .season-tag {
-    margin-left: 0.7rem;
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 0.25rem 0.55rem;
-    border-radius: 2px;
-    vertical-align: middle;
-  }
-  .cal-nav-btn {
-    width: 36px; height: 36px;
-    border: 1px solid var(--hairline);
-    background: rgba(255,255,255,0.7);
-    cursor: pointer;
-    display: grid; place-items: center;
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
-    color: var(--ink);
-    border-radius: 50%;
-    transition: all .3s var(--ease);
-  }
-  .cal-nav-btn:hover { border-color: var(--oxblood); color: var(--oxblood); }
-  .cal-nav-btns { display: flex; gap: 0.5rem; }
-
-  .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
-  .cal-weekday {
-    padding: 0.9rem 0.5rem;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ash);
-    border-bottom: 1px solid var(--hairline);
-    background: rgba(239,231,221,0.4);
-  }
-  .cal-day {
-    aspect-ratio: 1.1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.25rem;
-    border-right: 1px solid rgba(33,29,25,0.06);
-    border-bottom: 1px solid rgba(33,29,25,0.06);
-    cursor: pointer;
-    transition: background .3s var(--ease-out);
-    position: relative;
-  }
-  .cal-day:nth-child(7n) { border-right: none; }
-  .cal-day .day-num {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    color: var(--ink);
-    line-height: 1;
-  }
-  .cal-day .day-price {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.04em;
-    color: var(--stone);
-  }
-  .cal-day .day-tag {
-    font-family: var(--font-mono);
-    font-size: 0.42rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 0.15rem 0.4rem;
-    border-radius: 1px;
-  }
-  .cal-day.empty { cursor: default; }
-
-  .cal-day.peak .day-tag { background: rgba(122,62,54,0.12); color: var(--oxblood); }
-  .cal-day.peak:hover { background: rgba(122,62,54,0.06); }
-
-  .cal-day.standard .day-tag { background: rgba(201,130,125,0.18); color: var(--rose-dust); }
-  .cal-day.standard:hover { background: rgba(201,130,125,0.08); }
-
-  .cal-day.off-peak .day-tag { background: rgba(201,173,116,0.22); color: var(--walnut-2); }
-  .cal-day.off-peak:hover { background: rgba(201,173,116,0.1); }
-
-  .cal-day.unavailable {
-    cursor: not-allowed;
-    background: repeating-linear-gradient(45deg, transparent 0 4px, rgba(212,200,192,0.18) 4px 5px);
-    opacity: 0.55;
-  }
-  .cal-day.unavailable .day-num { text-decoration: line-through; color: var(--mauve-2); }
-  .cal-day.unavailable .day-price { color: var(--mauve-2); }
-
-  .cal-day.selected { background: var(--ink) !important; }
-  .cal-day.selected .day-num { color: var(--paper); }
-  .cal-day.selected .day-price { color: var(--champagne); }
-  .cal-day.selected .day-tag { background: rgba(255,250,244,0.16); color: var(--paper); }
-
-  .cal-day.today::after {
-    content: ""; position: absolute; bottom: 6px;
-    width: 5px; height: 5px; background: var(--rose-dust); border-radius: 50%;
-  }
-  .cal-day.weekend .day-num { color: var(--oxblood); }
-  .cal-day.weekend.selected .day-num { color: var(--champagne); }
-
-  .calendar-foot {
-    padding: 1rem 1.8rem;
-    border-top: 1px solid var(--hairline);
-    background: rgba(255,250,244,0.5);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ash);
-  }
-  .calendar-foot strong { color: var(--ink); font-weight: 500; }
-
-  /* ─── Pricing breakdown cards (seasonal) ─── */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.1rem;
-  }
-  .pricing-card {
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: 6px;
-    padding: 1.8rem 2rem;
-  }
-  .pricing-card h3 {
-    margin: 0 0 1.2rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--hairline);
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--oxblood);
-    font-weight: 500;
-  }
-  .price-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(33,29,25,0.06);
-    gap: 1rem;
-  }
-  .price-row:last-child { border-bottom: none; }
-  .price-row .label { font-size: 0.88rem; color: var(--ink-soft); }
-  .price-row .label .qual {
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ash);
-    margin-left: 0.4rem;
-  }
-  .price-row .value {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--ink);
-    white-space: nowrap;
-  }
-  .price-row .value.gold { color: var(--champagne); }
-  .price-row .value.rose { color: var(--rose-dust); }
-  .price-row .value.oxblood { color: var(--oxblood); }
-
-  /* ─── Deposit cards ─── */
-  .deposit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .deposit-card {
-    background: var(--paper);
-    padding: 2rem 1.8rem;
-    text-align: center;
-  }
-  .deposit-card .step-num {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 2.2rem;
-    color: var(--mauve);
-    line-height: 1;
-    margin-bottom: 0.6rem;
-  }
-  .deposit-card h4 {
-    margin: 0 0 0.5rem;
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    color: var(--ink);
-    font-weight: 400;
-  }
-  .deposit-card p {
-    font-size: 0.85rem;
-    color: var(--stone);
-    line-height: 1.7;
-    max-width: 260px;
-    margin: 0 auto;
-  }
-  .deposit-card .highlight {
-    display: inline-block;
-    margin-top: 0.9rem;
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.3rem;
-    color: var(--oxblood);
-  }
-
-  /* ─── Surcharge box (dark) ─── */
-  .upcharge-box {
-    background:
-      radial-gradient(circle at 16% 22%, rgba(255,255,255,0.045), transparent 28rem),
-      radial-gradient(circle at 80% 45%, rgba(201,173,116,0.05), transparent 34rem),
-      linear-gradient(135deg, #24211d 0%, #191816 100%);
-    color: var(--paper);
-    padding: clamp(2.2rem, 4vw, 3.2rem);
-    border-radius: 6px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-  .upcharge-icon {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 3rem;
-    color: var(--champagne);
-    line-height: 1;
-  }
-  .upcharge-content h3 {
-    margin: 0 0 0.7rem;
-    font-family: var(--font-serif);
-    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
-    font-weight: 400;
-    color: var(--paper);
-    letter-spacing: -0.015em;
-  }
-  .upcharge-content h3 em { font-style: italic; color: var(--rose-dust); }
-  .upcharge-content > p {
-    margin: 0 0 1.4rem;
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1rem;
-    color: rgba(255,250,244,0.7);
-    line-height: 1.7;
-    max-width: 620px;
-  }
-  .upcharge-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 2rem;
-  }
-  .upcharge-item {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.7rem 0;
-    border-bottom: 1px solid rgba(255,250,244,0.08);
-    gap: 1rem;
-  }
-  .upcharge-item .reason {
-    color: rgba(255,250,244,0.7);
-    font-size: 0.86rem;
-  }
-  .upcharge-item .fee {
-    font-family: var(--font-serif);
-    font-style: italic;
-    color: var(--champagne);
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  /* ─── Terms ─── */
-  .terms-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .term-block { background: var(--paper); padding: 1.8rem 2rem; }
-  .term-block h4 {
-    margin: 0 0 0.8rem;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--oxblood);
-    font-weight: 500;
-  }
-  .term-block p {
-    margin: 0;
-    font-size: 0.88rem;
-    color: var(--stone);
-    line-height: 1.8;
-  }
-  .term-block p strong { color: var(--ink-soft); font-weight: 500; }
-
-  /* ─── CTA ─── */
-  .booking-cta {
-    background: linear-gradient(180deg, #fffaf4 0%, #f7e3df 55%, #efc9c2 100%);
-    padding: clamp(3.5rem, 6vw, 5.5rem) 1.5rem;
-    text-align: center;
-    border-radius: 6px;
-    border: 1px solid rgba(201,173,116,0.4);
-    margin-top: clamp(2rem, 4vw, 3rem);
-  }
-  .booking-cta h2 {
-    margin: 0 0 1rem;
-    font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
-    font-weight: 400;
-    letter-spacing: -0.025em;
-    color: var(--ink);
-  }
-  .booking-cta h2 em { font-style: italic; color: var(--rose-dust); }
-  .booking-cta p {
-    max-width: 520px;
-    margin: 0 auto 2rem;
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
-  .booking-cta .selection-summary {
-<div class="selection-summary" id="summary">
-  <span><strong>Tier:</strong> <span id="sum-tier">Editorial</span></span>
-  <span><strong>Date:</strong> <span id="sum-date">Select a date</span></span>
-  <span><strong>Hourly:</strong> <span class="total" id="sum-rate">$90</span></span>
-  <span><strong>Total:</strong> <span class="total" id="sum-total">—</span></span>
-  <span><strong>Deposit:</strong> <span class="total" id="sum-deposit">—</span></span>
-</div>
-
-<div class="booking-controls">
-  <label>Start time
-    <select id="sel-time">
-      <option value="">Flexible</option>
-      <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
-      <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
-      <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option>
-    </select>
-  </label>
-  <label>Hours
-    <input type="number" id="sel-hours" min="0.5" max="8" step="0.5" value="2">
-  </label>
-</div>
-  }
-  .booking-cta .selection-summary strong { color: var(--oxblood); font-weight: 500; }
-  .booking-controls {
-    display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
-    margin-bottom: 1.6rem;
-  }
-  .booking-controls label {
-    font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--ash);
-    display: flex; flex-direction: column; gap: 0.35rem; text-align: left;
-  }
-  .booking-controls select, .booking-controls input {
-    font-family: var(--font-serif); font-size: 1rem; padding: 0.5rem 0.7rem;
-    border: 1px solid var(--hairline); border-radius: 6px;
-    background: rgba(255,250,244,0.6); color: var(--ink);
-  }
-  .booking-cta .selection-summary .total {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--ink);
-    letter-spacing: 0;
-    text-transform: none;
-  }
-
-  /* ─── Responsive ─── */
-  @media (max-width: 1024px) {
-    .tiers-grid { grid-template-columns: 1fr 1fr; }
-    .upcharge-list { grid-template-columns: 1fr; }
-    .upcharge-box { grid-template-columns: 1fr; gap: 1.2rem; }
-  }
-  @media (max-width: 780px) {
-    .booking-hero { grid-template-columns: 1fr; }
-    .tfp-block { grid-template-columns: 1fr; text-align: left; }
-    .tfp-block .dm-btn { justify-self: start; }
-    .booking-section-head { flex-direction: column; align-items: flex-start; }
-    .booking-section-head .note { text-align: left; }
-    .tiers-grid { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .deposit-grid { grid-template-columns: 1fr; }
-    .terms-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 560px) {
-    .cal-day .day-tag { display: none; }
-    .cal-day .day-price { font-size: 0.55rem; }
-  }
-</style>
+    .booking-wrap {
+      width: min(1280px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+    /* ─── Hero ─── */
+    .booking-hero {
+      padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: clamp(1.5rem, 4vw, 3.5rem);
+      align-items: end;
+    }
+    .booking-hero .kicker {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      margin-bottom: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .booking-hero .kicker::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.55;
+    }
+    .booking-hero h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .booking-hero h1 em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .booking-hero .hero-right p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+      color: var(--stone);
+      line-height: 1.7;
+      margin: 0;
+    }
+    /* ─── TFP block ─── */
+    .tfp-block {
+      margin: 1.5rem 0 0;
+      padding: 1.6rem 1.9rem;
+      background: linear-gradient(135deg, rgba(214,170,163,0.18), rgba(201,173,116,0.12));
+      border: 1px solid rgba(201,173,116,0.45);
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .tfp-block .tfp-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--champagne);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.5rem;
+      border-radius: 50%;
+    }
+    .tfp-block .tfp-copy {
+      min-width: 0;
+    }
+    .tfp-block .tfp-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .tfp-block .tfp-line {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .tfp-block .tfp-line em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .tfp-block .dm-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--font-serif);
+      font-variant: small-caps;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--ink);
+      transition: transform .35s var(--ease), background .35s var(--ease);
+      text-decoration: none;
+    }
+    .tfp-block .dm-btn:hover {
+      background: var(--oxblood);
+      border-color: var(--oxblood);
+      transform: translateY(-1px);
+    }
+    .tfp-block .dm-btn .arrow {
+      font-style: italic;
+      transition: transform .3s var(--ease);
+    }
+    .tfp-block .dm-btn:hover .arrow {
+      transform: translateX(3px);
+    }
+    .tfp-block .tfp-fineprint {
+      margin-top: 0.55rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    /* ─── Section heading utility ─── */
+    .booking-section {
+      padding: clamp(2.2rem, 4vw, 3.6rem) 0;
+    }
+    .booking-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+    }
+    .booking-section-head h2 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .booking-section-head h2 em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .booking-section-head .note {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ash);
+      max-width: 320px;
+      text-align: right;
+      line-height: 1.7;
+    }
+    .hairline {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--hairline), transparent);
+      margin: 0;
+    }
+    /* ─── Session tiers ─── */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .tier-card {
+      background: var(--paper);
+      padding: clamp(1.6rem, 2.4vw, 2.2rem);
+      position: relative;
+      cursor: pointer;
+      transition: background .45s var(--ease-out);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .tier-card:hover {
+      background: #fffdf9;
+    }
+    .tier-card.selected {
+      background: linear-gradient(180deg, rgba(214,170,163,0.18), rgba(201,173,116,0.08));
+    }
+    .tier-card.selected::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--oxblood);
+    }
+    .tier-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+    }
+    .tier-name {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      line-height: 1.1;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .tier-name em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .tier-desc {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.65;
+    }
+    .tier-price {
+      margin-top: auto;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .tier-price .from {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    .tier-price .amount {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .tier-price .per {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    .tier-flag {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      font-family: var(--font-mono);
+      font-size: 0.5rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.55rem;
+      border-radius: 2px;
+    }
+    .tier-flag.cheap {
+      background: rgba(201,173,116,0.22);
+      color: var(--walnut-2);
+    }
+    .tier-flag.premium {
+      background: var(--ink);
+      color: var(--champagne);
+    }
+    /* ─── Calendar ─── */
+    .calendar-legend {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    .legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+    }
+    .legend-dot.peak {
+      background: var(--oxblood);
+    }
+    .legend-dot.standard {
+      background: var(--rose-dust);
+    }
+    .legend-dot.off-peak {
+      background: var(--champagne);
+    }
+    .legend-dot.unavailable {
+      background: var(--mauve);
+    }
+    .calendar-wrapper {
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .calendar-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.8rem;
+      border-bottom: 1px solid var(--hairline);
+      background: rgba(255,250,244,0.7);
+    }
+    .calendar-nav .month-name {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .calendar-nav .month-name span {
+      color: var(--ash);
+      font-style: italic;
+      margin-left: 0.4rem;
+    }
+    .calendar-nav .season-tag {
+      margin-left: 0.7rem;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.55rem;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+    .cal-nav-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--hairline);
+      background: rgba(255,255,255,0.7);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      border-radius: 50%;
+      transition: all .3s var(--ease);
+    }
+    .cal-nav-btn:hover {
+      border-color: var(--oxblood);
+      color: var(--oxblood);
+    }
+    .cal-nav-btns {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+    .cal-weekday {
+      padding: 0.9rem 0.5rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ash);
+      border-bottom: 1px solid var(--hairline);
+      background: rgba(239,231,221,0.4);
+    }
+    .cal-day {
+      aspect-ratio: 1.1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      border-right: 1px solid rgba(33,29,25,0.06);
+      border-bottom: 1px solid rgba(33,29,25,0.06);
+      cursor: pointer;
+      transition: background .3s var(--ease-out);
+      position: relative;
+    }
+    .cal-day:nth-child(7n) {
+      border-right: none;
+    }
+    .cal-day .day-num {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .cal-day .day-price {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+      color: var(--stone);
+    }
+    .cal-day .day-tag {
+      font-family: var(--font-mono);
+      font-size: 0.42rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 1px;
+    }
+    .cal-day.empty {
+      cursor: default;
+    }
+    .cal-day.peak .day-tag {
+      background: rgba(122,62,54,0.12);
+      color: var(--oxblood);
+    }
+    .cal-day.peak:hover {
+      background: rgba(122,62,54,0.06);
+    }
+    .cal-day.standard .day-tag {
+      background: rgba(201,130,125,0.18);
+      color: var(--rose-dust);
+    }
+    .cal-day.standard:hover {
+      background: rgba(201,130,125,0.08);
+    }
+    .cal-day.off-peak .day-tag {
+      background: rgba(201,173,116,0.22);
+      color: var(--walnut-2);
+    }
+    .cal-day.off-peak:hover {
+      background: rgba(201,173,116,0.1);
+    }
+    .cal-day.unavailable {
+      cursor: not-allowed;
+      background: repeating-linear-gradient(45deg, transparent 0 4px, rgba(212,200,192,0.18) 4px 5px);
+      opacity: 0.55;
+    }
+    .cal-day.unavailable .day-num {
+      text-decoration: line-through;
+      color: var(--mauve-2);
+    }
+    .cal-day.unavailable .day-price {
+      color: var(--mauve-2);
+    }
+    .cal-day.selected {
+      background: var(--ink) !important;
+    }
+    .cal-day.selected .day-num {
+      color: var(--paper);
+    }
+    .cal-day.selected .day-price {
+      color: var(--champagne);
+    }
+    .cal-day.selected .day-tag {
+      background: rgba(255,250,244,0.16);
+      color: var(--paper);
+    }
+    .cal-day.today::after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      width: 5px;
+      height: 5px;
+      background: var(--rose-dust);
+      border-radius: 50%;
+    }
+    .cal-day.weekend .day-num {
+      color: var(--oxblood);
+    }
+    .cal-day.weekend.selected .day-num {
+      color: var(--champagne);
+    }
+    .calendar-foot {
+      padding: 1rem 1.8rem;
+      border-top: 1px solid var(--hairline);
+      background: rgba(255,250,244,0.5);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+    .calendar-foot strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+    /* ─── Pricing breakdown cards (seasonal) ─── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+    .pricing-card {
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      padding: 1.8rem 2rem;
+    }
+    .pricing-card h3 {
+      margin: 0 0 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--hairline);
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      font-weight: 500;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(33,29,25,0.06);
+      gap: 1rem;
+    }
+    .price-row:last-child {
+      border-bottom: none;
+    }
+    .price-row .label {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+    }
+    .price-row .label .qual {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-left: 0.4rem;
+    }
+    .price-row .value {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .price-row .value.gold {
+      color: var(--champagne);
+    }
+    .price-row .value.rose {
+      color: var(--rose-dust);
+    }
+    .price-row .value.oxblood {
+      color: var(--oxblood);
+    }
+    /* ─── Deposit cards ─── */
+    .deposit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .deposit-card {
+      background: var(--paper);
+      padding: 2rem 1.8rem;
+      text-align: center;
+    }
+    .deposit-card .step-num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 2.2rem;
+      color: var(--mauve);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .deposit-card h4 {
+      margin: 0 0 0.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+    .deposit-card p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.7;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    .deposit-card .highlight {
+      display: inline-block;
+      margin-top: 0.9rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--oxblood);
+    }
+    /* ─── Surcharge box (dark) ─── */
+    .upcharge-box {
+      background: radial-gradient(circle at 16% 22%, rgba(255,255,255,0.045), transparent 28rem), radial-gradient(circle at 80% 45%, rgba(201,173,116,0.05), transparent 34rem), linear-gradient(135deg, #24211d 0%, #191816 100%);
+      color: var(--paper);
+      padding: clamp(2.2rem, 4vw, 3.2rem);
+      border-radius: 6px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .upcharge-icon {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 3rem;
+      color: var(--champagne);
+      line-height: 1;
+    }
+    .upcharge-content h3 {
+      margin: 0 0 0.7rem;
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      font-weight: 400;
+      color: var(--paper);
+      letter-spacing: -0.015em;
+    }
+    .upcharge-content h3 em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .upcharge-content > p {
+      margin: 0 0 1.4rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,250,244,0.7);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+    .upcharge-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2rem;
+    }
+    .upcharge-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(255,250,244,0.08);
+      gap: 1rem;
+    }
+    .upcharge-item .reason {
+      color: rgba(255,250,244,0.7);
+      font-size: 0.86rem;
+    }
+    .upcharge-item .fee {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    /* ─── Terms ─── */
+    .terms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .term-block {
+      background: var(--paper);
+      padding: 1.8rem 2rem;
+    }
+    .term-block h4 {
+      margin: 0 0 0.8rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      font-weight: 500;
+    }
+    .term-block p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--stone);
+      line-height: 1.8;
+    }
+    .term-block p strong {
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    /* ─── CTA ─── */
+    .booking-cta {
+      background: linear-gradient(180deg, #fffaf4 0%, #f7e3df 55%, #efc9c2 100%);
+      padding: clamp(3.5rem, 6vw, 5.5rem) 1.5rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid rgba(201,173,116,0.4);
+      margin-top: clamp(2rem, 4vw, 3rem);
+    }
+    .booking-cta h2 {
+      margin: 0 0 1rem;
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+    .booking-cta h2 em {
+      font-style: italic;
+      color: var(--rose-dust);
+    }
+    .booking-cta p {
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+    .booking-cta .selection-summary {
+      <div class="selection-summary" id="summary"> <span><strong>Tier: </strong> <span id="sum-tier">Editorial</span></span> <span><strong>Date: </strong> <span id="sum-date">Select a date</span></span> <span><strong>Hourly: </strong> <span class="total" id="sum-rate">$90</span></span> <span><strong>Total: </strong> <span class="total" id="sum-total">—</span></span> <span><strong>Deposit: </strong> <span class="total" id="sum-deposit">—</span></span> </div> <div class="booking-controls"> <label>Start time <select id="sel-time"> <option value="">Flexible</option> <option>9: 00 AM</option><option>10: 00 AM</option><option>11: 00 AM</option> <option>12: 00 PM</option><option>1: 00 PM</option><option>2: 00 PM</option> <option>3: 00 PM</option><option>4: 00 PM</option><option>5: 00 PM</option> </select> </label> <label>Hours <input type="number" id="sel-hours" min="0.5" max="8" step="0.5" value="2"> </label> </div>;
+    }
+    .booking-cta .selection-summary strong {
+      color: var(--oxblood);
+      font-weight: 500;
+    }
+    .booking-controls {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+    .booking-controls label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ash);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      text-align: left;
+    }
+    .booking-controls select,
+    .booking-controls input {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      padding: 0.5rem 0.7rem;
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      background: rgba(255,250,244,0.6);
+      color: var(--ink);
+    }
+    .booking-cta .selection-summary .total {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .tiers-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .upcharge-list {
+        grid-template-columns: 1fr;
+      }
+      .upcharge-box {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+    @media (max-width: 780px) {
+      .booking-hero {
+        grid-template-columns: 1fr;
+      }
+      .tfp-block {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .tfp-block .dm-btn {
+        justify-self: start;
+      }
+      .booking-section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .booking-section-head .note {
+        text-align: left;
+      }
+      .tiers-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .deposit-grid {
+        grid-template-columns: 1fr;
+      }
+      .terms-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 560px) {
+      .cal-day .day-tag {
+        display: none;
+      }
+      .cal-day .day-price {
+        font-size: 0.55rem;
+      }
+    }
+  </style>
 </head>
 <body>
 

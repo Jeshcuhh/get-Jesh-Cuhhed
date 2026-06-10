@@ -31,7 +31,6 @@
       --port-body: 'Manrope', 'Inter', sans-serif;
       --port-ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     /* ─── Hero ─── */
     .port-hero {
       min-height: 100vh;
@@ -39,7 +38,6 @@
       grid-template-columns: 1.1fr 0.9fr;
       gap: 0;
     }
-
     .port-hero__image-col {
       position: relative;
       overflow: hidden;
@@ -48,7 +46,6 @@
       display: flex;
       flex-direction: column;
     }
-
     /* Photo fills the space above the band */
     .port-hero__photo-wrap {
       position: relative;
@@ -56,7 +53,6 @@
       min-height: 0;
       overflow: hidden;
     }
-
     .port-hero__img {
       width: 100%;
       height: 100%;
@@ -64,27 +60,23 @@
       object-position: center 20%;
       display: block;
     }
-
     .port-hero__img-placeholder {
       width: 100%;
       height: 100%;
       background: linear-gradient(160deg, #3a3530 0%, #2a2520 40%, #1a1714 100%);
       position: relative;
     }
-
-.port-hero__img-placeholder {
-  position: relative;
-}
-
-.port-hero__img-placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../assets/images/marz-Smile-ball-red-xmas.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
+    .port-hero__img-placeholder {
+      position: relative;
+    }
+    .port-hero__img-placeholder::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("../assets/images/marz-Smile-ball-red-xmas.jpg");
+      background-size: cover;
+      background-position: center;
+    }
     .port-hero__measurements {
       position: absolute;
       bottom: 0;
@@ -101,18 +93,15 @@
       opacity: 0;
       animation: port-fade-up 1s var(--port-ease) 1.5s forwards;
     }
-
     .port-measure {
       text-align: left;
     }
-
     .port-measure__val {
       font-family: var(--port-display);
       font-size: 1.4rem;
       color: #fff;
       line-height: 1.2;
     }
-
     .port-measure__label {
       font-size: 0.55rem;
       font-weight: 500;
@@ -121,7 +110,6 @@
       color: rgba(255,255,255,0.4);
       font-family: var(--port-heading);
     }
-
     .port-hero__text-col {
       display: flex;
       flex-direction: column;
@@ -130,7 +118,6 @@
       position: relative;
       background: var(--ivory, var(--port-bg));
     }
-
     .port-hero__tag {
       font-family: var(--port-heading);
       font-size: 0.6rem;
@@ -142,7 +129,6 @@
       opacity: 0;
       animation: port-fade-up 0.8s var(--port-ease) 0.4s forwards;
     }
-
     .port-hero__name {
       font-family: var(--port-display);
       font-size: clamp(3rem, 5.5vw, 5.5rem);
@@ -152,12 +138,10 @@
       opacity: 0;
       animation: port-fade-up 0.8s var(--port-ease) 0.6s forwards;
     }
-
     .port-hero__name em {
       font-style: italic;
       color: var(--port-accent);
     }
-
     .port-hero__subtitle {
       font-family: var(--port-display);
       font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -167,7 +151,6 @@
       opacity: 0;
       animation: port-fade-up 0.8s var(--port-ease) 0.8s forwards;
     }
-
     .port-hero__bio {
       font-family: var(--port-body);
       font-size: 0.88rem;
@@ -179,7 +162,6 @@
       opacity: 0;
       animation: port-fade-up 0.8s var(--port-ease) 1s forwards;
     }
-
     .port-hero__agencies {
       display: flex;
       gap: 2rem;
@@ -187,7 +169,6 @@
       opacity: 0;
       animation: port-fade-up 0.8s var(--port-ease) 1.2s forwards;
     }
-
     .port-hero__agency-label {
       font-size: 0.58rem;
       font-weight: 500;
@@ -196,13 +177,11 @@
       color: var(--port-light);
       font-family: var(--port-heading);
     }
-
     .port-hero__agency-pills {
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
     }
-
     .port-agency-pill {
       font-family: var(--port-heading);
       font-size: 0.6rem;
@@ -213,12 +192,16 @@
       padding: 0.4rem 1rem;
       border-radius: 2px;
     }
-
     @keyframes port-fade-up {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
     /* ─── Comp Card Bar ─── */
     .port-comp-bar {
       display: grid;
@@ -227,15 +210,14 @@
       border-bottom: 1px solid var(--port-whisper);
       background: var(--ivory, var(--port-bg));
     }
-
     .port-comp-stat {
       padding: 2rem 1.5rem;
       text-align: center;
       border-right: 1px solid var(--port-whisper);
     }
-
-    .port-comp-stat:last-child { border-right: none; }
-
+    .port-comp-stat:last-child {
+      border-right: none;
+    }
     .port-comp-stat__val {
       font-family: var(--port-display);
       font-size: 1.5rem;
@@ -243,7 +225,6 @@
       line-height: 1.2;
       margin-bottom: 0.3rem;
     }
-
     .port-comp-stat__lbl {
       font-size: 0.55rem;
       font-weight: 500;
@@ -252,20 +233,17 @@
       color: var(--port-light);
       font-family: var(--port-heading);
     }
-
     /* ─── Lookbook Grid ─── */
     .port-lookbook {
       padding: 7rem 4vw;
       background: var(--ivory, var(--port-bg));
     }
-
     .port-section-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 4rem;
     }
-
     .port-section-header h2 {
       font-family: var(--port-display);
       font-size: clamp(2rem, 3.5vw, 3.2rem);
@@ -273,12 +251,10 @@
       margin: 0;
       color: var(--port-ink);
     }
-
     .port-section-header h2 em {
       font-style: italic;
       color: var(--port-accent);
     }
-
     .port-section-header .port-sub {
       font-family: var(--port-body);
       font-size: 0.68rem;
@@ -289,59 +265,80 @@
       text-align: right;
       line-height: 1.7;
     }
-
     .port-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       align-items: start;
     }
-
     .port-card {
       position: relative;
       overflow: hidden;
       cursor: pointer;
       background: var(--port-bg-warm);
     }
-
     /* Photo always visible, square tile with a colored backdrop */
     .port-card__photo {
       width: 100%;
-      aspect-ratio: 1 / 1;        /* square, IG-style */
-      object-fit: cover;          /* fill + crop */
+      aspect-ratio: 1 / 1;
+      /* square, IG-style */
+      object-fit: cover;
+      /* fill + crop */
       object-position: center;
       display: block;
       transition: transform 1.2s var(--port-ease), aspect-ratio 0.6s var(--port-ease);
     }
-
     /* The colored gradient backdrop behind each photo */
-    .port-card:nth-child(1) { background: linear-gradient(150deg, #3a3530, #1a1714); }
-    .port-card:nth-child(2) { background: linear-gradient(150deg, #c4bdb4, #9b9189); }
-    .port-card:nth-child(3) { background: linear-gradient(150deg, #2c2824, #141210); }
-    .port-card:nth-child(4) { background: linear-gradient(150deg, #b5afa8, #8a827a); }
-    .port-card:nth-child(5) { background: linear-gradient(150deg, #342f2b, #1e1a16); }
-    .port-card:nth-child(6) { background: linear-gradient(150deg, #d6d1cb, #b5afa8); }
-
+    .port-card:nth-child(1) {
+      background: linear-gradient(150deg, #3a3530, #1a1714);
+    }
+    .port-card:nth-child(2) {
+      background: linear-gradient(150deg, #c4bdb4, #9b9189);
+    }
+    .port-card:nth-child(3) {
+      background: linear-gradient(150deg, #2c2824, #141210);
+    }
+    .port-card:nth-child(4) {
+      background: linear-gradient(150deg, #b5afa8, #8a827a);
+    }
+    .port-card:nth-child(5) {
+      background: linear-gradient(150deg, #342f2b, #1e1a16);
+    }
+    .port-card:nth-child(6) {
+      background: linear-gradient(150deg, #d6d1cb, #b5afa8);
+    }
     /* Per-photo crop focus */
-    .port-card:nth-child(1) .port-card__photo { object-position: center center; }
-    .port-card:nth-child(2) .port-card__photo { object-position: center center; }
-    .port-card:nth-child(3) .port-card__photo { object-position: center top; }
-    .port-card:nth-child(4) .port-card__photo { object-position: center top; }
-    .port-card:nth-child(5) .port-card__photo { object-position: center center; }
-    .port-card:nth-child(6) .port-card__photo { object-position: center top; }
-
+    .port-card:nth-child(1) .port-card__photo {
+      object-position: center center;
+    }
+    .port-card:nth-child(2) .port-card__photo {
+      object-position: center center;
+    }
+    .port-card:nth-child(3) .port-card__photo {
+      object-position: center top;
+    }
+    .port-card:nth-child(4) .port-card__photo {
+      object-position: center top;
+    }
+    .port-card:nth-child(5) .port-card__photo {
+      object-position: center center;
+    }
+    .port-card:nth-child(6) .port-card__photo {
+      object-position: center top;
+    }
     /* On hover: show full uncropped photo + keep the slow zoom */
     .port-card:hover .port-card__photo {
-      object-fit: contain;        /* whole image, no crop — backdrop shows around it */
+      object-fit: contain;
+      /* whole image, no crop — backdrop shows around it */
       aspect-ratio: auto;
       transform: scale(1.04);
     }
-
     /* Single column → 3 stacked rows */
     @media (max-width: 900px) {
-      .port-grid { grid-template-columns: 1fr; }
+      .port-grid {
+        grid-template-columns: 1fr;
+      }
     }
-
     /* ─── Credits ─── */
     .port-credits {
       padding: 6rem 4vw 8rem;
@@ -349,37 +346,34 @@
       color: var(--port-bg);
       position: relative;
     }
-
     .port-credits::before {
       content: '';
       position: absolute;
-      top: -1px; left: 0; right: 0;
+      top: -1px;
+      left: 0;
+      right: 0;
       height: 150px;
       background: linear-gradient(to bottom, var(--ivory, var(--port-bg)), var(--port-ink));
     }
-
     .port-credits .port-section-header h2 {
       color: var(--port-bg);
     }
-
     .port-credits .port-sub {
       color: var(--port-mid);
     }
-
     .port-credits-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 0;
       border: 1px solid rgba(255,255,255,0.08);
     }
-
     .port-credit-cat {
       padding: 2.5rem;
       border-right: 1px solid rgba(255,255,255,0.08);
     }
-
-    .port-credit-cat:last-child { border-right: none; }
-
+    .port-credit-cat:last-child {
+      border-right: none;
+    }
     .port-credit-cat h3 {
       font-family: var(--port-heading);
       font-size: 0.62rem;
@@ -391,7 +385,6 @@
       padding-bottom: 1rem;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
     .port-credit-item {
       display: flex;
       justify-content: space-between;
@@ -399,22 +392,20 @@
       padding: 0.7rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
-
-    .port-credit-item:last-child { border-bottom: none; }
-
+    .port-credit-item:last-child {
+      border-bottom: none;
+    }
     .port-credit-item .port-client {
       font-family: var(--port-display);
       font-size: 1rem;
       color: var(--port-bg);
     }
-
     .port-credit-item .port-year {
       font-size: 0.62rem;
       letter-spacing: 0.12em;
       color: var(--port-mid);
       font-family: var(--port-body);
     }
-
     /* ─── Testimonial ─── */
     .port-testimonial {
       padding: 7rem 4vw;
@@ -426,21 +417,20 @@
       margin: 0 auto;
       background: var(--ivory, var(--port-bg));
     }
-
     .port-test-quote {
       position: relative;
       padding-left: 2rem;
     }
-
     .port-test-quote::before {
       content: '';
       position: absolute;
-      left: 0; top: 0;
-      width: 3px; height: 100%;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
       background: var(--port-accent);
       border-radius: 2px;
     }
-
     .port-test-quote blockquote {
       font-family: var(--port-display);
       font-size: clamp(1.2rem, 2vw, 1.7rem);
@@ -449,7 +439,6 @@
       color: var(--port-ink);
       margin: 0 0 1.5rem;
     }
-
     .port-test-quote .port-attribution {
       font-family: var(--port-body);
       font-size: 0.68rem;
@@ -457,18 +446,15 @@
       letter-spacing: 0.12em;
       color: var(--port-mid);
     }
-
     .port-test-quote .port-attribution strong {
       color: var(--port-ink-soft);
       font-weight: 600;
     }
-
     .port-test-details {
       background: var(--port-bg-warm);
       padding: 3rem;
       position: relative;
     }
-
     .port-test-details h3 {
       font-family: var(--port-heading);
       font-size: 0.6rem;
@@ -478,7 +464,6 @@
       color: var(--port-accent);
       margin: 0 0 1.5rem;
     }
-
     .port-detail-row {
       display: flex;
       justify-content: space-between;
@@ -487,19 +472,17 @@
       font-family: var(--port-body);
       font-size: 0.82rem;
     }
-
-    .port-detail-row:last-child { border-bottom: none; }
-
+    .port-detail-row:last-child {
+      border-bottom: none;
+    }
     .port-detail-row .port-d-label {
       color: var(--port-light);
       font-weight: 400;
     }
-
     .port-detail-row .port-d-value {
       color: var(--port-ink-soft);
       font-weight: 500;
     }
-
     /* ─── Contact ─── */
     .port-contact {
       padding: 6rem 4vw;
@@ -507,7 +490,6 @@
       text-align: center;
       position: relative;
     }
-
     .port-contact::before {
       content: '—';
       display: block;
@@ -516,19 +498,16 @@
       color: var(--port-whisper);
       margin-bottom: 2rem;
     }
-
     .port-contact h2 {
       font-family: var(--port-display);
       font-size: clamp(2rem, 4vw, 3.5rem);
       margin: 0 0 1rem;
       color: var(--port-ink);
     }
-
     .port-contact h2 em {
       font-style: italic;
       color: var(--port-accent);
     }
-
     .port-contact p {
       font-family: var(--port-body);
       font-size: 0.85rem;
@@ -537,14 +516,12 @@
       margin: 0 auto 2.5rem;
       line-height: 1.8;
     }
-
     .port-contact-methods {
       display: flex;
       justify-content: center;
       gap: 3rem;
       flex-wrap: wrap;
     }
-
     .port-contact-method {
       text-decoration: none;
       display: flex;
@@ -553,11 +530,12 @@
       gap: 0.6rem;
       transition: transform 0.4s var(--port-ease);
     }
-
-    .port-contact-method:hover { transform: translateY(-3px); }
-
+    .port-contact-method:hover {
+      transform: translateY(-3px);
+    }
     .port-method-icon {
-      width: 48px; height: 48px;
+      width: 48px;
+      height: 48px;
       border: 1px solid var(--port-whisper);
       display: flex;
       align-items: center;
@@ -568,12 +546,10 @@
       color: var(--port-accent);
       transition: border-color 0.4s, background 0.4s;
     }
-
     .port-contact-method:hover .port-method-icon {
       border-color: var(--port-accent);
       background: var(--port-accent-soft);
     }
-
     .port-method-label {
       font-family: var(--port-heading);
       font-size: 0.6rem;
@@ -582,35 +558,68 @@
       text-transform: uppercase;
       color: var(--port-mid);
     }
-
     /* ─── Responsive ─── */
     @media (max-width: 900px) {
-      .port-hero { grid-template-columns: 1fr; }
-      .port-hero__image-col { min-height: 60vh; }
-      .port-hero__text-col { padding: 4rem 6vw; }
-      .port-comp-bar { grid-template-columns: repeat(3, 1fr); }
-      .port-comp-stat:nth-child(3) { border-right: none; }
-      .port-credits-grid { grid-template-columns: 1fr; }
-      .port-credit-cat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
-      .port-credit-cat:last-child { border-bottom: none; }
-      .port-testimonial { grid-template-columns: 1fr; }
-      .port-hero__agencies { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+      .port-hero {
+        grid-template-columns: 1fr;
+      }
+      .port-hero__image-col {
+        min-height: 60vh;
+      }
+      .port-hero__text-col {
+        padding: 4rem 6vw;
+      }
+      .port-comp-bar {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .port-comp-stat:nth-child(3) {
+        border-right: none;
+      }
+      .port-credits-grid {
+        grid-template-columns: 1fr;
+      }
+      .port-credit-cat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .port-credit-cat:last-child {
+        border-bottom: none;
+      }
+      .port-testimonial {
+        grid-template-columns: 1fr;
+      }
+      .port-hero__agencies {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
     }
-
     @media (max-width: 600px) {
-      .port-comp-bar { grid-template-columns: repeat(2, 1fr); }
-      .port-hero__measurements { gap: 1.5rem; }
-      .port-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      .port-section-header .port-sub { text-align: left; }
+      .port-comp-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .port-hero__measurements {
+        gap: 1.5rem;
+      }
+      .port-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .port-section-header .port-sub {
+        text-align: left;
+      }
     }
-
     /* ─── Reveal animation for portfolio sections ─── */
     .port-reveal {
       opacity: 0;
       transform: translateY(35px);
       transition: opacity 0.9s var(--port-ease), transform 0.9s var(--port-ease);
     }
-    .port-reveal.vis { opacity: 1; transform: translateY(0); }
+    .port-reveal.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>

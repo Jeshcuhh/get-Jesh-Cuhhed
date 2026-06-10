@@ -56,7 +56,6 @@
       font-size: .82rem;
       color: var(--stone);
     }
-
     .stonks-controls {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -106,17 +105,23 @@
       outline: none;
     }
     .input-wrap input[type="number"]::-webkit-inner-spin-button,
-    .input-wrap input[type="number"]::-webkit-outer-spin-button { opacity: .35; }
-
+    .input-wrap input[type="number"]::-webkit-outer-spin-button {
+      opacity: .35;
+    }
     .preset-row {
       display: flex;
       flex-wrap: wrap;
       gap: .55rem;
       grid-column: 1 / -1;
     }
-    .preset-row .btn { cursor: pointer; }
-    .preset-row .btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-
+    .preset-row .btn {
+      cursor: pointer;
+    }
+    .preset-row .btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
     .warning {
       display: none;
       margin: -0.75rem 0 1.25rem;
@@ -128,8 +133,9 @@
       font-size: .9rem;
       line-height: 1.6;
     }
-    .warning.show { display: block; }
-
+    .warning.show {
+      display: block;
+    }
     .stonks-charts {
       display: grid;
       grid-template-columns: 1fr;
@@ -160,7 +166,10 @@
       letter-spacing: -0.01em;
       margin: .35rem 0 0;
     }
-    .panel__title em { color: var(--rose-dust); font-style: normal; }
+    .panel__title em {
+      color: var(--rose-dust);
+      font-style: normal;
+    }
     .panel__note {
       max-width: 420px;
       color: var(--stone);
@@ -175,25 +184,85 @@
       color: var(--oxblood);
       margin: 0;
     }
-
-    .chart-wrap { position: relative; width: 100%; min-height: 420px; }
-    svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
-    .grid-label, .chart-label { font-family: var(--font-mono); fill: var(--ash); font-size: 12px; letter-spacing: .08em; }
-    .axis-line, .grid-line { stroke: var(--hairline); stroke-width: 1; shape-rendering: crispEdges; }
-    .bar { transition: opacity .3s var(--ease), filter .3s var(--ease); cursor: pointer; }
-    .bar:hover, .bar:focus { opacity: .92; filter: drop-shadow(0 12px 16px rgba(54, 40, 30, .14)); outline: none; }
-    .line { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .dot { cursor: pointer; transition: r .25s var(--ease); }
-    .dot:hover, .dot:focus { r: 7; outline: none; }
-
-    .legend { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-top: 1rem; color: var(--stone); font-size: .85rem; }
-    .legend__item { display: inline-flex; align-items: center; gap: .5rem; }
-    .legend__swatch { width: 18px; height: 10px; border-radius: 999px; background: var(--ink); }
-    .legend__swatch--taupe { background: var(--mauve-2); }
-    .legend__swatch--coral { background: var(--rose-dust); }
-    .legend__swatch--ink { background: var(--ink); }
-    .legend__swatch--champagne { background: var(--champagne); }
-
+    .chart-wrap {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+    }
+    svg.chart {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    .grid-label,
+    .chart-label {
+      font-family: var(--font-mono);
+      fill: var(--ash);
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+    .axis-line,
+    .grid-line {
+      stroke: var(--hairline);
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+    }
+    .bar {
+      transition: opacity .3s var(--ease), filter .3s var(--ease);
+      cursor: pointer;
+    }
+    .bar:hover,
+    .bar:focus {
+      opacity: .92;
+      filter: drop-shadow(0 12px 16px rgba(54, 40, 30, .14));
+      outline: none;
+    }
+    .line {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .dot {
+      cursor: pointer;
+      transition: r .25s var(--ease);
+    }
+    .dot:hover,
+    .dot:focus {
+      r: 7;
+      outline: none;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.4rem;
+      margin-top: 1rem;
+      color: var(--stone);
+      font-size: .85rem;
+    }
+    .legend__item {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .legend__swatch {
+      width: 18px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--ink);
+    }
+    .legend__swatch--taupe {
+      background: var(--mauve-2);
+    }
+    .legend__swatch--coral {
+      background: var(--rose-dust);
+    }
+    .legend__swatch--ink {
+      background: var(--ink);
+    }
+    .legend__swatch--champagne {
+      background: var(--champagne);
+    }
     .stonks-assumptions {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -223,9 +292,20 @@
       color: var(--stone);
       font-size: .92rem;
     }
-    .assumption-list li { display: grid; grid-template-columns: 8px 1fr; gap: .75rem; align-items: start; }
-    .assumption-list li::before { content: ""; width: 4px; height: 4px; margin-top: .6rem; border-radius: 50%; background: var(--rose-dust); }
-
+    .assumption-list li {
+      display: grid;
+      grid-template-columns: 8px 1fr;
+      gap: .75rem;
+      align-items: start;
+    }
+    .assumption-list li::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      margin-top: .6rem;
+      border-radius: 50%;
+      background: var(--rose-dust);
+    }
     .tooltip {
       position: fixed;
       z-index: 1000;
@@ -242,19 +322,51 @@
       box-shadow: var(--shadow);
       transition: opacity .2s var(--ease), transform .2s var(--ease);
     }
-    .tooltip.show { opacity: 1; transform: translate(-50%, calc(-100% - 10px)); }
-    .tooltip__title { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255, 250, 244, .72); margin-bottom: .35rem; }
-    .tooltip__value { font-family: var(--font-serif); font-size: 1.8rem; line-height: 1.05; color: var(--paper); }
-    .tooltip__body { margin-top: .45rem; color: rgba(255, 250, 244, .78); font-size: .82rem; line-height: 1.5; }
-
+    .tooltip.show {
+      opacity: 1;
+      transform: translate(-50%, calc(-100% - 10px));
+    }
+    .tooltip__title {
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255, 250, 244, .72);
+      margin-bottom: .35rem;
+    }
+    .tooltip__value {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      line-height: 1.05;
+      color: var(--paper);
+    }
+    .tooltip__body {
+      margin-top: .45rem;
+      color: rgba(255, 250, 244, .78);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
     @media (max-width: 1000px) {
-      .stonks-assumptions { grid-template-columns: 1fr; }
-      .stonks-kpis, .stonks-controls { grid-template-columns: repeat(2, 1fr); }
-      .panel__head { flex-direction: column; align-items: start; }
+      .stonks-assumptions {
+        grid-template-columns: 1fr;
+      }
+      .stonks-kpis,
+      .stonks-controls {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .panel__head {
+        flex-direction: column;
+        align-items: start;
+      }
     }
     @media (max-width: 640px) {
-      .stonks-kpis, .stonks-controls { grid-template-columns: 1fr; }
-      .chart-wrap { min-height: 340px; }
+      .stonks-kpis,
+      .stonks-controls {
+        grid-template-columns: 1fr;
+      }
+      .chart-wrap {
+        min-height: 340px;
+      }
     }
   </style>
 </head>
@@ -368,7 +480,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../home-lifestyle/index.html">
-          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.jpg" alt="" /></div>
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">

@@ -32,34 +32,153 @@
       display: block;
       object-fit: cover;
     }
-
     /* measure / cost section: matches the microneedling page so nothing spills the border */
-    .measure{width:min(1180px,calc(100% - 2rem));margin:clamp(3rem,6vw,5rem) auto 0;
-      background:var(--ink);color:var(--paper);border-radius:24px;padding:clamp(2rem,5vw,3.5rem);}
-    .measure .section__eyebrow{color:var(--champagne);}
-    .measure .section__title{color:var(--paper);font-size:clamp(2rem,4.5vw,3.2rem);}
-    .measure .section__title em{color:var(--champagne);}
-    .measure__lede{color:rgba(255,250,244,.82);max-width:62ch;line-height:1.7;}
-    .measure__quote{font-family:var(--font-serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:rgba(255,250,244,.92);border-left:2px solid var(--champagne);padding-left:1.2rem;margin:1.8rem 0;}
-    .measure__inner{display:grid;gap:2rem;}
-    .measure__actions{margin-top:1rem;}
-    .measure__link{color:var(--champagne);text-decoration:none;font-family:var(--font-serif);font-variant:small-caps;letter-spacing:.05em;font-size:1.1rem;}
-    .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);margin-top:2.5rem;}
-    @media(max-width:760px){.cost-grid{grid-template-columns:1fr;}}
-    .cost-col{background:rgba(255,250,244,.04);border:1px solid rgba(255,250,244,.12);border-radius:16px;padding:1.5rem;}
-    .cost-col__head{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,250,244,.14);}
-    .cost-col__title{margin:0;font-family:var(--font-serif);font-weight:400;font-size:1.6rem;}
-    .cost-col__total{white-space:nowrap;}
-    .cost-col__total-num{font-family:var(--font-serif);font-size:2rem;color:var(--champagne);}
-    .cost-col__total-unit{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,250,244,.6);}
-    .cost-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:.82rem;color:rgba(255,250,244,.8);margin-top:.9rem;}
-    .cost-row__label{font-family:var(--font-serif);font-style:italic;font-size:1rem;color:rgba(255,250,244,.9);}
-    .cost-row__val{font-family:var(--font-mono);font-size:.7rem;color:rgba(255,250,244,.6);white-space:nowrap;}
-    .cost-bar{height:5px;border-radius:999px;background:rgba(255,250,244,.08);margin-top:.4rem;overflow:hidden;}
-    .cost-bar__fill{height:100%;border-radius:999px;}
-    .cost-foot{display:flex;justify-content:space-between;gap:1rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid rgba(255,250,244,.14);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,250,244,.7);}
-    .cost-foot__val--gold{color:var(--champagne);}
-    .cost-foot__val--rose{color:var(--rose);}
+    .measure {
+      width: min(1180px,calc(100% - 2rem));
+      margin: clamp(3rem,6vw,5rem) auto 0;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 24px;
+      padding: clamp(2rem,5vw,3.5rem);
+    }
+    .measure .section__eyebrow {
+      color: var(--champagne);
+    }
+    .measure .section__title {
+      color: var(--paper);
+      font-size: clamp(2rem,4.5vw,3.2rem);
+    }
+    .measure .section__title em {
+      color: var(--champagne);
+    }
+    .measure__lede {
+      color: rgba(255,250,244,.82);
+      max-width: 62ch;
+      line-height: 1.7;
+    }
+    .measure__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: rgba(255,250,244,.92);
+      border-left: 2px solid var(--champagne);
+      padding-left: 1.2rem;
+      margin: 1.8rem 0;
+    }
+    .measure__inner {
+      display: grid;
+      gap: 2rem;
+    }
+    .measure__actions {
+      margin-top: 1rem;
+    }
+    .measure__link {
+      color: var(--champagne);
+      text-decoration: none;
+      font-family: var(--font-serif);
+      font-variant: small-caps;
+      letter-spacing: .05em;
+      font-size: 1.1rem;
+    }
+    .cost-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem,3vw,2.5rem);
+      margin-top: 2.5rem;
+    }
+    @media(max-width:760px) {
+      .cost-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cost-col {
+      background: rgba(255,250,244,.04);
+      border: 1px solid rgba(255,250,244,.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .cost-col__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .8rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,250,244,.14);
+    }
+    .cost-col__title {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+    .cost-col__total {
+      white-space: nowrap;
+    }
+    .cost-col__total-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--champagne);
+    }
+    .cost-col__total-unit {
+      font-family: var(--font-mono);
+      font-size: .6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,250,244,.6);
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: .82rem;
+      color: rgba(255,250,244,.8);
+      margin-top: .9rem;
+    }
+    .cost-row__label {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,250,244,.9);
+    }
+    .cost-row__val {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      color: rgba(255,250,244,.6);
+      white-space: nowrap;
+    }
+    .cost-bar {
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255,250,244,.08);
+      margin-top: .4rem;
+      overflow: hidden;
+    }
+    .cost-bar__fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .cost-foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,250,244,.14);
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,250,244,.7);
+    }
+    .cost-foot__val--gold {
+      color: var(--champagne);
+    }
+    .cost-foot__val--rose {
+      color: var(--rose);
+    }
   </style>
 </head>
 <body>
@@ -172,7 +291,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../home-lifestyle/index.html">
-          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.jpg" alt="" /></div>
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">
@@ -357,7 +476,7 @@
 
 </section>
 
-<!-- ===== WHERE THE DOLLAR GOES ===== -->
+<!-- WHERE THE DOLLAR GOES -->
 <section class="measure reveal" id="dollar">
   <div class="measure__inner">
     <div>

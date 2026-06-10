@@ -24,7 +24,6 @@
       margin: 0 auto;
       padding: 0 0 clamp(3rem, 6vw, 5rem);
     }
-
     .pyramid-stage {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -35,7 +34,6 @@
       border: 1px solid rgba(33, 29, 25, 0.1);
       box-shadow: var(--shadow-soft);
     }
-
     .pyramid-visual {
       position: relative;
       display: flex;
@@ -44,7 +42,6 @@
       justify-content: center;
       padding: 1rem 0;
     }
-
     .pyramid-visual__caption {
       margin-top: 1.25rem;
       font-family: var(--font-mono);
@@ -54,16 +51,20 @@
       color: var(--ash);
       text-align: center;
     }
-    .pyramid-visual__caption span { color: var(--rose-dust); margin: 0 .45rem; }
-
+    .pyramid-visual__caption span {
+      color: var(--rose-dust);
+      margin: 0 .45rem;
+    }
     svg.pyramid {
       width: 100%;
       max-width: 540px;
       height: auto;
       overflow: visible;
     }
-
-    .tier-band { cursor: pointer; transition: opacity .4s var(--ease); }
+    .tier-band {
+      cursor: pointer;
+      transition: opacity .4s var(--ease);
+    }
     .tier-band polygon {
       fill: var(--paper);
       stroke: var(--walnut);
@@ -77,18 +78,28 @@
       font-weight: 500;
       transition: fill .4s var(--ease);
     }
-    .tier-band--foundation polygon { fill: var(--ink); }
-    .tier-band--foundation text { fill: var(--paper); }
-    .tier-band--foundation .pyr-sub { fill: var(--champagne); }
-
-    .pyramid-stage.has-active .tier-band:not(.active) { opacity: 0.32; }
+    .tier-band--foundation polygon {
+      fill: var(--ink);
+    }
+    .tier-band--foundation text {
+      fill: var(--paper);
+    }
+    .tier-band--foundation .pyr-sub {
+      fill: var(--champagne);
+    }
+    .pyramid-stage.has-active .tier-band:not(.active) {
+      opacity: 0.32;
+    }
     .tier-band.active polygon {
       fill: var(--rose-dust);
       stroke: var(--oxblood);
     }
-    .tier-band.active text { fill: var(--paper); }
-    .tier-band--foundation.active polygon { fill: var(--oxblood); }
-
+    .tier-band.active text {
+      fill: var(--paper);
+    }
+    .tier-band--foundation.active polygon {
+      fill: var(--oxblood);
+    }
     .pyr-axis {
       font-family: var(--font-mono);
       font-size: 8px;
@@ -96,8 +107,10 @@
       letter-spacing: 1.5px;
       fill: var(--walnut);
     }
-    .pyr-axis--gold { fill: var(--walnut-2); font-weight: 600; }
-
+    .pyr-axis--gold {
+      fill: var(--walnut-2);
+      font-weight: 600;
+    }
     /* DETAIL PANEL */
     .pyramid-detail {
       display: flex;
@@ -118,8 +131,9 @@
       display: grid;
       transition: opacity .35s var(--ease);
     }
-    .pyramid-detail__inner.fading { opacity: 0; }
-
+    .pyramid-detail__inner.fading {
+      opacity: 0;
+    }
     .pyr-tier-roman {
       font-family: var(--font-serif);
       font-style: italic;
@@ -145,7 +159,10 @@
       margin: 0 0 1.1rem;
       color: var(--ink);
     }
-    .pyr-tier-name em { color: var(--rose-dust); font-style: normal; }
+    .pyr-tier-name em {
+      color: var(--rose-dust);
+      font-style: normal;
+    }
     .pyr-tier-desc {
       color: var(--stone);
       font-style: italic;
@@ -173,7 +190,6 @@
       border-radius: 50%;
       background: var(--rose-dust);
     }
-
     .pyr-nav {
       display: flex;
       gap: .65rem;
@@ -208,14 +224,17 @@
       color: var(--ink);
       border-color: var(--hairline-strong);
     }
-
     @media (max-width: 860px) {
       .pyramid-stage {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
-      .pyramid-detail { min-height: auto; }
-      svg.pyramid { max-width: 380px; }
+      .pyramid-detail {
+        min-height: auto;
+      }
+      svg.pyramid {
+        max-width: 380px;
+      }
     }
   </style>
 </head>
@@ -329,7 +348,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../home-lifestyle/index.html">
-          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.png" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/lov-russian-teapot.jpg" alt="" /></div>
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">

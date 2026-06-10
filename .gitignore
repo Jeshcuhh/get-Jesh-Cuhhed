@@ -9,5 +9,3 @@ node_modules/
 *.mov
 assets/video/how2hairTone.mov
 
-# Local Claude settings (may contain secrets)
-.claude/settings.local.json
