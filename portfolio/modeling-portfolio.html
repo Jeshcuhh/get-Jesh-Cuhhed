@@ -286,28 +286,38 @@
       /* fill + crop */
       object-position: center;
       display: block;
-      transition: transform 1.2s var(--port-ease), aspect-ratio 0.6s var(--port-ease);
+      transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  aspect-ratio 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  object-position 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, aspect-ratio;
+      backface-visibility: hidden;
     }
-    /* The colored gradient backdrop behind each photo */
-    .port-card:nth-child(1) {
+    /* The colored gradient backdrop behind each photo.
+       Uses :nth-child(6n+k) so the 6 tones repeat automatically —
+       every new photo you add keeps getting a backdrop, no extra CSS. */
+    .port-card:nth-child(6n + 1) {
       background: linear-gradient(150deg, #3a3530, #1a1714);
     }
-    .port-card:nth-child(2) {
+    .port-card:nth-child(6n + 2) {
       background: linear-gradient(150deg, #c4bdb4, #9b9189);
     }
-    .port-card:nth-child(3) {
+    .port-card:nth-child(6n + 3) {
       background: linear-gradient(150deg, #2c2824, #141210);
     }
-    .port-card:nth-child(4) {
+    .port-card:nth-child(6n + 4) {
       background: linear-gradient(150deg, #b5afa8, #8a827a);
     }
-    .port-card:nth-child(5) {
+    .port-card:nth-child(6n + 5) {
       background: linear-gradient(150deg, #342f2b, #1e1a16);
     }
-    .port-card:nth-child(6) {
+    .port-card:nth-child(6n + 6) {
       background: linear-gradient(150deg, #d6d1cb, #b5afa8);
     }
-    /* Per-photo crop focus */
+    /* Per-photo crop focus — OPTIONAL overrides.
+       Any card without a rule here just uses the default `center` crop
+       from .port-card__photo above, so new photos work without edits.
+       Add a rule below only when you want a different focal point. */
     .port-card:nth-child(1) .port-card__photo {
       object-position: center center;
     }
@@ -326,12 +336,16 @@
     .port-card:nth-child(6) .port-card__photo {
       object-position: center top;
     }
+    .port-card:nth-child(7) .port-card__photo {
+      object-position: center right;
+    }
     /* On hover: show full uncropped photo + keep the slow zoom */
     .port-card:hover .port-card__photo {
       object-fit: contain;
       /* whole image, no crop — backdrop shows around it */
       aspect-ratio: auto;
       transform: scale(1.04);
+      filter: brightness(1.03);
     }
     /* Single column → 3 stacked rows */
     @media (max-width: 900px) {
@@ -938,26 +952,86 @@
 <section class="port-lookbook" id="portfolio">
   <div class="port-section-header port-reveal">
     <h2>Selected <em>Work</em></h2>
-    <span class="port-sub">A selection of my portraits and lifestyle.</span>
+    <span class="port-sub">A selection of my portraits and lifestyle</span>
   </div>
+  
   <div class="port-grid">
+        <!--alien.1-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life.jpg" alt="Portrait" />
     </div>
-    <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/randy-stripe.JPG" alt="Portrait" />
-    </div>
-    <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed-smile.jpg" alt="Portrait" />
-    </div>
-    <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/shew-Ch*-Wool.jpg" alt="Portrait" />
-    </div>
+    <!--alien.2-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life-white.png" alt="Portrait" />
     </div>
+      <!--alien.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/alien-green-white-random.jpg" alt="Portrait" />
+    </div>
+      <!--shew.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/shew-door-bw-090.jpg" alt="Portrait" />
+    </div>
+      <!--shew.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/shew-door-bw-091.jpg" alt="Portrait" />
+    </div>
+      <!--shew.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/shew-door-bw-092.jpg" alt="Portrait" />
+    </div>
+      <!--thisguysdope.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/thisguysdope1.jpg" alt="Portrait" />
+    </div>
+      <!--thisguysdope.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/thisguysdope2.jpg" alt="Portrait" />
+    </div>
+      <!--thisguysdope.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/thisguysdope3.jpg" alt="Portrait" />
+    </div>
+
+      <!--randy.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/randy-stripe.JPG" alt="Portrait" />
+    </div>
+      <!--randy.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/randy2.JPG" alt="Portrait" />
+    </div>
+      <!--randy.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/randy3.JPG" alt="Portrait" />
+    </div>
+<!--rice.fur.1-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/on-nuu-fab-rice.jpg" alt="Portrait" />
+    </div>
+<!--rice.fur.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="Portrait" />
+    </div>
+<!--rice.fur.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/rice_jewlery.jpg" alt="Portrait" />
+    </div>
+      <!--sirmao2026.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed-smile.jpg" alt="Portrait" />
+    </div>
+      <!--sirmao2026.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed-smile2.jpg" alt="Portrait" />
+    </div>    
+      <!--sirmao2026.3-->    
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed.jpg" alt="Portrait" />
+    </div>
+    
+     <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/sofa.JPG  " alt="Portrait" />
     </div>
   </div>
 </section>
@@ -966,7 +1040,7 @@
 <section class="port-credits" id="credits">
   <div class="port-section-header port-reveal" style="padding-top:5rem;">
     <h2>Portfolio <em>Direction</em></h2>
-    <span class="port-sub">Principles and notes.</span>
+    <span class="port-sub">Principles and notes</span>
   </div>
   <div class="port-credits-grid port-reveal">
     <div class="port-credit-cat">
@@ -996,7 +1070,7 @@
 <!-- ════════ TESTIMONIAL / ABOUT ════════ -->
 <section class="port-testimonial" id="about">
   <div class="port-test-quote port-reveal">
-    <blockquote>My work lives in the unseen details, where meticulously reads as effortlessly.</blockquote>
+    <blockquote>My work lives in the unseen details, where meticulously reads as effortlessly</blockquote>
     <div class="port-attribution">
       <strong>JeshCuhh</strong> ~ A Peaceful Life
     </div>
@@ -1021,7 +1095,7 @@
   <div class="footer__top">
     <div class="footer__news">
       <h4>Subscribe to our newsletter</h4>
-      <p>Receive letters from the archive: collections, routines, and the latest from JeshCuhh.</p>
+      <p>Receive letters from the archive: collections, routines, and the latest from JeshCuhh</p>
       <form class="footer__form" onsubmit="return false">
         <input type="email" placeholder="Your email address" aria-label="Email address" />
         <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="20" height="14"><line x1="2" y1="7" x2="20" y2="7"/><polyline points="15 2 21 7 15 12"/></svg></button>
