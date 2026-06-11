@@ -314,30 +314,13 @@
     .port-card:nth-child(6n + 6) {
       background: linear-gradient(150deg, #d6d1cb, #b5afa8);
     }
-    /* Per-photo crop focus — OPTIONAL overrides.
-       Any card without a rule here just uses the default `center` crop
-       from .port-card__photo above, so new photos work without edits.
-       Add a rule below only when you want a different focal point. */
-    .port-card:nth-child(1) .port-card__photo {
-      object-position: center center;
-    }
-    .port-card:nth-child(2) .port-card__photo {
-      object-position: center center;
-    }
-    .port-card:nth-child(3) .port-card__photo {
-      object-position: center top;
-    }
-    .port-card:nth-child(4) .port-card__photo {
-      object-position: center top;
-    }
-    .port-card:nth-child(5) .port-card__photo {
-      object-position: center center;
-    }
-    .port-card:nth-child(6) .port-card__photo {
-      object-position: center top;
-    }
-    .port-card:nth-child(7) .port-card__photo {
-      object-position: center right;
+    /* Per-photo crop focus.
+       Every photo defaults to `center center` (set on .port-card__photo above).
+       To re-crop one photo, add/change a rule below — the number in
+       nth-child() is the photo's position in the grid (1 = first photo).
+       Examples: center top | center bottom | center right | left center */
+    .port-card:nth-child(19) .port-card__photo {
+      object-position: center right; /* sofa.JPG */
     }
     /* On hover: show full uncropped photo + keep the slow zoom */
     .port-card:hover .port-card__photo {
@@ -956,18 +939,18 @@
   </div>
   
   <div class="port-grid">
-        <!--alien.1-->
+       <!-- alien.1
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life.jpg" alt="Portrait" />
     </div>
-    <!--alien.2-->
+    -alien.2
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life-white.png" alt="Portrait" />
     </div>
-      <!--alien.3-->
+      alien.3
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-green-white-random.jpg" alt="Portrait" />
-    </div>
+    </div> -->
       <!--shew.1-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/shew-door-bw-090.jpg" alt="Portrait" />
@@ -1029,9 +1012,21 @@
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed.jpg" alt="Portrait" />
     </div>
+          <!--enchanted.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/enchanted10.jpg" alt="Portrait" />
+    </div>
+      <!--enchanted.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/enchanted36.jpg" alt="Portrait" />
+    </div>    
+      <!--enchanted.3-->    
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/enchanted45.jpg" alt="Portrait" />
+    </div>
     
      <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/sofa.JPG  " alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/sofa.JPG" alt="Portrait" />
     </div>
   </div>
 </section>
