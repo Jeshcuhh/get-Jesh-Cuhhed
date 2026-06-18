@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mock index — an editorial layout study on JeshCuhh's quiet-luxury palette." />
+  <meta name="description" content="Get Jeshied" />
   <title>JeshCuhh · Index</title>
   <link rel="stylesheet" href="https://use.typekit.net/suc5fzg.css" />
   <style>
@@ -1525,6 +1526,88 @@
     .sprig-divider .sprig {
       opacity: .85;
     }
+
+    /* ════════════════ DARK MODE · [data-theme="dark"] on <html> ════════════════ */
+    :root { color-scheme: light; }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --ivory: #16110d;
+      --paper: #201913;
+      --parchment: #2a2119;
+      --linen: #342a21;
+      --mauve: #463b32;
+      --secondary: #221b15;
+      --wool: #2a2119;
+      --wash-sage: #1c2118;
+      --wash-euc: #1a201c;
+      --wash-clay: #2a211a;
+      --wash-rose: #2a1d1a;
+      --wash-champ: #2a2419;
+      --champagne: #d8bd86;
+      --camel: #cdb088;
+      --sand: #b89a73;
+      --rose: #d6aaa3;
+      --rose-dust: #d79a93;
+      --oxblood: #d99a8f;
+      --kumel: #d99a8f;
+      --accent: #d99a8f;
+      --tertiary: #6fb6b0;
+      --ink: #ece4d9;
+      --ink-soft: #c7bdb1;
+      --carbon: #c7bdb1;
+      --stone: #a89e93;
+      --ash: #978d83;
+      --sage: #aab494;
+      --eucalyptus: #9aa890;
+      --olive: #8a9670;
+      --olive-deep: #6b7551;
+      --moss: #717a55;
+      --clay: #c08f6c;
+      --terracotta: #c07a59;
+      --hairline: rgba(255,250,244,.12);
+    }
+    html[data-theme="dark"] { background: #16110d; }
+    html[data-theme="dark"] .silk-canvas { opacity: .12; }
+    html[data-theme="dark"] body::before { opacity: .05; }
+    /* sticky nav bar — was a light rose-wash gradient */
+    html[data-theme="dark"] .nav {
+      background: radial-gradient(ellipse at 50% 100%, rgba(122,62,54,.35) 0%, rgba(122,62,54,0) 70%), rgba(22,17,13,.9);
+    }
+    /* translucent nav pills that were hardcoded light */
+    html[data-theme="dark"] .nav__menu a,
+    html[data-theme="dark"] .nav__icons a,
+    html[data-theme="dark"] .navitem__btn {
+      background: rgba(255,250,244,.05);
+      border-color: rgba(255,250,244,.14);
+      box-shadow: inset 0 1px 0 rgba(255,250,244,.08);
+    }
+    html[data-theme="dark"] .nav__menu a:hover,
+    html[data-theme="dark"] .nav__icons a:hover,
+    html[data-theme="dark"] .navitem.is-open .navitem__btn,
+    html[data-theme="dark"] .navitem__btn:hover {
+      background: rgba(255,250,244,.12);
+      border-color: rgba(216,189,134,.6);
+    }
+    /* floating toggle button */
+    .theme-toggle {
+      position: fixed; right: clamp(14px,2.4vw,28px); bottom: clamp(14px,2.4vw,28px);
+      z-index: 9999; width: 46px; height: 46px; border-radius: 999px;
+      display: grid; place-items: center; cursor: pointer;
+      border: 1px solid rgba(33,29,25,.28); background: rgba(255,250,244,.78);
+      color: var(--ink); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      box-shadow: 0 18px 45px -35px rgba(54,40,30,.4);
+      transition: transform .35s var(--ease-out), background .35s var(--ease-out), color .35s var(--ease-out);
+    }
+    html[data-theme="dark"] .theme-toggle {
+      border-color: rgba(255,250,244,.22); background: rgba(28,22,17,.74);
+      box-shadow: 0 18px 45px -35px rgba(0,0,0,.7);
+    }
+    .theme-toggle:hover { transform: translateY(-2px) rotate(-8deg); }
+    .theme-toggle svg { width: 20px; height: 20px; display: block; }
+    .theme-toggle .icon-sun { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    @media print { .theme-toggle { display: none; } }
   </style>
 </head>
 <body>
@@ -2282,6 +2365,29 @@
     rafId = requestAnimationFrame(loop);
   }
 })();
+</script>
+<script>
+  /* Light / dark mode toggle — persists in localStorage('theme') */
+  (function () {
+    var SUN = '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>';
+    var MOON = '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8 8 0 0 1 9.8 3.5a8 8 0 1 0 10.7 10.7z"/></svg>';
+    function cur(){ return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+    var btn = document.createElement('button');
+    btn.className = 'theme-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Toggle dark mode');
+    btn.title = 'Toggle light / dark';
+    btn.innerHTML = SUN + MOON;
+    btn.setAttribute('aria-pressed', String(cur() === 'dark'));
+    btn.addEventListener('click', function () {
+      var next = cur() === 'dark' ? 'light' : 'dark';
+      if (next === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      else document.documentElement.removeAttribute('data-theme');
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      btn.setAttribute('aria-pressed', String(next === 'dark'));
+    });
+    document.body.appendChild(btn);
+  })();
 </script>
 </body>
 </html>

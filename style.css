@@ -1527,3 +1527,112 @@ h2 em { color: var(--rose-dust); font-style: normal; }
   color:var(--ink); line-height:0;}
 .nav__icons a.nav__iconlink:hover{background:none; border:0; box-shadow:none; transform:none; color:var(--oxblood);}
 .nav__iconlink svg{width:21px; height:21px; display:block;}
+
+/* ════════════════════════════════════════════════════════════════
+   DARK MODE  ·  toggle via [data-theme="dark"] on <html>
+   The site is token-driven, so remapping the palette does most of
+   the work; a few translucent/literal-white surfaces are nudged too.
+   ════════════════════════════════════════════════════════════════ */
+:root { color-scheme: light; }
+html[data-theme="dark"] {
+  color-scheme: dark;
+  /* base — warm near-blacks instead of ivory/paper */
+  --ivory: #16110d;
+  --paper: #201913;
+  --parchment: #2a2119;
+  --linen: #342a21;
+  --mauve: #463b32;
+  --mauve-2: #51453b;
+  /* accents — brightened so they read on dark */
+  --champagne: #d8bd86;
+  --champagne-soft: rgba(216, 189, 134, 0.20);
+  --rose: #d6aaa3;
+  --rose-dust: #d79a93;
+  --oxblood: #d99a8f;
+  --walnut: #0f0b08;
+  --walnut-2: #2a1a12;
+  /* text — flipped to light */
+  --ink: #ece4d9;
+  --ink-soft: #c7bdb1;
+  --stone: #a89e93;
+  --ash: #978d83;
+  /* lines, glass, depth */
+  --hairline: rgba(255, 250, 244, 0.12);
+  --hairline-strong: rgba(255, 250, 244, 0.22);
+  --glass: rgba(28, 22, 17, 0.74);
+  --shadow: 0 28px 70px -48px rgba(0, 0, 0, 0.8);
+  --shadow-soft: 0 18px 45px -35px rgba(0, 0, 0, 0.7);
+  /* earth/greens — slightly lifted */
+  --olive: #8a9670;
+  --olive-deep: #6b7551;
+  --clay: #c08f6c;
+  --terracotta: #c07a59;
+}
+
+/* page canvas */
+html[data-theme="dark"] {
+  background:
+    radial-gradient(circle at 12% 4%, rgba(214, 170, 163, 0.10), transparent 26rem),
+    radial-gradient(circle at 88% 10%, rgba(216, 189, 134, 0.08), transparent 30rem),
+    linear-gradient(180deg, var(--ivory) 0%, #1b1510 45%, var(--ivory) 100%);
+}
+/* the silk fabric backdrop is a JS-painted light canvas — dim it hard so
+   the dark page gradient shows through, keeping only a faint sheen */
+html[data-theme="dark"] .silk-canvas { opacity: 0.12; }
+html[data-theme="dark"] body::before { opacity: 0.05; }
+
+/* sticky nav bar — was a light rose-wash gradient */
+html[data-theme="dark"] .nav,
+html[data-theme="dark"] .nav.scrolled {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(122,62,54,.35) 0%, rgba(122,62,54,0) 70%),
+    rgba(22,17,13,.92);
+  border-bottom-color: rgba(216,189,134,.32);
+}
+
+/* translucent nav pills / glass surfaces that were hardcoded light */
+html[data-theme="dark"] .nav__links a,
+html[data-theme="dark"] .nav__menu a,
+html[data-theme="dark"] .nav__icons a,
+html[data-theme="dark"] .navitem__btn {
+  background: rgba(255, 250, 244, 0.05);
+  border-color: rgba(255, 250, 244, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 250, 244, 0.08);
+}
+html[data-theme="dark"] .nav__links a:hover,
+html[data-theme="dark"] .nav__links a.active,
+html[data-theme="dark"] .nav__menu a:hover,
+html[data-theme="dark"] .nav__icons a:hover,
+html[data-theme="dark"] .navitem.is-open .navitem__btn,
+html[data-theme="dark"] .navitem__btn:hover {
+  background: rgba(255, 250, 244, 0.12);
+  border-color: rgba(216, 189, 134, 0.6);
+}
+
+/* ── floating light/dark toggle button (injected on every page) ── */
+.theme-toggle {
+  position: fixed;
+  right: clamp(14px, 2.4vw, 28px);
+  bottom: clamp(14px, 2.4vw, 28px);
+  z-index: 9999;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: 1px solid var(--hairline-strong);
+  background: var(--glass);
+  color: var(--ink);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s var(--ease-out), background .35s var(--ease-out), color .35s var(--ease-out);
+}
+.theme-toggle:hover { transform: translateY(-2px) rotate(-8deg); }
+.theme-toggle svg { width: 20px; height: 20px; display: block; }
+.theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun  { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+@media print { .theme-toggle { display: none; } }

@@ -1,0 +1,552 @@
+{
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/.claude/launch.json": {
+    "mtime": 1781212624.1497304,
+    "ast_hash": "02fa5074c4353adb4ae6e9125481ff5d",
+    "semantic_hash": "02fa5074c4353adb4ae6e9125481ff5d"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/.claude/settings.local.json": {
+    "mtime": 1781552235.4657562,
+    "ast_hash": "11b7373dfbeb6f9eba800264535e1144",
+    "semantic_hash": "11b7373dfbeb6f9eba800264535e1144"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/script.js": {
+    "mtime": 1781212334.2351182,
+    "ast_hash": "30609539f37e3a858c9e9dbcd26d0693",
+    "semantic_hash": "30609539f37e3a858c9e9dbcd26d0693"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/README.md": {
+    "mtime": 1781065225.9460824,
+    "ast_hash": "91440d1a18eaac864e09deee25d30f5c",
+    "semantic_hash": "91440d1a18eaac864e09deee25d30f5c"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/dentalHygine.txt": {
+    "mtime": 1779861228.0,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/dermaplaner.html": {
+    "mtime": 1781212420.8123822,
+    "ast_hash": "a9c0ba89a0601c1d6d0c07e1eafe0841",
+    "semantic_hash": "a9c0ba89a0601c1d6d0c07e1eafe0841"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/hair-care.html": {
+    "mtime": 1781212420.811411,
+    "ast_hash": "e7edcd1de8e1a1e73a91b7f42e41e9e1",
+    "semantic_hash": "e7edcd1de8e1a1e73a91b7f42e41e9e1"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/hair-toning.html": {
+    "mtime": 1781212420.8113132,
+    "ast_hash": "b403334f0586dfedbf9995e9b0978a0b",
+    "semantic_hash": "b403334f0586dfedbf9995e9b0978a0b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/index.html": {
+    "mtime": 1781212420.8115716,
+    "ast_hash": "5c510bc546226bc1046b79abd996ff81",
+    "semantic_hash": "5c510bc546226bc1046b79abd996ff81"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/lash-clusters.html": {
+    "mtime": 1781212420.8126786,
+    "ast_hash": "d8ae837293cc3075283b7699f46c1319",
+    "semantic_hash": "d8ae837293cc3075283b7699f46c1319"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/makeup.html": {
+    "mtime": 1781212420.8118382,
+    "ast_hash": "5cbecf0dc05b7807dd9b57730afe70e6",
+    "semantic_hash": "5cbecf0dc05b7807dd9b57730afe70e6"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/micro.txt": {
+    "mtime": 1780393343.5397716,
+    "ast_hash": "b2a1abfa79be59062cf483e7ce1e8c89",
+    "semantic_hash": "b2a1abfa79be59062cf483e7ce1e8c89"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/microneedling.html": {
+    "mtime": 1781212420.812051,
+    "ast_hash": "0b85883325a8a499bb072372ab09bdb4",
+    "semantic_hash": "0b85883325a8a499bb072372ab09bdb4"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/pressOnNail.html": {
+    "mtime": 1781212420.8117638,
+    "ast_hash": "3cdfa4ded159f5e416e2aad046ad31b6",
+    "semantic_hash": "3cdfa4ded159f5e416e2aad046ad31b6"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/skincare-routine.html": {
+    "mtime": 1781212420.8122232,
+    "ast_hash": "1b986f075c7196293dfd769bd6bde9f4",
+    "semantic_hash": "1b986f075c7196293dfd769bd6bde9f4"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/finance-investing/churning.html": {
+    "mtime": 1781212420.8134189,
+    "ast_hash": "ac4cc55def65bc969bf7d83bb2567589",
+    "semantic_hash": "ac4cc55def65bc969bf7d83bb2567589"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/finance-investing/fire.html": {
+    "mtime": 1781212420.8138316,
+    "ast_hash": "ed7940c5433c23669d51175d1cb20a90",
+    "semantic_hash": "ed7940c5433c23669d51175d1cb20a90"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/finance-investing/index.html": {
+    "mtime": 1781212420.8133295,
+    "ast_hash": "6fbab53189f3697fee5f90dc30165a31",
+    "semantic_hash": "6fbab53189f3697fee5f90dc30165a31"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/finance-investing/invest.html": {
+    "mtime": 1781212420.8135126,
+    "ast_hash": "bd105f5b74abe33f16f6d55a3df38d0f",
+    "semantic_hash": "bd105f5b74abe33f16f6d55a3df38d0f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/finance-investing/stonks.html": {
+    "mtime": 1781212420.8136127,
+    "ast_hash": "5c16456034da526bac60791927fc5845",
+    "semantic_hash": "5c16456034da526bac60791927fc5845"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/home-lifestyle/decor.html": {
+    "mtime": 1781212420.814165,
+    "ast_hash": "b702a2b211c8ece296840e7e66d5861f",
+    "semantic_hash": "b702a2b211c8ece296840e7e66d5861f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/home-lifestyle/index.html": {
+    "mtime": 1781212420.8139892,
+    "ast_hash": "321be416e17b927f034734d68d16b019",
+    "semantic_hash": "321be416e17b927f034734d68d16b019"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/home-lifestyle/masstige.html": {
+    "mtime": 1781212420.8143156,
+    "ast_hash": "c712be725bbd041752ed6cff0240ff80",
+    "semantic_hash": "c712be725bbd041752ed6cff0240ff80"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/home-lifestyle/opinion-procedure.html": {
+    "mtime": 1781212420.8140934,
+    "ast_hash": "555b6484e5f9c9239dd50a0321afaac5",
+    "semantic_hash": "555b6484e5f9c9239dd50a0321afaac5"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/index.html": {
+    "mtime": 1781213990.2744958,
+    "ast_hash": "cd5681f64d18c7744c5275229fdd4129",
+    "semantic_hash": "cd5681f64d18c7744c5275229fdd4129"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/portfolio/booking.html": {
+    "mtime": 1781212420.8130553,
+    "ast_hash": "2e018a74bb48d9155a56982c5e46652c",
+    "semantic_hash": "2e018a74bb48d9155a56982c5e46652c"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/portfolio/index.html": {
+    "mtime": 1781212420.8128138,
+    "ast_hash": "a3e49f5df18dbed2208f26514052d228",
+    "semantic_hash": "a3e49f5df18dbed2208f26514052d228"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/portfolio/modeling-portfolio.html": {
+    "mtime": 1781212420.8132553,
+    "ast_hash": "9697e93d46b1532c22d7658c032a475a",
+    "semantic_hash": "9697e93d46b1532c22d7658c032a475a"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/index.html": {
+    "mtime": 1781212420.8101144,
+    "ast_hash": "513250b859e6f1276db1fe7dfa1699a7",
+    "semantic_hash": "513250b859e6f1276db1fe7dfa1699a7"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/jewelry.html": {
+    "mtime": 1781212420.81042,
+    "ast_hash": "b1bc41910141f4277ea8dd3162dc814e",
+    "semantic_hash": "b1bc41910141f4277ea8dd3162dc814e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/shoe-care.html": {
+    "mtime": 1781212420.810734,
+    "ast_hash": "8cc22b1fa344ad21439129438b9ca811",
+    "semantic_hash": "8cc22b1fa344ad21439129438b9ca811"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/shopping.txt": {
+    "mtime": 1780091866.8100765,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/wardrobe-care.html": {
+    "mtime": 1781212420.8105812,
+    "ast_hash": "6c4fd749597bab815275718f7b9deb56",
+    "semantic_hash": "6c4fd749597bab815275718f7b9deb56"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/wardrobe/wardrobe.html": {
+    "mtime": 1781212420.8109202,
+    "ast_hash": "dc19e425e525efd9eb7162e8ca13befb",
+    "semantic_hash": "dc19e425e525efd9eb7162e8ca13befb"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/beauty-self-care/skincare_routine.pdf": {
+    "mtime": 1779861228.0,
+    "ast_hash": "99453e8d7da8e06011320fe66788cafb",
+    "semantic_hash": "99453e8d7da8e06011320fe66788cafb"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/BLTCream.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "d6af9b8aa6da067e178be951716440a9",
+    "semantic_hash": "d6af9b8aa6da067e178be951716440a9"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/BW-fur-coat-Fab-Rice.jpg": {
+    "mtime": 1779964060.9563272,
+    "ast_hash": "ccf15bf680c711d3f0dd35de786fae74",
+    "semantic_hash": "ccf15bf680c711d3f0dd35de786fae74"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/Chi44.png": {
+    "mtime": 1780092581.038764,
+    "ast_hash": "35c94dfcc75ace01ccee9ed99d1f1596",
+    "semantic_hash": "35c94dfcc75ace01ccee9ed99d1f1596"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/HA.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "6e840088bd8b3ded6f246ea65b9bdf80",
+    "semantic_hash": "6e840088bd8b3ded6f246ea65b9bdf80"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/IMG_3389.jpg": {
+    "mtime": 1780531139.0,
+    "ast_hash": "782a0cba698d6a0f6719b5c32f33187f",
+    "semantic_hash": "782a0cba698d6a0f6719b5c32f33187f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/IMG_3419.jpg": {
+    "mtime": 1780535826.0,
+    "ast_hash": "f6b9c5d36c22308a047fe9e6584a2b2f",
+    "semantic_hash": "f6b9c5d36c22308a047fe9e6584a2b2f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/PDRN.png": {
+    "mtime": 1780474782.6080692,
+    "ast_hash": "75c3636edbef4717d4e500965c0788b1",
+    "semantic_hash": "75c3636edbef4717d4e500965c0788b1"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/Pureology.png": {
+    "mtime": 1780092381.7658937,
+    "ast_hash": "468054a0d2c72b294625fee768d38cae",
+    "semantic_hash": "468054a0d2c72b294625fee768d38cae"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/Screenshot 2026-05-28 at 5.19.11\u202fAM.png": {
+    "mtime": 1779970757.2294428,
+    "ast_hash": "f5ba9cfc713fb921ce4635b51433ef0a",
+    "semantic_hash": "f5ba9cfc713fb921ce4635b51433ef0a"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/alien-black-leather.jpg": {
+    "mtime": 1780980289.6500163,
+    "ast_hash": "d1bdebd23472d4b6c0ea0dc1da37c34f",
+    "semantic_hash": "d1bdebd23472d4b6c0ea0dc1da37c34f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/alien-green-white-random.jpg": {
+    "mtime": 1781124039.5904276,
+    "ast_hash": "8c2dddddd6f103bf34729cdffb3cd188",
+    "semantic_hash": "8c2dddddd6f103bf34729cdffb3cd188"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/alien-life-white.png": {
+    "mtime": 1779965391.2581594,
+    "ast_hash": "a1e7a3cfd5bc31dfc61d759c1dcd48f6",
+    "semantic_hash": "a1e7a3cfd5bc31dfc61d759c1dcd48f6"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/alien-life.jpg": {
+    "mtime": 1779963645.7093313,
+    "ast_hash": "a9144691fc97f4fab9ae238e54914b6b",
+    "semantic_hash": "a9144691fc97f4fab9ae238e54914b6b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/alien-red.png": {
+    "mtime": 1780980592.6532762,
+    "ast_hash": "abd6d334db4fdfb4b28c03ecf63e69b8",
+    "semantic_hash": "abd6d334db4fdfb4b28c03ecf63e69b8"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/blackGlove.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "c14cd46982ac6e8483865319629762f5",
+    "semantic_hash": "c14cd46982ac6e8483865319629762f5"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/blue.png": {
+    "mtime": 1780011211.2230372,
+    "ast_hash": "5900c810062c16c89d84b8efb54ffad0",
+    "semantic_hash": "5900c810062c16c89d84b8efb54ffad0"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/buff.jpeg": {
+    "mtime": 1780683573.0468118,
+    "ast_hash": "71c943d844565047770361bfe2311b56",
+    "semantic_hash": "71c943d844565047770361bfe2311b56"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/derm2.jpeg": {
+    "mtime": 1780518705.71264,
+    "ast_hash": "83daabf867e213cf0bd56c4abdd1382b",
+    "semantic_hash": "83daabf867e213cf0bd56c4abdd1382b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/derm2.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "0c355a7b5b3b7f5b0e880cbeec748244",
+    "semantic_hash": "0c355a7b5b3b7f5b0e880cbeec748244"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/enchanted10.jpg": {
+    "mtime": 1781135377.8095932,
+    "ast_hash": "75f848d1e9020d45fca23d55e02b4d1d",
+    "semantic_hash": "75f848d1e9020d45fca23d55e02b4d1d"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/enchanted36.jpg": {
+    "mtime": 1781135326.1363971,
+    "ast_hash": "57825cbddb413da7954d1a81fa6fce8e",
+    "semantic_hash": "57825cbddb413da7954d1a81fa6fce8e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/enchanted45.jpg": {
+    "mtime": 1781135261.455792,
+    "ast_hash": "5c0800f52de498f9b96a01bd4b32a1b0",
+    "semantic_hash": "5c0800f52de498f9b96a01bd4b32a1b0"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/face-logo2.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "2b3c9dba2e3d039d19a9c9c85f60e4ce",
+    "semantic_hash": "2b3c9dba2e3d039d19a9c9c85f60e4ce"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/garnierFructisOil.png": {
+    "mtime": 1780092351.6754336,
+    "ast_hash": "a4c3399ce9a94e97cbbdb4a31eca863c",
+    "semantic_hash": "a4c3399ce9a94e97cbbdb4a31eca863c"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/homepage-reference.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "d2b8c218c405c5045a6f707aed6be24d",
+    "semantic_hash": "d2b8c218c405c5045a6f707aed6be24d"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/horseHair.jpg": {
+    "mtime": 1779962661.8305075,
+    "ast_hash": "dd0f80e0fd627fd614340144b2a4d268",
+    "semantic_hash": "dd0f80e0fd627fd614340144b2a4d268"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/image.jpg": {
+    "mtime": 1780612753.1461563,
+    "ast_hash": "dfc6c0cee1a45a99cac3681acab61de7",
+    "semantic_hash": "dfc6c0cee1a45a99cac3681acab61de7"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/jewlery-collection.jpg": {
+    "mtime": 1780388861.5120595,
+    "ast_hash": "49a10b4a42cafd2a9aec5468cfcac78f",
+    "semantic_hash": "49a10b4a42cafd2a9aec5468cfcac78f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/lov-russian-teapot.jpg": {
+    "mtime": 1781057798.1521943,
+    "ast_hash": "338f08d8b24d24b53344d4067e49a5f0",
+    "semantic_hash": "338f08d8b24d24b53344d4067e49a5f0"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/lov-russian-teapot.png": {
+    "mtime": 1780093861.0413122,
+    "ast_hash": "34a92639634c0efc0f1cbfd438e72e6d",
+    "semantic_hash": "34a92639634c0efc0f1cbfd438e72e6d"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/mah-face-2026.jpg": {
+    "mtime": 1780979464.4513667,
+    "ast_hash": "c8b3fa2d114e29aaaab44a8ae03daa59",
+    "semantic_hash": "c8b3fa2d114e29aaaab44a8ae03daa59"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/mahHand.jpg": {
+    "mtime": 1779917934.7241302,
+    "ast_hash": "6b01685a5a95ec86195a4ba837d9df9f",
+    "semantic_hash": "6b01685a5a95ec86195a4ba837d9df9f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/marz-Smile-ball-red-xmas.jpg": {
+    "mtime": 1779965902.8848555,
+    "ast_hash": "2e654f3d2492fe501ab5491f73adffa2",
+    "semantic_hash": "2e654f3d2492fe501ab5491f73adffa2"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/marz-half-smile-ball-red-xmas.jpg": {
+    "mtime": 1779965864.5980613,
+    "ast_hash": "dd5e0628f2dcb9c5b0469ebcd743b600",
+    "semantic_hash": "dd5e0628f2dcb9c5b0469ebcd743b600"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/microneedling-carousel.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "c3be41597c794f31ab767ef91ab3bf58",
+    "semantic_hash": "c3be41597c794f31ab767ef91ab3bf58"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/mink-fur-linen-Sir-Mao-Ed-smile.jpg": {
+    "mtime": 1780871022.9468791,
+    "ast_hash": "2af145d928d0239b43eacf9ffa5c900e",
+    "semantic_hash": "2af145d928d0239b43eacf9ffa5c900e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/mink-fur-linen-Sir-Mao-Ed-smile2.jpg": {
+    "mtime": 1780705910.0,
+    "ast_hash": "7f47b3c90614c940384201cb89122a29",
+    "semantic_hash": "7f47b3c90614c940384201cb89122a29"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/mink-fur-linen-Sir-Mao-Ed.jpg": {
+    "mtime": 1780705910.0,
+    "ast_hash": "8407f15fb6a08477ff9030c8b7391d05",
+    "semantic_hash": "8407f15fb6a08477ff9030c8b7391d05"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/minoxidil.png": {
+    "mtime": 1780092420.8989463,
+    "ast_hash": "f909f77458f3a4de82c01bc09a6d11ce",
+    "semantic_hash": "f909f77458f3a4de82c01bc09a6d11ce"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-45.jpg": {
+    "mtime": 1780529249.0,
+    "ast_hash": "51d20a22168afb1d0df273a78866800d",
+    "semantic_hash": "51d20a22168afb1d0df273a78866800d"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-apply-bead.JPG": {
+    "mtime": 1780685620.8649309,
+    "ast_hash": "a8ff75f7954b15725dc44fcc5e6d2cc8",
+    "semantic_hash": "a8ff75f7954b15725dc44fcc5e6d2cc8"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-bead.JPG": {
+    "mtime": 1780960507.057287,
+    "ast_hash": "85b900c9893d9295508e7ae39da2afc6",
+    "semantic_hash": "85b900c9893d9295508e7ae39da2afc6"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-dip-acr.jpg": {
+    "mtime": 1780529089.0,
+    "ast_hash": "c3118c8cffb9ecd1f558311dafedac59",
+    "semantic_hash": "c3118c8cffb9ecd1f558311dafedac59"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-dip-mono.jpg": {
+    "mtime": 1780685472.8841565,
+    "ast_hash": "58ff72cea2a64491bdcc8a1ae6022408",
+    "semantic_hash": "58ff72cea2a64491bdcc8a1ae6022408"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-drill.JPG": {
+    "mtime": 1780531094.0,
+    "ast_hash": "094191bac8ec32d42a4490ab5f030ff1",
+    "semantic_hash": "094191bac8ec32d42a4490ab5f030ff1"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-fill.jpg": {
+    "mtime": 1780529056.0,
+    "ast_hash": "96d2cb65aafa6a7ff06fab58d25e26f4",
+    "semantic_hash": "96d2cb65aafa6a7ff06fab58d25e26f4"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-primer.jpg": {
+    "mtime": 1780683724.264964,
+    "ast_hash": "56aba29f0d4ff5abf27b097c7998bf7f",
+    "semantic_hash": "56aba29f0d4ff5abf27b097c7998bf7f"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-smooth.jpg": {
+    "mtime": 1780529370.0,
+    "ast_hash": "9e6cbbae2e8e75b9e918f8ad04cd8140",
+    "semantic_hash": "9e6cbbae2e8e75b9e918f8ad04cd8140"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-step-1.png": {
+    "mtime": 1780616577.2019217,
+    "ast_hash": "5506c012aa6e1a5fe0b289eba5e1ae65",
+    "semantic_hash": "5506c012aa6e1a5fe0b289eba5e1ae65"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-swipe-bottom.jpg": {
+    "mtime": 1780985946.0,
+    "ast_hash": "2cdb27aece92d63b7ecf44eda8f31755",
+    "semantic_hash": "2cdb27aece92d63b7ecf44eda8f31755"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/nail-swipe-top.jpg": {
+    "mtime": 1780985946.0,
+    "ast_hash": "ab4e5a18300860ec7bbb091d15df590a",
+    "semantic_hash": "ab4e5a18300860ec7bbb091d15df590a"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/on-nuu-fab-rice.jpg": {
+    "mtime": 1779964135.5216815,
+    "ast_hash": "baec7d94d176e5dc7fc098abf438d7ba",
+    "semantic_hash": "baec7d94d176e5dc7fc098abf438d7ba"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/oribe.png": {
+    "mtime": 1780092441.488495,
+    "ast_hash": "c4fd72ad232f6ce18866b7db9af2293a",
+    "semantic_hash": "c4fd72ad232f6ce18866b7db9af2293a"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/personalToning.jpg": {
+    "mtime": 1779914703.6833756,
+    "ast_hash": "c4a4bacbf29f7af889a38af2d1592d13",
+    "semantic_hash": "c4a4bacbf29f7af889a38af2d1592d13"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/pressOnNail.jpg": {
+    "mtime": 1779916883.4462245,
+    "ast_hash": "963314ccdfc6f8f2190c9548ae065780",
+    "semantic_hash": "963314ccdfc6f8f2190c9548ae065780"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/randy-stripe.JPG": {
+    "mtime": 1779970819.2474976,
+    "ast_hash": "fa6f7bdeb59f2fe61804be95e7208ccf",
+    "semantic_hash": "fa6f7bdeb59f2fe61804be95e7208ccf"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/randy2.JPG": {
+    "mtime": 1781128701.3356576,
+    "ast_hash": "f8d5363bcd0dc5cfe899be71576ae02e",
+    "semantic_hash": "f8d5363bcd0dc5cfe899be71576ae02e"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/randy3.JPG": {
+    "mtime": 1781128384.247732,
+    "ast_hash": "aa7770ad8d3d9319e21f42ba2f1b72f3",
+    "semantic_hash": "aa7770ad8d3d9319e21f42ba2f1b72f3"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/redkenNight.png": {
+    "mtime": 1780092401.7617471,
+    "ast_hash": "823a3ff80a9174137d6cf273c66206fd",
+    "semantic_hash": "823a3ff80a9174137d6cf273c66206fd"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/rice_jewlery.jpg": {
+    "mtime": 1781130474.77359,
+    "ast_hash": "336a25151e70ad2c6d8e4af794463976",
+    "semantic_hash": "336a25151e70ad2c6d8e4af794463976"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/shew-Ch*-Wool.jpg": {
+    "mtime": 1779965223.95536,
+    "ast_hash": "f2f3fae212995aae47e32745938ca881",
+    "semantic_hash": "f2f3fae212995aae47e32745938ca881"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/shew-big-smile.jpg": {
+    "mtime": 1780006010.7280822,
+    "ast_hash": "62dbddf7d9cd3207575918314336c2ab",
+    "semantic_hash": "62dbddf7d9cd3207575918314336c2ab"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/shew-door-bw-090.jpg": {
+    "mtime": 1781125537.6272392,
+    "ast_hash": "57c382c9cb77e62075b70b4948001283",
+    "semantic_hash": "57c382c9cb77e62075b70b4948001283"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/shew-door-bw-091.jpg": {
+    "mtime": 1781125532.6574981,
+    "ast_hash": "c709cd1e003c94f658fb107254ecfd5b",
+    "semantic_hash": "c709cd1e003c94f658fb107254ecfd5b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/shew-door-bw-092.jpg": {
+    "mtime": 1781125529.4995432,
+    "ast_hash": "50bd5ae4daf8c89d6d39ca6a8839b801",
+    "semantic_hash": "50bd5ae4daf8c89d6d39ca6a8839b801"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/sir-mao-smile.png": {
+    "mtime": 1780010981.8845963,
+    "ast_hash": "e7d311d641635978acda74d86f9fd6b0",
+    "semantic_hash": "e7d311d641635978acda74d86f9fd6b0"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/sir-mao-smirk.png": {
+    "mtime": 1780008510.9573731,
+    "ast_hash": "6426daa08356bf02ab3a02b14bc9686b",
+    "semantic_hash": "6426daa08356bf02ab3a02b14bc9686b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/sofa.JPG": {
+    "mtime": 1780950878.0358794,
+    "ast_hash": "e00945193138df3593e58cb753abe056",
+    "semantic_hash": "e00945193138df3593e58cb753abe056"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/spatual.png": {
+    "mtime": 1779861228.0,
+    "ast_hash": "bc971d7869f5c9c228de56b925858839",
+    "semantic_hash": "bc971d7869f5c9c228de56b925858839"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/thisguysdope1.jpg": {
+    "mtime": 1781127471.9459164,
+    "ast_hash": "7af3ef120b2179c92b98d1407486fadc",
+    "semantic_hash": "7af3ef120b2179c92b98d1407486fadc"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/thisguysdope2.jpg": {
+    "mtime": 1781127513.0194843,
+    "ast_hash": "43c170a700b56445192697fccdecc189",
+    "semantic_hash": "43c170a700b56445192697fccdecc189"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/thisguysdope3.jpg": {
+    "mtime": 1781127528.359501,
+    "ast_hash": "04d678421d0bcb07db01b3c959e61b9c",
+    "semantic_hash": "04d678421d0bcb07db01b3c959e61b9c"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/white-outfit.jpg": {
+    "mtime": 1780092929.4850054,
+    "ast_hash": "4f119b873782cb7333f434c7b86ff49b",
+    "semantic_hash": "4f119b873782cb7333f434c7b86ff49b"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/images/white-outfit.png": {
+    "mtime": 1780092241.2734106,
+    "ast_hash": "6eba045c6098ce76c11d1f5ddebfb6ca",
+    "semantic_hash": "6eba045c6098ce76c11d1f5ddebfb6ca"
+  },
+  "/Users/jeshcuhh/Desktop/Art177/get-Jesh-Cuhhed/assets/video/nail-file-resize.gif": {
+    "mtime": 1780617564.1426675,
+    "ast_hash": "57e62ebca4e2edc92db7dc5636ae5a09",
+    "semantic_hash": "57e62ebca4e2edc92db7dc5636ae5a09"
+  }
+}
