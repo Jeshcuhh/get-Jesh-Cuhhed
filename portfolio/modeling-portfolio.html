@@ -74,7 +74,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url("../assets/images/marz-Smile-ball-red-xmas.jpg");
+      background-image: url("../assets/images/modeling-photos/marz-Smile-ball-red-xmas.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -268,10 +268,18 @@
     }
     .port-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr); /* invisible 6-col base everything snaps to */
       gap: 1rem;
       align-items: start;
     }
+    /* ── Span modifiers: vary width while staying aligned to the 6-col base ──
+       default tile = 3-up (spans 2 of 6) · .span-2 = 2-up (3 of 6) · .span-3 = full width (6 of 6) */
+    .port-card { grid-column: span 2; }
+    .port-card.span-2 { grid-column: span 3; }
+    .port-card.span-3 { grid-column: span 6; }
+    /* match the crop to the slot so wider shots aren't over-stretched */
+    .port-card.span-2 .port-card__photo { aspect-ratio: 4 / 5; }
+    .port-card.span-3 .port-card__photo { aspect-ratio: 3 / 2; }
     .port-card {
       position: relative;
       overflow: hidden;
@@ -708,7 +716,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../wardrobe/index.html">
-          <div class="mega__card-img"><img src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/modeling-photos/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
           <p>Closet care</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../wardrobe/jewelry.html">
@@ -736,7 +744,7 @@
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">
-          <div class="mega__card-img"><img src="../assets/images/on-nuu-fab-rice.jpg" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/modeling-photos/on-nuu-fab-rice.jpg" alt="" /></div>
           <p>Decor</p><span class="cta">Discover</span>
         </a>
       </div>
@@ -940,94 +948,135 @@
   </div>
   
   <div class="port-grid">
-       <!-- alien.1
+       <!-- alien.1 -->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life.jpg" alt="Portrait" />
     </div>
-    -alien.2
+    <!--alien.2-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-life-white.png" alt="Portrait" />
     </div>
-      alien.3
+    <!--alien.3-->
     <div class="port-card port-reveal">
       <img class="port-card__photo" src="../assets/images/alien-green-white-random.jpg" alt="Portrait" />
-    </div> -->
+    </div> 
       <!--shew.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/shew-door-bw-090.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/shew-door-bw-090.jpg" alt="Portrait" />
     </div>
       <!--shew.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/shew-door-bw-091.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/shew-door-bw-091.jpg" alt="Portrait" />
     </div>
       <!--shew.3-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/shew-door-bw-092.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/shew-door-bw-092.jpg" alt="Portrait" />
     </div>
       <!--thisguysdope.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/thisguysdope1.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/thisguysdope1.jpg" alt="Portrait" />
     </div>
       <!--thisguysdope.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/thisguysdope2.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/thisguysdope2.jpg" alt="Portrait" />
     </div>
       <!--thisguysdope.3-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/thisguysdope3.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/thisguysdope3.jpg" alt="Portrait" />
     </div>
 
       <!--randy.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/randy-stripe.JPG" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/randy-stripe.JPG" alt="Portrait" />
     </div>
       <!--randy.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/randy2.JPG" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/randy2.JPG" alt="Portrait" />
     </div>
       <!--randy.3-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/randy3.JPG" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/randy3.JPG" alt="Portrait" />
     </div>
 <!--rice.fur.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/on-nuu-fab-rice.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/on-nuu-fab-rice.jpg" alt="Portrait" />
     </div>
 <!--rice.fur.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/BW-fur-coat-Fab-Rice.jpg" alt="Portrait" />
     </div>
 <!--rice.fur.3-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/rice_jewlery.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/rice_jewlery.jpg" alt="Portrait" />
     </div>
       <!--sirmao2026.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed-smile.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/mink-fur-linen-Sir-Mao-Ed-smile.jpg" alt="Portrait" />
     </div>
       <!--sirmao2026.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed-smile2.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/mink-fur-linen-Sir-Mao-Ed-smile2.jpg" alt="Portrait" />
     </div>    
       <!--sirmao2026.3-->    
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/mink-fur-linen-Sir-Mao-Ed.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/mink-fur-linen-Sir-Mao-Ed.jpg" alt="Portrait" />
     </div>
           <!--enchanted.1-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/enchanted10.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/enchanted10.jpg" alt="Portrait" />
     </div>
       <!--enchanted.2-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/enchanted36.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/enchanted36.jpg" alt="Portrait" />
     </div>    
-      <!--enchanted.3-->    
+      <!--enchanted.3-->
     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/enchanted45.jpg" alt="Portrait" />
+      <img class="port-card__photo" src="../assets/images/modeling-photos/enchanted45.jpg" alt="Portrait" />
     </div>
-    
-     <div class="port-card port-reveal">
-      <img class="port-card__photo" src="../assets/images/sofa.JPG" alt="Portrait" />
+      <!--blue_mont_redlight_fur.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/blue_mont_redlight_fur6266.jpg" alt="Portrait" />
+    </div>
+      <!--blue_mont_redlight_fur.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/blue_mont_redlight_fur6272.jpg" alt="Portrait" />
+    </div>
+      <!--blue_mont_redlight_fur.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/blue_mont_redlight_fur6343.jpg" alt="Portrait" />
+    </div>
+      <!--orange_mont_redlight_fur.1-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/orange_mont_redlight_fur5721.jpg" alt="Portrait" />
+    </div>
+      <!--orange_mont_redlight_fur.2-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/orange_mont_redlight_fur5735.jpg" alt="Portrait" />
+    </div>
+      <!--orange_mont_redlight_fur.3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/orange_mont_redlight_fur5773.jpg" alt="Portrait" />
+    </div>
+      <!--henry-reyes-blue: row of 3-->
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/henry-reyes-blue171.JPG" alt="Portrait" />
+    </div>
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/henry-reyes-blue174.JPG" alt="Portrait" />
+    </div>
+    <div class="port-card port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/henry-reyes-blue180.JPG" alt="Portrait" />
+    </div>
+      <!--henry-reyes-blue: row of 2-->
+    <div class="port-card span-2 port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/henry-reyes-blue185.JPG" alt="Portrait" />
+    </div>
+    <div class="port-card span-2 port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/henry-reyes-blue189.JPG" alt="Portrait" />
+    </div>
+
+     <div class="port-card span-3 port-reveal">
+      <img class="port-card__photo" src="../assets/images/modeling-photos/sofa.JPG" alt="Portrait" />
     </div>
   </div>
 </section>

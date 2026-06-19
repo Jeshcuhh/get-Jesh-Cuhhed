@@ -393,6 +393,8 @@
     .cost-foot__val--rose {
       color: var(--rose);
     }
+    /* taller open state so the photo-heavy build steps never clip */
+    .protocol.open .protocol__body { max-height: 9000px; }
   </style>
 </head>
 <body>
@@ -483,7 +485,7 @@
       </div>
       <div class="mega__feature">
         <a class="mega__card" href="../wardrobe/index.html">
-          <div class="mega__card-img"><img src="../assets/images/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/modeling-photos/BW-fur-coat-Fab-Rice.jpg" alt="" /></div>
           <p>Closet care</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../wardrobe/jewelry.html">
@@ -511,7 +513,7 @@
           <p>At home</p><span class="cta">Discover</span>
         </a>
         <a class="mega__card" href="../home-lifestyle/decor.html">
-          <div class="mega__card-img"><img src="../assets/images/on-nuu-fab-rice.jpg" alt="" /></div>
+          <div class="mega__card-img"><img src="../assets/images/modeling-photos/on-nuu-fab-rice.jpg" alt="" /></div>
           <p>Decor</p><span class="cta">Discover</span>
         </a>
       </div>
@@ -633,59 +635,134 @@
       </g>
     </svg>
 
-    <!-- rail (LEFT, sticky) + steps (RIGHT) -->
-    <div class="build">
-      <aside class="rail">
-        <div class="kit-card">
-          <h5>The full kit</h5>
-          <ul class="kit-list">
-            <li><span class="nm">Nail primer</span><a href="https://www.amazon.com/dp/B00B8M43SY">Amazon</a></li>
-            <li><span class="nm">Clear acrylic powder</span><a href="https://www.aliexpress.us/item/3256806474170210.html">AliExpress</a></li>
-            <li><span class="nm">Monomer + enhancer</span><a href="https://www.amazon.com/dp/B0DDPT6BXH">Amazon</a></li>
-            <li><span class="nm">Acrylic brush</span><a href="https://www.aliexpress.us/item/3256805438853897.html">AliExpress</a></li>
-            <li><span class="nm">Press-on tips</span><a href="https://www.aliexpress.us/item/3256808542255336.html">AliExpress</a></li>
-            <li><span class="nm">Nail drill</span><a href="https://www.amazon.com/dp/B0DJ2VWNK9">Amazon</a></li>
-            <li><span class="nm">Drill bit</span><a href="https://www.amazon.com/dp/B082X8PMXC">Amazon</a></li>
-            <li><span class="nm">Hand file</span><a href="https://www.aliexpress.us/item/3256812053363224.html">AliExpress</a></li>
-            <li><span class="nm">Mask</span><a href="https://www.amazon.com/100PCS-disposable-shield-filter-protection/dp/B08C7HDF1F/ref=sr_1_2_sspa?crid=3BOZL0HTUXJ6I&dib=eyJ2IjoiMSJ9.k6PAovfjCKXnfhAZ6RIFfjbUIYlVJfE-EAY-ArvjBa4KTFKPgmAYxZcCEZdMsOtTIRlLCo1Y_IEPnVwTwrmFtnEMTzncOGytvNL9qak7OlTxZhqL2ZlWcdDA6UCgXv4c32aUcgGs6A1T8A6AcNox5dIuc9T_ieeJTJH4QdFB5GGa2foaWEpWl9vEPfqpiSZ4ZQv9rnAJmWFMgZPHPAu7yGqUcVJ38oX4X06R5tt6rKbxw2ntRU2unrJMGzaqhlvZ9TcdJ0a-pZB6HXaNlHMOZ5cHGDrZq25pUMixe-W1gDg.-pBi-HRh-9k_EbtSdIhofqoys63IAECtL4pNG3TbRq0&dib_tag=se&keywords=mask&qid=1780612917&sprefix=mask%2Caps%2C185&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazon</a></li>
-            <li><span class="nm">Top Coat</span><a href="https://www.amazon.com/Beetles-Wipe-Gel-Coat-Base/dp/B07F12SZDS/ref=sr_1_1?crid=2CXVTZYZB3X74&dib=eyJ2IjoiMSJ9.vwRknX8GsLSTla0x1_8nvrv7K-gP-TKNOElX3-ExXqkbD2zyFCzIiZNu0w2FdPH1CJx7A0Cb_ho-3h4wpy0PAC1B4ODsCmIfXkFWVamMxK0PTpdMmlut5c7jm-sFb9meKshVgNNqpGty9gYviDeNwbrbWmUSOvHbI42-NxGj7_8JZlCkyQk6bXRtA2jP9KfnnVYCZBNApfZA2tFBpa9o9xv6orfwlHWDHnf6x4sM_zfZ7bsmb09qfHy0VpDDU3y43gJbdIn0y5fH-uYUFrGfZWGiDDrWWNgrH2itYUbSCfw.QuRrKqdust0mrNamhlSstRWhzEvrOlw1MjLa040U6Nc&dib_tag=se&keywords=top+coat&qid=1780614029&sprefix=top+coat%2Caps%2C157&sr=8-1">Amazon</a></li>
+    <!-- retractable / collapsible sections (matches hair-care.html) -->
+    <div class="detail-section" style="width:auto;padding:0;margin-top:clamp(2rem,4vw,3rem);">
 
-            <li><span class="nm">Aluminum foil</span><span class="onhand">On hand</span></li>
-          </ul>
-      </aside>
+      <!-- 01 · THE FULL KIT -->
+      <article class="protocol" data-protocol>
+        <div class="protocol__header" data-toggle>
+          <div class="protocol__num">01</div>
+          <div class="protocol__title-wrap">
+            <h3 class="protocol__title">The Full <em>Kit</em></h3>
+            <div class="protocol__meta">Everything to buy · where to buy it</div>
+          </div>
+          <div class="protocol__cadence">One-time setup</div>
+          <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M7 1v12M1 7h12"/></svg>
+          </button>
+        </div>
+        <div class="protocol__body protocol__body--learn">
+          <div class="protocol__body-spacer"></div>
+          <div class="protocol__learn-card" style="max-width:none;">
+            <ul class="kit-list">
+              <li><span class="nm">Nail primer</span><a href="https://www.amazon.com/dp/B00B8M43SY">Amazon</a></li>
+              <li><span class="nm">Clear acrylic powder</span><a href="https://www.aliexpress.us/item/3256806474170210.html">AliExpress</a></li>
+              <li><span class="nm">Monomer + enhancer</span><a href="https://www.amazon.com/dp/B0DDPT6BXH">Amazon</a></li>
+              <li><span class="nm">Acrylic brush</span><a href="https://www.aliexpress.us/item/3256805438853897.html">AliExpress</a></li>
+              <li><span class="nm">Press-on tips</span><a href="https://www.aliexpress.us/item/3256808542255336.html">AliExpress</a></li>
+              <li><span class="nm">Nail drill</span><a href="https://www.amazon.com/dp/B0DJ2VWNK9">Amazon</a></li>
+              <li><span class="nm">Drill bit</span><a href="https://www.amazon.com/dp/B082X8PMXC">Amazon</a></li>
+              <li><span class="nm">Hand file</span><a href="https://www.aliexpress.us/item/3256812053363224.html">AliExpress</a></li>
+              <li><span class="nm">Mask</span><a href="https://www.amazon.com/100PCS-disposable-shield-filter-protection/dp/B08C7HDF1F/ref=sr_1_2_sspa?crid=3BOZL0HTUXJ6I&dib=eyJ2IjoiMSJ9.k6PAovfjCKXnfhAZ6RIFfjbUIYlVJfE-EAY-ArvjBa4KTFKPgmAYxZcCEZdMsOtTIRlLCo1Y_IEPnVwTwrmFtnEMTzncOGytvNL9qak7OlTxZhqL2ZlWcdDA6UCgXv4c32aUcgGs6A1T8A6AcNox5dIuc9T_ieeJTJH4QdFB5GGa2foaWEpWl9vEPfqpiSZ4ZQv9rnAJmWFMgZPHPAu7yGqUcVJ38oX4X06R5tt6rKbxw2ntRU2unrJMGzaqhlvZ9TcdJ0a-pZB6HXaNlHMOZ5cHGDrZq25pUMixe-W1gDg.-pBi-HRh-9k_EbtSdIhofqoys63IAECtL4pNG3TbRq0&dib_tag=se&keywords=mask&qid=1780612917&sprefix=mask%2Caps%2C185&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazon</a></li>
+              <li><span class="nm">Top Coat</span><a href="https://www.amazon.com/Beetles-Wipe-Gel-Coat-Base/dp/B07F12SZDS/ref=sr_1_1?crid=2CXVTZYZB3X74&dib=eyJ2IjoiMSJ9.vwRknX8GsLSTla0x1_8nvrv7K-gP-TKNOElX3-ExXqkbD2zyFCzIiZNu0w2FdPH1CJx7A0Cb_ho-3h4wpy0PAC1B4ODsCmIfXkFWVamMxK0PTpdMmlut5c7jm-sFb9meKshVgNNqpGty9gYviDeNwbrbWmUSOvHbI42-NxGj7_8JZlCkyQk6bXRtA2jP9KfnnVYCZBNApfZA2tFBpa9o9xv6orfwlHWDHnf6x4sM_zfZ7bsmb09qfHy0VpDDU3y43gJbdIn0y5fH-uYUFrGfZWGiDDrWWNgrH2itYUbSCfw.QuRrKqdust0mrNamhlSstRWhzEvrOlw1MjLa040U6Nc&dib_tag=se&keywords=top+coat&qid=1780614029&sprefix=top+coat%2Caps%2C157&sr=8-1">Amazon</a></li>
+              <li><span class="nm">Aluminum foil</span><span class="onhand">On hand</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
 
-      <div>
-        <p class="section-label">13 mini steps</p>
-        <ol class="steps">
-          <li><h4>Sanitize &amp; set up</h4><p>Clean hands and tools, then lay aluminum foil across your surface for fast clean-up. Lay out every product within reach before you start</p><div class="step-media step-media--full"><img src="../assets/images/nail-step-1.png" alt="supplies" /></div></li>
-          <li><h4>Sizing</h4><p>With a file, sand each side of the nail for a few seconds, until it fits on the nail, sidewall to sidewall</p>
-          <div class="step-media"><img src="../assets/video/nail-file-resize.gif" alt="filing the tip to size" /></div></li>
+      <!-- 02 · PREP & SETUP -->
+      <article class="protocol" data-protocol>
+        <div class="protocol__header" data-toggle>
+          <div class="protocol__num">02</div>
+          <div class="protocol__title-wrap">
+            <h3 class="protocol__title">Prep &amp; <em>Setup</em></h3>
+            <div class="protocol__meta">Sanitize · size · buff · prime</div>
+          </div>
+          <div class="protocol__cadence">Steps 1–4</div>
+          <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M7 1v12M1 7h12"/></svg>
+          </button>
+        </div>
+        <div class="protocol__body protocol__body--learn">
+          <div class="protocol__body-spacer"></div>
+          <div class="protocol__learn-card" style="max-width:none;">
+            <ol class="steps">
+              <li><h4>Sanitize &amp; set up</h4><p>Clean hands and tools, then lay aluminum foil across your surface for fast clean-up. Lay out every product within reach before you start</p><div class="step-media step-media--full"><img src="../assets/images/press-on-nail/nail-step-1.png" alt="supplies" /></div></li>
+              <li><h4>Sizing</h4><p>With a file, sand each side of the nail for a few seconds, until it fits on the nail, sidewall to sidewall</p>
+              <div class="step-media"><img src="../assets/video/nail-file-resize.gif" alt="filing the tip to size" /></div></li>
+              <li><h4>Remove the shine</h4><p>With an e-file or  a fine sanding band, lightly buff each natural nail for a few seconds on a high grit low setting. Wipe away dust with rubbing alcohol</p><div class="step-media"><img src="../assets/images/press-on-nail/buff.jpeg" alt="buff"/></div></li>
+              <li><h4>Prime</h4><p>Apply a thin layer of acrylic primer to each natural nail to help prevent lifting</p><div class="step-media"><img src="../assets/images/press-on-nail/nail-primer.jpg" alt="primer" /></div></li>
+            </ol>
+          </div>
+        </div>
+      </article>
 
-          <li><h4>Remove the shine</h4><p>With an e-file or  a fine sanding band, lightly buff each natural nail for a few seconds on a high grit low setting. Wipe away dust with rubbing alcohol</p><div class="step-media"><img src="../assets/images/buff.jpeg" alt="buff"/></div></li>
-          <li><h4>Prime</h4><p>Apply a thin layer of acrylic primer to each natural nail to help prevent lifting</p><div class="step-media"><img src="../assets/images/nail-primer.jpg" alt="primer" /></div></li>
-          <li><h4>Prep fast-set acrylic</h4><p>Add a few drops of monomer enhancer to your monomer so the acrylic sets quickly and predictably</p></li>
-          <li><h4>Bead the tip</h4><p>Pick up a small acrylic bead on the brush and place it on the underside of the press-on tip and swipe the brush top to bottom to reinforce the nail</p>
-          <div class="step-media">
-            <img src="../assets/images/nail-bead.JPG" alt="bead" />
-            <img src="../assets/images/nail-apply-bead.JPG" alt="apply" />
-            <img src="../assets/images/nail-swipe-top.jpg" alt="top" />
-            <img src="../assets/images/nail-swipe-bottom.jpg" alt="bottom" />
-          </div></li>
-          <li><h4>Attach at 45°</h4><p>Wait a few seconds, then set the tip onto the nail at roughly a 45-degree angle and press down slowly to push out any air bubbles</p>
-          <div class="step-media step-media--full"><img src="../assets/images/nail-45.jpg" alt="top" /></div>
+      <!-- 03 · THE ACRYLIC BUILD -->
+      <article class="protocol" data-protocol>
+        <div class="protocol__header" data-toggle>
+          <div class="protocol__num">03</div>
+          <div class="protocol__title-wrap">
+            <h3 class="protocol__title">The Acrylic <em>Build</em></h3>
+            <div class="protocol__meta">Bead · attach · set · reinforce</div>
+          </div>
+          <div class="protocol__cadence">Steps 5–9</div>
+          <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M7 1v12M1 7h12"/></svg>
+          </button>
+        </div>
+        <div class="protocol__body protocol__body--learn">
+          <div class="protocol__body-spacer"></div>
+          <div class="protocol__learn-card" style="max-width:none;">
+            <ol class="steps" style="counter-reset: step 4;">
+              <li><h4>Prep fast-set acrylic</h4><p>Add a few drops of monomer enhancer to your monomer so the acrylic sets quickly and predictably</p></li>
+              <li><h4>Bead the tip</h4><p>Pick up a small acrylic bead on the brush and place it on the underside of the press-on tip and swipe the brush top to bottom to reinforce the nail</p>
+              <div class="step-media">
+                <img src="../assets/images/press-on-nail/nail-bead.JPG" alt="bead" />
+                <img src="../assets/images/press-on-nail/nail-apply-bead.JPG" alt="apply" />
+                <img src="../assets/images/press-on-nail/nail-swipe-top.jpg" alt="top" />
+                <img src="../assets/images/press-on-nail/nail-swipe-bottom.jpg" alt="bottom" />
+              </div></li>
+              <li><h4>Attach at 45°</h4><p>Wait a few seconds, then set the tip onto the nail at roughly a 45-degree angle and press down slowly to push out any air bubbles</p>
+              <div class="step-media step-media--full"><img src="../assets/images/press-on-nail/nail-45.jpg" alt="top" /></div>
 </li>
-          <li><h4>Hold until set</h4><p>Hold for about 10 seconds. With the monomer enhancer, the acrylic cures fully in roughly 20 seconds</p>
-          </li>
-          <li><h4>Reinforce the back</h4><p>Add a little extra acrylic behind the tip for a stronger hold, especially for medium or long lengths</p>
-          <div class="step-media"><img src="../assets/images/nail-smooth.jpg" alt="top" /></div>
+              <li><h4>Hold until set</h4><p>Hold for about 10 seconds. With the monomer enhancer, the acrylic cures fully in roughly 20 seconds</p>
+              </li>
+              <li><h4>Reinforce the back</h4><p>Add a little extra acrylic behind the tip for a stronger hold, especially for medium or long lengths</p>
+              <div class="step-media"><img src="../assets/images/press-on-nail/nail-smooth.jpg" alt="top" /></div>
 </li>
-          <li><h4>Refine the shape</h4><p>Use a hand file and the e-file with the Ceramic Tip to remove any excess material and clean up the edges</p>
-          <div class="step-media"><img src="../assets/images/nail-drill.JPG" alt="top" /></div>
-          </li>
-          <li><h4>Top coat<span class="opt">Optional</span></h4><p>Apply a gel top coat for extra durability and cure for 60 seconds</p></li>
-          <li><h4>Repeat across the set</h4><p>Work nail by nail. A finished set takes about 30–50 minutes and lasts up to three weeks</p></li>
-        </ol>
-      </div>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · SHAPE & FINISH -->
+      <article class="protocol" data-protocol>
+        <div class="protocol__header" data-toggle>
+          <div class="protocol__num">04</div>
+          <div class="protocol__title-wrap">
+            <h3 class="protocol__title">Shape &amp; <em>Finish</em></h3>
+            <div class="protocol__meta">Refine · top coat · repeat the set</div>
+          </div>
+          <div class="protocol__cadence">Steps 10–12</div>
+          <button class="protocol__toggle" aria-label="Expand protocol" aria-expanded="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M7 1v12M1 7h12"/></svg>
+          </button>
+        </div>
+        <div class="protocol__body protocol__body--learn">
+          <div class="protocol__body-spacer"></div>
+          <div class="protocol__learn-card" style="max-width:none;">
+            <ol class="steps" style="counter-reset: step 9;">
+              <li><h4>Refine the shape</h4><p>Use a hand file and the e-file with the Ceramic Tip to remove any excess material and clean up the edges</p>
+              <div class="step-media"><img src="../assets/images/press-on-nail/nail-drill.JPG" alt="top" /></div>
+              </li>
+              <li><h4>Top coat<span class="opt">Optional</span></h4><p>Apply a gel top coat for extra durability and cure for 60 seconds</p></li>
+              <li><h4>Repeat across the set</h4><p>Work nail by nail. A finished set takes about 30–50 minutes and lasts up to three weeks</p></li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
   <br>
