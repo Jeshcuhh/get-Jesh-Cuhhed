@@ -1,0 +1,960 @@
+{
+  "pages": [
+    {
+      "startMs": 23440,
+      "endMs": 27450,
+      "tokens": [
+        {
+          "text": "I",
+          "fromMs": 23440,
+          "toMs": 23440
+        },
+        {
+          "text": "did",
+          "fromMs": 23440,
+          "toMs": 23440
+        },
+        {
+          "text": "one",
+          "fromMs": 23440,
+          "toMs": 23440
+        },
+        {
+          "text": "gram",
+          "fromMs": 23440,
+          "toMs": 25860
+        },
+        {
+          "text": "of",
+          "fromMs": 25860,
+          "toMs": 26640
+        },
+        {
+          "text": "1B",
+          "fromMs": 26640,
+          "toMs": 26950
+        }
+      ]
+    },
+    {
+      "startMs": 30520,
+      "endMs": 33120,
+      "tokens": [
+        {
+          "text": "And",
+          "fromMs": 30520,
+          "toMs": 30790
+        },
+        {
+          "text": "about",
+          "fromMs": 30790,
+          "toMs": 31250
+        },
+        {
+          "text": "to",
+          "fromMs": 31250,
+          "toMs": 31430
+        },
+        {
+          "text": "do",
+          "fromMs": 31430,
+          "toMs": 31610
+        },
+        {
+          "text": "about",
+          "fromMs": 31610,
+          "toMs": 32070
+        },
+        {
+          "text": "10",
+          "fromMs": 32070,
+          "toMs": 32620
+        },
+        {
+          "text": "grams",
+          "fromMs": 32620,
+          "toMs": 33120
+        }
+      ]
+    },
+    {
+      "startMs": 33120,
+      "endMs": 40240,
+      "tokens": [
+        {
+          "text": "of",
+          "fromMs": 33120,
+          "toMs": 33960
+        },
+        {
+          "text": "the",
+          "fromMs": 33960,
+          "toMs": 35960
+        },
+        {
+          "text": "060",
+          "fromMs": 35960,
+          "toMs": 37360
+        },
+        {
+          "text": "which",
+          "fromMs": 37680,
+          "toMs": 38390
+        },
+        {
+          "text": "is",
+          "fromMs": 38390,
+          "toMs": 38670
+        },
+        {
+          "text": "a",
+          "fromMs": 38670,
+          "toMs": 38810
+        },
+        {
+          "text": "platinum",
+          "fromMs": 38810,
+          "toMs": 39940
+        }
+      ]
+    },
+    {
+      "startMs": 40240,
+      "endMs": 42510,
+      "tokens": [
+        {
+          "text": "or",
+          "fromMs": 40240,
+          "toMs": 40800
+        },
+        {
+          "text": "they",
+          "fromMs": 40800,
+          "toMs": 41140
+        },
+        {
+          "text": "call",
+          "fromMs": 41140,
+          "toMs": 41480
+        },
+        {
+          "text": "it",
+          "fromMs": 41480,
+          "toMs": 41650
+        },
+        {
+          "text": "iron",
+          "fromMs": 41650,
+          "toMs": 41990
+        },
+        {
+          "text": "but",
+          "fromMs": 42160,
+          "toMs": 42310
+        },
+        {
+          "text": "it's",
+          "fromMs": 42310,
+          "toMs": 42510
+        }
+      ]
+    },
+    {
+      "startMs": 42510,
+      "endMs": 43370,
+      "tokens": [
+        {
+          "text": "T",
+          "fromMs": 42510,
+          "toMs": 42560
+        },
+        {
+          "text": "series",
+          "fromMs": 42560,
+          "toMs": 42870
+        }
+      ]
+    },
+    {
+      "startMs": 64200,
+      "endMs": 68200,
+      "tokens": [
+        {
+          "text": "So",
+          "fromMs": 64200,
+          "toMs": 64500
+        },
+        {
+          "text": "13",
+          "fromMs": 64500,
+          "toMs": 65420
+        },
+        {
+          "text": "times",
+          "fromMs": 65420,
+          "toMs": 66180
+        },
+        {
+          "text": "2",
+          "fromMs": 66180,
+          "toMs": 66640
+        },
+        {
+          "text": "is",
+          "fromMs": 66640,
+          "toMs": 66940
+        },
+        {
+          "text": "26",
+          "fromMs": 66940,
+          "toMs": 67860
+        }
+      ]
+    },
+    {
+      "startMs": 68200,
+      "endMs": 73110,
+      "tokens": [
+        {
+          "text": "so",
+          "fromMs": 68200,
+          "toMs": 68450
+        },
+        {
+          "text": "26",
+          "fromMs": 68450,
+          "toMs": 69200
+        },
+        {
+          "text": "plus",
+          "fromMs": 69200,
+          "toMs": 69720
+        },
+        {
+          "text": "13",
+          "fromMs": 69720,
+          "toMs": 70600
+        },
+        {
+          "text": "is",
+          "fromMs": 70600,
+          "toMs": 70880
+        },
+        {
+          "text": "39",
+          "fromMs": 70880,
+          "toMs": 72610
+        }
+      ]
+    },
+    {
+      "startMs": 73480,
+      "endMs": 76130,
+      "tokens": [
+        {
+          "text": "Hopefully",
+          "fromMs": 73480,
+          "toMs": 74250
+        },
+        {
+          "text": "that's",
+          "fromMs": 74250,
+          "toMs": 74760
+        },
+        {
+          "text": "right",
+          "fromMs": 74760,
+          "toMs": 75190
+        },
+        {
+          "text": "don't",
+          "fromMs": 75380,
+          "toMs": 75630
+        },
+        {
+          "text": "want",
+          "fromMs": 75630,
+          "toMs": 75830
+        },
+        {
+          "text": "to",
+          "fromMs": 75830,
+          "toMs": 75930
+        },
+        {
+          "text": "pull",
+          "fromMs": 75930,
+          "toMs": 76130
+        }
+      ]
+    },
+    {
+      "startMs": 76130,
+      "endMs": 77680,
+      "tokens": [
+        {
+          "text": "out",
+          "fromMs": 76130,
+          "toMs": 76280
+        },
+        {
+          "text": "my",
+          "fromMs": 76280,
+          "toMs": 76380
+        },
+        {
+          "text": "phone",
+          "fromMs": 76380,
+          "toMs": 76630
+        },
+        {
+          "text": "a",
+          "fromMs": 76630,
+          "toMs": 76680
+        },
+        {
+          "text": "little",
+          "fromMs": 76680,
+          "toMs": 76980
+        },
+        {
+          "text": "lady",
+          "fromMs": 76980,
+          "toMs": 77180
+        }
+      ]
+    },
+    {
+      "startMs": 80980,
+      "endMs": 83460,
+      "tokens": [
+        {
+          "text": "I'm",
+          "fromMs": 80980,
+          "toMs": 81220
+        },
+        {
+          "text": "stopping",
+          "fromMs": 81220,
+          "toMs": 81860
+        },
+        {
+          "text": "at",
+          "fromMs": 81860,
+          "toMs": 82020
+        },
+        {
+          "text": "34",
+          "fromMs": 82020,
+          "toMs": 82500
+        },
+        {
+          "text": "because",
+          "fromMs": 82500,
+          "toMs": 83060
+        },
+        {
+          "text": "I",
+          "fromMs": 83060,
+          "toMs": 83140
+        },
+        {
+          "text": "kind",
+          "fromMs": 83140,
+          "toMs": 83460
+        }
+      ]
+    },
+    {
+      "startMs": 83460,
+      "endMs": 85060,
+      "tokens": [
+        {
+          "text": "of",
+          "fromMs": 83460,
+          "toMs": 83620
+        },
+        {
+          "text": "want",
+          "fromMs": 83620,
+          "toMs": 83940
+        },
+        {
+          "text": "to",
+          "fromMs": 83940,
+          "toMs": 84100
+        },
+        {
+          "text": "live",
+          "fromMs": 84100,
+          "toMs": 84420
+        },
+        {
+          "text": "a",
+          "fromMs": 84420,
+          "toMs": 84500
+        },
+        {
+          "text": "bit",
+          "fromMs": 84500,
+          "toMs": 84740
+        },
+        {
+          "text": "more",
+          "fromMs": 84740,
+          "toMs": 85060
+        }
+      ]
+    },
+    {
+      "startMs": 85060,
+      "endMs": 88150,
+      "tokens": [
+        {
+          "text": "concentrated",
+          "fromMs": 85060,
+          "toMs": 86020
+        },
+        {
+          "text": "Just",
+          "fromMs": 86280,
+          "toMs": 86820
+        },
+        {
+          "text": "so",
+          "fromMs": 86820,
+          "toMs": 87090
+        },
+        {
+          "text": "I",
+          "fromMs": 87090,
+          "toMs": 87220
+        },
+        {
+          "text": "can",
+          "fromMs": 87220,
+          "toMs": 87620
+        },
+        {
+          "text": "add",
+          "fromMs": 87620,
+          "toMs": 88020
+        },
+        {
+          "text": "a",
+          "fromMs": 88020,
+          "toMs": 88150
+        }
+      ]
+    },
+    {
+      "startMs": 88150,
+      "endMs": 91760,
+      "tokens": [
+        {
+          "text": "little",
+          "fromMs": 88150,
+          "toMs": 88960
+        },
+        {
+          "text": "bit",
+          "fromMs": 88960,
+          "toMs": 89360
+        },
+        {
+          "text": "of",
+          "fromMs": 89360,
+          "toMs": 89630
+        },
+        {
+          "text": "this",
+          "fromMs": 89630,
+          "toMs": 90170
+        },
+        {
+          "text": "in",
+          "fromMs": 90170,
+          "toMs": 90440
+        },
+        {
+          "text": "here",
+          "fromMs": 90440,
+          "toMs": 91040
+        },
+        {
+          "text": "Just",
+          "fromMs": 91320,
+          "toMs": 91760
+        }
+      ]
+    },
+    {
+      "startMs": 91760,
+      "endMs": 94290,
+      "tokens": [
+        {
+          "text": "so",
+          "fromMs": 91760,
+          "toMs": 91980
+        },
+        {
+          "text": "I",
+          "fromMs": 91980,
+          "toMs": 92090
+        },
+        {
+          "text": "can",
+          "fromMs": 92090,
+          "toMs": 92420
+        },
+        {
+          "text": "add",
+          "fromMs": 92420,
+          "toMs": 92750
+        },
+        {
+          "text": "some",
+          "fromMs": 92750,
+          "toMs": 93190
+        },
+        {
+          "text": "strength",
+          "fromMs": 93190,
+          "toMs": 94070
+        },
+        {
+          "text": "in",
+          "fromMs": 94070,
+          "toMs": 94290
+        }
+      ]
+    },
+    {
+      "startMs": 94290,
+      "endMs": 97670,
+      "tokens": [
+        {
+          "text": "my",
+          "fromMs": 94290,
+          "toMs": 94510
+        },
+        {
+          "text": "hair",
+          "fromMs": 94510,
+          "toMs": 94950
+        },
+        {
+          "text": "and",
+          "fromMs": 94950,
+          "toMs": 95320
+        },
+        {
+          "text": "then",
+          "fromMs": 95320,
+          "toMs": 95560
+        },
+        {
+          "text": "the",
+          "fromMs": 95560,
+          "toMs": 95820
+        },
+        {
+          "text": "bun",
+          "fromMs": 95820,
+          "toMs": 96080
+        },
+        {
+          "text": "begins",
+          "fromMs": 96080,
+          "toMs": 97170
+        }
+      ]
+    },
+    {
+      "startMs": 97720,
+      "endMs": 100780,
+      "tokens": [
+        {
+          "text": "Usually",
+          "fromMs": 97720,
+          "toMs": 99000
+        },
+        {
+          "text": "this",
+          "fromMs": 99000,
+          "toMs": 99730
+        },
+        {
+          "text": "too",
+          "fromMs": 99730,
+          "toMs": 100280
+        }
+      ]
+    },
+    {
+      "startMs": 145280,
+      "endMs": 147790,
+      "tokens": [
+        {
+          "text": "There's",
+          "fromMs": 145280,
+          "toMs": 145880
+        },
+        {
+          "text": "still",
+          "fromMs": 145880,
+          "toMs": 146310
+        },
+        {
+          "text": "a",
+          "fromMs": 146310,
+          "toMs": 146390
+        },
+        {
+          "text": "lot",
+          "fromMs": 146390,
+          "toMs": 146650
+        },
+        {
+          "text": "left",
+          "fromMs": 146650,
+          "toMs": 147000
+        },
+        {
+          "text": "I",
+          "fromMs": 147300,
+          "toMs": 147380
+        },
+        {
+          "text": "think",
+          "fromMs": 147380,
+          "toMs": 147790
+        }
+      ]
+    },
+    {
+      "startMs": 147790,
+      "endMs": 153380,
+      "tokens": [
+        {
+          "text": "I'm",
+          "fromMs": 147790,
+          "toMs": 148030
+        },
+        {
+          "text": "going",
+          "fromMs": 148030,
+          "toMs": 148440
+        },
+        {
+          "text": "to",
+          "fromMs": 148440,
+          "toMs": 148600
+        },
+        {
+          "text": "use",
+          "fromMs": 148600,
+          "toMs": 148840
+        },
+        {
+          "text": "about",
+          "fromMs": 148840,
+          "toMs": 149280
+        },
+        {
+          "text": "15",
+          "fromMs": 149280,
+          "toMs": 151510
+        },
+        {
+          "text": "total",
+          "fromMs": 151510,
+          "toMs": 153380
+        }
+      ]
+    },
+    {
+      "startMs": 153380,
+      "endMs": 156580,
+      "tokens": [
+        {
+          "text": "of",
+          "fromMs": 153380,
+          "toMs": 154040
+        },
+        {
+          "text": "the",
+          "fromMs": 154040,
+          "toMs": 154280
+        },
+        {
+          "text": "toner",
+          "fromMs": 154280,
+          "toMs": 154670
+        },
+        {
+          "text": "So",
+          "fromMs": 154920,
+          "toMs": 155110
+        },
+        {
+          "text": "15",
+          "fromMs": 155110,
+          "toMs": 155700
+        },
+        {
+          "text": "divided",
+          "fromMs": 155700,
+          "toMs": 156390
+        },
+        {
+          "text": "by",
+          "fromMs": 156390,
+          "toMs": 156580
+        }
+      ]
+    },
+    {
+      "startMs": 156580,
+      "endMs": 159200,
+      "tokens": [
+        {
+          "text": "two",
+          "fromMs": 156580,
+          "toMs": 156870
+        },
+        {
+          "text": "is",
+          "fromMs": 156870,
+          "toMs": 157060
+        },
+        {
+          "text": "about",
+          "fromMs": 157060,
+          "toMs": 157550
+        },
+        {
+          "text": "7.5",
+          "fromMs": 157550,
+          "toMs": 158420
+        },
+        {
+          "text": "each",
+          "fromMs": 158420,
+          "toMs": 158810
+        }
+      ]
+    },
+    {
+      "startMs": 159200,
+      "endMs": 161970,
+      "tokens": [
+        {
+          "text": "And",
+          "fromMs": 159200,
+          "toMs": 159550
+        },
+        {
+          "text": "then",
+          "fromMs": 159550,
+          "toMs": 160010
+        },
+        {
+          "text": "I'm",
+          "fromMs": 160010,
+          "toMs": 160350
+        },
+        {
+          "text": "going",
+          "fromMs": 160350,
+          "toMs": 160930
+        },
+        {
+          "text": "to",
+          "fromMs": 160930,
+          "toMs": 161160
+        },
+        {
+          "text": "bring",
+          "fromMs": 161160,
+          "toMs": 161740
+        },
+        {
+          "text": "it",
+          "fromMs": 161740,
+          "toMs": 161970
+        }
+      ]
+    },
+    {
+      "startMs": 161970,
+      "endMs": 163360,
+      "tokens": [
+        {
+          "text": "up",
+          "fromMs": 161970,
+          "toMs": 162200
+        },
+        {
+          "text": "or",
+          "fromMs": 162480,
+          "toMs": 162560
+        },
+        {
+          "text": "not",
+          "fromMs": 162560,
+          "toMs": 162680
+        },
+        {
+          "text": "bring",
+          "fromMs": 162680,
+          "toMs": 162890
+        },
+        {
+          "text": "it",
+          "fromMs": 162890,
+          "toMs": 162970
+        },
+        {
+          "text": "up",
+          "fromMs": 162970,
+          "toMs": 163050
+        },
+        {
+          "text": "I'm",
+          "fromMs": 163160,
+          "toMs": 163360
+        }
+      ]
+    },
+    {
+      "startMs": 163360,
+      "endMs": 166820,
+      "tokens": [
+        {
+          "text": "going",
+          "fromMs": 163360,
+          "toMs": 163550
+        },
+        {
+          "text": "to",
+          "fromMs": 163550,
+          "toMs": 163640
+        },
+        {
+          "text": "use",
+          "fromMs": 163640,
+          "toMs": 163860
+        },
+        {
+          "text": "the",
+          "fromMs": 163860,
+          "toMs": 164700
+        },
+        {
+          "text": "developer",
+          "fromMs": 164700,
+          "toMs": 165360
+        },
+        {
+          "text": "here",
+          "fromMs": 165360,
+          "toMs": 166480
+        },
+        {
+          "text": "And",
+          "fromMs": 166520,
+          "toMs": 166820
+        }
+      ]
+    },
+    {
+      "startMs": 166820,
+      "endMs": 169120,
+      "tokens": [
+        {
+          "text": "get",
+          "fromMs": 166820,
+          "toMs": 167120
+        },
+        {
+          "text": "it",
+          "fromMs": 167120,
+          "toMs": 167320
+        },
+        {
+          "text": "to",
+          "fromMs": 167320,
+          "toMs": 167520
+        },
+        {
+          "text": "15",
+          "fromMs": 167520,
+          "toMs": 168120
+        },
+        {
+          "text": "times",
+          "fromMs": 168120,
+          "toMs": 168620
+        }
+      ]
+    },
+    {
+      "startMs": 175280,
+      "endMs": 177510,
+      "tokens": [
+        {
+          "text": "So",
+          "fromMs": 175280,
+          "toMs": 175480
+        },
+        {
+          "text": "I'm",
+          "fromMs": 175480,
+          "toMs": 175780
+        },
+        {
+          "text": "going",
+          "fromMs": 175780,
+          "toMs": 176290
+        },
+        {
+          "text": "to",
+          "fromMs": 176290,
+          "toMs": 176490
+        },
+        {
+          "text": "just",
+          "fromMs": 176490,
+          "toMs": 176900
+        },
+        {
+          "text": "work",
+          "fromMs": 176900,
+          "toMs": 177310
+        },
+        {
+          "text": "it",
+          "fromMs": 177310,
+          "toMs": 177510
+        }
+      ]
+    },
+    {
+      "startMs": 177510,
+      "endMs": 178780,
+      "tokens": [
+        {
+          "text": "all",
+          "fromMs": 177510,
+          "toMs": 177820
+        },
+        {
+          "text": "over",
+          "fromMs": 177820,
+          "toMs": 178280
+        }
+      ]
+    }
+  ]
+}
